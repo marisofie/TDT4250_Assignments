@@ -30,7 +30,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="specialisation" eType="#//Specialisation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="SpecialisationType">
-    <eLiterals name="Artificial Intelligence"/>
-    <eLiterals name="Algorithms and Computers" value="1"/>
+    <eLiterals name="artificial intelligence" literal="artificial intelligence"/>
+    <eLiterals name="algorithms and computers" value="1"/>
+    <eLiterals name="software" value="2"/>
+    <eLiterals name="databases and search" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LevelType">
+    <eLiterals name="second degree"/>
+    <eLiterals name="third year subjects, level 3" value="1"/>
+    <eLiterals name="intermediate course, level 2" value="2"/>
+    <eLiterals name="foundation course, level 1" value="3"/>
   </eClassifiers>
 </ecore:EPackage>
