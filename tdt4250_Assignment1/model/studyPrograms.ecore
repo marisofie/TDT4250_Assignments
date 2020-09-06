@@ -9,36 +9,45 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Programme">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSemesters" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="degree" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specialisation" eType="#//Specialisation"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Specialisation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mandatoryCourses">
       <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
         <eTypeArguments/>
       </eGenericType>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Specialisation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEnumerator"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StudyPlan">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="person" eType="#//Person"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="person" eType="#//Person"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
-        eType="#//Course"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="specialisation" eType="#//Specialisation"/>
+        eType="#//Course" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="SpecialisationType">
     <eLiterals name="artificial intelligence" literal="artificial intelligence"/>
     <eLiterals name="algorithms and computers" value="1"/>
     <eLiterals name="software" value="2"/>
     <eLiterals name="databases and search" value="3"/>
+    <eLiterals name="computer science" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LevelType">
-    <eLiterals name="second degree"/>
-    <eLiterals name="third year subjects, level 3" value="1"/>
-    <eLiterals name="intermediate course, level 2" value="2"/>
-    <eLiterals name="foundation course, level 1" value="3"/>
+    <eLiterals name="foundation course, level 1"/>
+    <eLiterals name="intermediate course, level 2" value="1"/>
+    <eLiterals name="third year subjects, level 3" value="2"/>
+    <eLiterals name="second degree" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DegreeType">
+    <eLiterals name="master science of informatics"/>
+    <eLiterals name="master computer science" value="1"/>
+    <eLiterals name="integrated master" value="2"/>
   </eClassifiers>
 </ecore:EPackage>
