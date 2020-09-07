@@ -6,11 +6,13 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="creditBounds"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true" transient="true" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//LevelType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="credit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Programme">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -43,7 +45,7 @@
     <eLiterals name="integratedMaster" value="2" literal="integrated master"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CourseGroup">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CourseGroupType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
         eType="#//Course"/>
   </eClassifiers>
@@ -51,5 +53,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="semesterNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroups" upperBound="-1"
         eType="#//CourseGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CourseGroupType">
+    <eLiterals name="mandatorySubject" literal="mandatory subject"/>
+    <eLiterals name="complimentarySubject" value="1" literal="complimentary subject"/>
+    <eLiterals name="optionalSubject" value="2" literal="optional subject"/>
+    <eLiterals name="engineeringSubjectOtherProgramme" value="3" literal="engineering subject other programme"/>
+    <eLiterals name="expertsInTeam" value="4" literal="experts in team"/>
+    <eLiterals name="specialisationSubject" value="5" literal="specialisation subject"/>
   </eClassifiers>
 </ecore:EPackage>

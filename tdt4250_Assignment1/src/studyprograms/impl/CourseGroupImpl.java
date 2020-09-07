@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import studyprograms.Course;
 import studyprograms.CourseGroup;
+import studyprograms.CourseGroupType;
 import studyprograms.StudyprogramsPackage;
 
 /**
@@ -42,7 +43,7 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final CourseGroupType NAME_EDEFAULT = CourseGroupType.MANDATORY_SUBJECT;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -52,7 +53,7 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected CourseGroupType name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getCourses() <em>Courses</em>}' reference list.
@@ -88,7 +89,7 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public CourseGroupType getName() {
 		return name;
 	}
 
@@ -97,9 +98,9 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setName(CourseGroupType newName) {
+		CourseGroupType oldName = name;
+		name = newName == null ? NAME_EDEFAULT : newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.COURSE_GROUP__NAME, oldName, name));
 	}
@@ -142,7 +143,7 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case StudyprogramsPackage.COURSE_GROUP__NAME:
-				setName((String)newValue);
+				setName((CourseGroupType)newValue);
 				return;
 			case StudyprogramsPackage.COURSE_GROUP__COURSES:
 				getCourses().clear();
@@ -179,7 +180,7 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case StudyprogramsPackage.COURSE_GROUP__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+				return name != NAME_EDEFAULT;
 			case StudyprogramsPackage.COURSE_GROUP__COURSES:
 				return courses != null && !courses.isEmpty();
 		}

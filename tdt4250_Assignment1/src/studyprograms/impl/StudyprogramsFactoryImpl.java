@@ -80,6 +80,8 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 				return createLevelTypeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.DEGREE_TYPE:
 				return createDegreeTypeFromString(eDataType, initialValue);
+			case StudyprogramsPackage.COURSE_GROUP_TYPE:
+				return createCourseGroupTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -97,6 +99,8 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 				return convertLevelTypeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.DEGREE_TYPE:
 				return convertDegreeTypeToString(eDataType, instanceValue);
+			case StudyprogramsPackage.COURSE_GROUP_TYPE:
+				return convertCourseGroupTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -199,6 +203,26 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	 * @generated
 	 */
 	public String convertDegreeTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CourseGroupType createCourseGroupTypeFromString(EDataType eDataType, String initialValue) {
+		CourseGroupType result = CourseGroupType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCourseGroupTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

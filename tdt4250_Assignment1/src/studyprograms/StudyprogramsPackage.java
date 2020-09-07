@@ -77,13 +77,13 @@ public interface StudyprogramsPackage extends EPackage {
 	int COURSE__CODE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Subject</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE__NAME = 1;
+	int COURSE__SUBJECT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -104,13 +104,22 @@ public interface StudyprogramsPackage extends EPackage {
 	int COURSE__CREDIT = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__NAME = 4;
+
+	/**
 	 * The number of structural features of the '<em>Course</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_FEATURE_COUNT = 4;
+	int COURSE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Course</em>' class.
@@ -389,6 +398,16 @@ public interface StudyprogramsPackage extends EPackage {
 	 */
 	int DEGREE_TYPE = 7;
 
+	/**
+	 * The meta object id for the '{@link studyprograms.CourseGroupType <em>Course Group Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.CourseGroupType
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseGroupType()
+	 * @generated
+	 */
+	int COURSE_GROUP_TYPE = 8;
+
 
 	/**
 	 * Returns the meta object for class '{@link studyprograms.Course <em>Course</em>}'.
@@ -410,6 +429,17 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCourse_Code();
+
+	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.Course#getSubject <em>Subject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Subject</em>'.
+	 * @see studyprograms.Course#getSubject()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_Subject();
 
 	/**
 	 * Returns the meta object for the attribute '{@link studyprograms.Course#getName <em>Name</em>}'.
@@ -647,6 +677,16 @@ public interface StudyprogramsPackage extends EPackage {
 	EEnum getDegreeType();
 
 	/**
+	 * Returns the meta object for enum '{@link studyprograms.CourseGroupType <em>Course Group Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Course Group Type</em>'.
+	 * @see studyprograms.CourseGroupType
+	 * @generated
+	 */
+	EEnum getCourseGroupType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -686,6 +726,14 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COURSE__CODE = eINSTANCE.getCourse_Code();
+
+		/**
+		 * The meta object literal for the '<em><b>Subject</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__SUBJECT = eINSTANCE.getCourse_Subject();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -876,6 +924,16 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DEGREE_TYPE = eINSTANCE.getDegreeType();
+
+		/**
+		 * The meta object literal for the '{@link studyprograms.CourseGroupType <em>Course Group Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.CourseGroupType
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseGroupType()
+		 * @generated
+		 */
+		EEnum COURSE_GROUP_TYPE = eINSTANCE.getCourseGroupType();
 
 	}
 
