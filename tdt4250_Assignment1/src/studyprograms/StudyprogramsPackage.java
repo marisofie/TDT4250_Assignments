@@ -4,6 +4,7 @@ package studyprograms;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -410,6 +411,27 @@ public interface StudyprogramsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '<em>Course Code</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseCode()
+	 * @generated
+	 */
+	int COURSE_CODE = 9;
+
+
+	/**
+	 * The meta object id for the '<em>Course Credit</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseCredit()
+	 * @generated
+	 */
+	int COURSE_CREDIT = 10;
+
+
+	/**
 	 * Returns the meta object for class '{@link studyprograms.Course <em>Course</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -687,6 +709,27 @@ public interface StudyprogramsPackage extends EPackage {
 	EEnum getCourseGroupType();
 
 	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Course Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Course Code</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 * @generated
+	 */
+	EDataType getCourseCode();
+
+	/**
+	 * Returns the meta object for data type '<em>Course Credit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Course Credit</em>'.
+	 * @model instanceClass="float"
+	 * @generated
+	 */
+	EDataType getCourseCredit();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -934,6 +977,25 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum COURSE_GROUP_TYPE = eINSTANCE.getCourseGroupType();
+
+		/**
+		 * The meta object literal for the '<em>Course Code</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseCode()
+		 * @generated
+		 */
+		EDataType COURSE_CODE = eINSTANCE.getCourseCode();
+
+		/**
+		 * The meta object literal for the '<em>Course Credit</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseCredit()
+		 * @generated
+		 */
+		EDataType COURSE_CREDIT = eINSTANCE.getCourseCredit();
 
 	}
 

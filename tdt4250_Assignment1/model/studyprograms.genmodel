@@ -25,6 +25,8 @@
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/expertsInTeam"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/specialisationSubject"/>
     </genEnums>
+    <genDataTypes ecoreDataType="studyprograms.ecore#//CourseCode"/>
+    <genDataTypes ecoreDataType="studyprograms.ecore#//CourseCredit"/>
     <genClasses ecoreClass="studyprograms.ecore#//Course">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/code"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/subject"/>

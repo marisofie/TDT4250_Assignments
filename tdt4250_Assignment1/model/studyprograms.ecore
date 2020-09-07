@@ -3,15 +3,12 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="studyprograms" nsURI="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore"
     nsPrefix="studyprograms">
   <eClassifiers xsi:type="ecore:EClass" name="Course">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="creditBounds"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="#//CourseCode"
         volatile="true" transient="true" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="subject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         volatile="true" transient="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//LevelType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credit" eType="#//CourseCredit"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Programme">
@@ -62,4 +59,6 @@
     <eLiterals name="expertsInTeam" value="4" literal="experts in team"/>
     <eLiterals name="specialisationSubject" value="5" literal="specialisation subject"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="CourseCredit" instanceClassName="float"/>
 </ecore:EPackage>

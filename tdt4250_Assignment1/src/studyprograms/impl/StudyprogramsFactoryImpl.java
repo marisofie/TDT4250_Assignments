@@ -82,6 +82,10 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 				return createDegreeTypeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.COURSE_GROUP_TYPE:
 				return createCourseGroupTypeFromString(eDataType, initialValue);
+			case StudyprogramsPackage.COURSE_CODE:
+				return createCourseCodeFromString(eDataType, initialValue);
+			case StudyprogramsPackage.COURSE_CREDIT:
+				return createCourseCreditFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -101,6 +105,10 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 				return convertDegreeTypeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.COURSE_GROUP_TYPE:
 				return convertCourseGroupTypeToString(eDataType, instanceValue);
+			case StudyprogramsPackage.COURSE_CODE:
+				return convertCourseCodeToString(eDataType, instanceValue);
+			case StudyprogramsPackage.COURSE_CREDIT:
+				return convertCourseCreditToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -224,6 +232,49 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	 */
 	public String convertCourseGroupTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String createCourseCodeFromString(EDataType eDataType, String initialValue) {
+		if (! initialValue.matches("[A-Z\\Wæøå]+[0-9]+")) {
+			throw new IllegalArgumentException("Course code must have the format [A-Z\\Wæøå]+[0-9]+");
+		}
+		return (String)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String convertCourseCodeToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public Float createCourseCreditFromString(EDataType eDataType, String initialValue) {
+		float value = Float.parseFloat(initialValue);
+		if (value < 0 || value > 30) {
+			throw new IllegalArgumentException("Credit can not be negative or higher than 30");
+		}
+		return (Float)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCourseCreditToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**
