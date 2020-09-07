@@ -77,13 +77,13 @@ public interface StudyprogramsPackage extends EPackage {
 	int COURSE__CODE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Subject</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE__NAME = 1;
+	int COURSE__SUBJECT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -104,13 +104,22 @@ public interface StudyprogramsPackage extends EPackage {
 	int COURSE__CREDIT = 3;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__NAME = 4;
+
+	/**
 	 * The number of structural features of the '<em>Course</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_FEATURE_COUNT = 4;
+	int COURSE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Course</em>' class.
@@ -422,6 +431,17 @@ public interface StudyprogramsPackage extends EPackage {
 	EAttribute getCourse_Code();
 
 	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.Course#getSubject <em>Subject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Subject</em>'.
+	 * @see studyprograms.Course#getSubject()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_Subject();
+
+	/**
 	 * Returns the meta object for the attribute '{@link studyprograms.Course#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -706,6 +726,14 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COURSE__CODE = eINSTANCE.getCourse_Code();
+
+		/**
+		 * The meta object literal for the '<em><b>Subject</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__SUBJECT = eINSTANCE.getCourse_Subject();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

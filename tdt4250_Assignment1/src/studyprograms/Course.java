@@ -14,9 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link studyprograms.Course#getCode <em>Code</em>}</li>
- *   <li>{@link studyprograms.Course#getName <em>Name</em>}</li>
+ *   <li>{@link studyprograms.Course#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.Course#getLevel <em>Level</em>}</li>
  *   <li>{@link studyprograms.Course#getCredit <em>Credit</em>}</li>
+ *   <li>{@link studyprograms.Course#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getCourse()
@@ -31,7 +32,7 @@ public interface Course extends EObject {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Code()
-	 * @model id="true" required="true"
+	 * @model transient="true" volatile="true"
 	 * @generated
 	 */
 	String getCode();
@@ -47,13 +48,35 @@ public interface Course extends EObject {
 	void setCode(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Subject</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subject</em>' attribute.
+	 * @see #setSubject(String)
+	 * @see studyprograms.StudyprogramsPackage#getCourse_Subject()
+	 * @model transient="true" volatile="true"
+	 * @generated
+	 */
+	String getSubject();
+
+	/**
+	 * Sets the value of the '{@link studyprograms.Course#getSubject <em>Subject</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Subject</em>' attribute.
+	 * @see #getSubject()
+	 * @generated
+	 */
+	void setSubject(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Name()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getName();

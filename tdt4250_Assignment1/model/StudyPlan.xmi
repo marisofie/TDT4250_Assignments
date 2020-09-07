@@ -15,14 +15,13 @@
       <semesters
           semesterNumber="1">
         <courseGroups
+            name="optional subject"
             courses="TDT4250"/>
       </semesters>
     </specialisations>
     <specialisations
         name="Artifical Intelligence"/>
   </programmes>
-  <courses code="TDT4250"
-      name="Avansert Programvaredesign"
-      level="second degree"
+  <courses level="second degree"
       credit="7.5"/>
 </studyprograms:University>

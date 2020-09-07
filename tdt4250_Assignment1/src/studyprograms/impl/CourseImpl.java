@@ -22,9 +22,10 @@ import studyprograms.StudyprogramsPackage;
  * </p>
  * <ul>
  *   <li>{@link studyprograms.impl.CourseImpl#getCode <em>Code</em>}</li>
- *   <li>{@link studyprograms.impl.CourseImpl#getName <em>Name</em>}</li>
+ *   <li>{@link studyprograms.impl.CourseImpl#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.impl.CourseImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link studyprograms.impl.CourseImpl#getCredit <em>Credit</em>}</li>
+ *   <li>{@link studyprograms.impl.CourseImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,34 +42,14 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	protected static final String CODE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * The default value of the '{@link #getSubject() <em>Subject</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCode()
+	 * @see #getSubject()
 	 * @generated
 	 * @ordered
 	 */
-	protected String code = CODE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
+	protected static final String SUBJECT_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
@@ -111,6 +92,26 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	protected float credit = CREDIT_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -122,7 +123,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	protected EClass eStaticClass() {
@@ -132,22 +133,73 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getCode() {
-		return code;
+		if (this.name == null) {
+			return null;
+		}
+		
+		int pos = name.lastIndexOf(' ');
+		if (pos < 0) {
+			return null;
+		}
+		
+		return name.substring(0, pos).trim();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.COURSE__CODE, oldCode, code));
+		String subject = getSubject();
+		if (subject == null) {
+			subject = "?";
+		}
+		
+		if (newCode == null) {
+			newCode = "";
+		}
+		
+		setName((newCode + " " + subject).trim());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String getSubject() {
+		if (this.name == null) {
+			return null;
+		}
+		
+		int pos = name.lastIndexOf(' ');
+		if (pos < 0) {
+			return name;
+		}
+		
+		return name.substring(pos + 1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void setSubject(String newSubject) {
+		String code = getCode();
+		if (code == null) {
+			code = "?";
+		}
+		
+		if (newSubject == null) {
+			newSubject = "";
+		}
+		
+		setName((code + " " + newSubject).trim());
 	}
 
 	/**
@@ -223,12 +275,14 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 		switch (featureID) {
 			case StudyprogramsPackage.COURSE__CODE:
 				return getCode();
-			case StudyprogramsPackage.COURSE__NAME:
-				return getName();
+			case StudyprogramsPackage.COURSE__SUBJECT:
+				return getSubject();
 			case StudyprogramsPackage.COURSE__LEVEL:
 				return getLevel();
 			case StudyprogramsPackage.COURSE__CREDIT:
 				return getCredit();
+			case StudyprogramsPackage.COURSE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -244,14 +298,17 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case StudyprogramsPackage.COURSE__CODE:
 				setCode((String)newValue);
 				return;
-			case StudyprogramsPackage.COURSE__NAME:
-				setName((String)newValue);
+			case StudyprogramsPackage.COURSE__SUBJECT:
+				setSubject((String)newValue);
 				return;
 			case StudyprogramsPackage.COURSE__LEVEL:
 				setLevel((LevelType)newValue);
 				return;
 			case StudyprogramsPackage.COURSE__CREDIT:
 				setCredit((Float)newValue);
+				return;
+			case StudyprogramsPackage.COURSE__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -268,14 +325,17 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case StudyprogramsPackage.COURSE__CODE:
 				setCode(CODE_EDEFAULT);
 				return;
-			case StudyprogramsPackage.COURSE__NAME:
-				setName(NAME_EDEFAULT);
+			case StudyprogramsPackage.COURSE__SUBJECT:
+				setSubject(SUBJECT_EDEFAULT);
 				return;
 			case StudyprogramsPackage.COURSE__LEVEL:
 				setLevel(LEVEL_EDEFAULT);
 				return;
 			case StudyprogramsPackage.COURSE__CREDIT:
 				setCredit(CREDIT_EDEFAULT);
+				return;
+			case StudyprogramsPackage.COURSE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -290,13 +350,15 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case StudyprogramsPackage.COURSE__CODE:
-				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
-			case StudyprogramsPackage.COURSE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+				return CODE_EDEFAULT == null ? getCode() != null : !CODE_EDEFAULT.equals(getCode());
+			case StudyprogramsPackage.COURSE__SUBJECT:
+				return SUBJECT_EDEFAULT == null ? getSubject() != null : !SUBJECT_EDEFAULT.equals(getSubject());
 			case StudyprogramsPackage.COURSE__LEVEL:
 				return level != LEVEL_EDEFAULT;
 			case StudyprogramsPackage.COURSE__CREDIT:
 				return credit != CREDIT_EDEFAULT;
+			case StudyprogramsPackage.COURSE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -311,14 +373,12 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (code: ");
-		result.append(code);
-		result.append(", name: ");
-		result.append(name);
-		result.append(", level: ");
+		result.append(" (level: ");
 		result.append(level);
 		result.append(", credit: ");
 		result.append(credit);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

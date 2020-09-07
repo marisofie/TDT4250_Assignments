@@ -27,9 +27,10 @@
     </genEnums>
     <genClasses ecoreClass="studyprograms.ecore#//Course">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/code"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/subject"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/level"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/credit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/name"/>
     </genClasses>
     <genClasses ecoreClass="studyprograms.ecore#//Programme">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Programme/name"/>
