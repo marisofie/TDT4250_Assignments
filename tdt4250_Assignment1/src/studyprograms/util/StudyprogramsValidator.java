@@ -104,6 +104,10 @@ public class StudyprogramsValidator extends EObjectValidator {
 				return validateDegreeType((DegreeType)value, diagnostics, context);
 			case StudyprogramsPackage.COURSE_GROUP_TYPE:
 				return validateCourseGroupType((CourseGroupType)value, diagnostics, context);
+			case StudyprogramsPackage.COURSE_CODE:
+				return validateCourseCode((String)value, diagnostics, context);
+			case StudyprogramsPackage.COURSE_CREDIT:
+				return validateCourseCredit((Float)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -124,37 +128,7 @@ public class StudyprogramsValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_UniqueID(course, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(course, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(course, diagnostics, context);
-		if (result || diagnostics != null) result &= validateCourse_creditBounds(course, diagnostics, context);
 		return result;
-	}
-
-	/**
-	 * Validates the creditBounds constraint of '<em>Course</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public boolean validateCourse_creditBounds(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		// TODO implement the constraint
-		// -> specify the condition that violates the constraint
-		// -> verify the diagnostic details, including severity, code, and message
-		// Ensure that you remove @generated or mark it @generated NOT
-		
-		if (course.getCredit() < 0f || course.getCredit() > 30f) {
-			if (diagnostics != null) {
-				diagnostics.add
-					(createDiagnostic
-						(Diagnostic.ERROR,
-						 DIAGNOSTIC_SOURCE,
-						 0,
-						 "_UI_GenericConstraint_diagnostic",
-						 new Object[] { "creditBounds", getObjectLabel(course, context) },
-						 new Object[] { course },
-						 context));
-			}
-			return false;
-		}
-		return true;
 	}
 
 	/**
@@ -226,6 +200,24 @@ public class StudyprogramsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCourseGroupType(CourseGroupType courseGroupType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCourseCode(String courseCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCourseCredit(float courseCredit, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

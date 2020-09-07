@@ -32,7 +32,7 @@ public interface Course extends EObject {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Code()
-	 * @model transient="true" volatile="true"
+	 * @model id="true" dataType="studyprograms.CourseCode" transient="true" volatile="true"
 	 * @generated
 	 */
 	String getCode();
@@ -45,6 +45,8 @@ public interface Course extends EObject {
 	 * @see #getCode()
 	 * @generated
 	 */
+	
+	
 	void setCode(String value);
 
 	/**
@@ -76,7 +78,7 @@ public interface Course extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Name()
-	 * @model id="true"
+	 * @model
 	 * @generated
 	 */
 	String getName();
@@ -123,7 +125,7 @@ public interface Course extends EObject {
 	 * @return the value of the '<em>Credit</em>' attribute.
 	 * @see #setCredit(float)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Credit()
-	 * @model
+	 * @model dataType="studyprograms.CourseCredit"
 	 * @generated
 	 */
 	float getCredit();
