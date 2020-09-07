@@ -87,12 +87,7 @@ public class StudyprogramsValidator extends EObjectValidator {
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
 			case StudyprogramsPackage.COURSE:
-			try {
 				return validateCourse((Course)value, diagnostics, context);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			case StudyprogramsPackage.PROGRAMME:
 				return validateProgramme((Programme)value, diagnostics, context);
 			case StudyprogramsPackage.SPECIALISATION:
@@ -107,6 +102,8 @@ public class StudyprogramsValidator extends EObjectValidator {
 				return validateLevelType((LevelType)value, diagnostics, context);
 			case StudyprogramsPackage.DEGREE_TYPE:
 				return validateDegreeType((DegreeType)value, diagnostics, context);
+			case StudyprogramsPackage.COURSE_GROUP_TYPE:
+				return validateCourseGroupType((CourseGroupType)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -115,10 +112,9 @@ public class StudyprogramsValidator extends EObjectValidator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @throws Exception 
 	 * @generated
 	 */
-	public boolean validateCourse(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) throws Exception {
+	public boolean validateCourse(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		if (!validate_NoCircularContainment(course, diagnostics, context)) return false;
 		boolean result = validate_EveryMultiplicityConforms(course, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(course, diagnostics, context);
@@ -136,12 +132,27 @@ public class StudyprogramsValidator extends EObjectValidator {
 	 * Validates the creditBounds constraint of '<em>Course</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @throws Exception 
 	 * @generated NOT
 	 */
-	public boolean validateCourse_creditBounds(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) throws Exception {
-		if (course.getCredit() < 0 || course.getCredit() > 30) {
-			throw new IllegalArgumentException(); 
+	public boolean validateCourse_creditBounds(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		// TODO implement the constraint
+		// -> specify the condition that violates the constraint
+		// -> verify the diagnostic details, including severity, code, and message
+		// Ensure that you remove @generated or mark it @generated NOT
+		
+		if (course.getCredit() < 0f || course.getCredit() > 30f) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "creditBounds", getObjectLabel(course, context) },
+						 new Object[] { course },
+						 context));
+			}
+			return false;
 		}
 		return true;
 	}
@@ -206,6 +217,15 @@ public class StudyprogramsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateDegreeType(DegreeType degreeType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCourseGroupType(CourseGroupType courseGroupType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
 

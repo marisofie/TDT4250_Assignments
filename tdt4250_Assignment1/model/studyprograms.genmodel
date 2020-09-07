@@ -17,6 +17,14 @@
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//DegreeType/master"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//DegreeType/integratedMaster"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="studyprograms.ecore#//CourseGroupType">
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/mandatorySubject"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/complimentarySubject"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/optionalSubject"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/engineeringSubjectOtherProgramme"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/expertsInTeam"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/specialisationSubject"/>
+    </genEnums>
     <genClasses ecoreClass="studyprograms.ecore#//Course">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/code"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/name"/>

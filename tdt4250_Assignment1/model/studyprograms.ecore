@@ -43,7 +43,7 @@
     <eLiterals name="integratedMaster" value="2" literal="integrated master"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CourseGroup">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CourseGroupType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
         eType="#//Course"/>
   </eClassifiers>
@@ -51,5 +51,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="semesterNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroups" upperBound="-1"
         eType="#//CourseGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CourseGroupType">
+    <eLiterals name="mandatorySubject" literal="mandatory subject"/>
+    <eLiterals name="complimentarySubject" value="1" literal="complimentary subject"/>
+    <eLiterals name="optionalSubject" value="2" literal="optional subject"/>
+    <eLiterals name="engineeringSubjectOtherProgramme" value="3" literal="engineering subject other programme"/>
+    <eLiterals name="expertsInTeam" value="4" literal="experts in team"/>
+    <eLiterals name="specialisationSubject" value="5" literal="specialisation subject"/>
   </eClassifiers>
 </ecore:EPackage>

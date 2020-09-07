@@ -389,6 +389,16 @@ public interface StudyprogramsPackage extends EPackage {
 	 */
 	int DEGREE_TYPE = 7;
 
+	/**
+	 * The meta object id for the '{@link studyprograms.CourseGroupType <em>Course Group Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.CourseGroupType
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseGroupType()
+	 * @generated
+	 */
+	int COURSE_GROUP_TYPE = 8;
+
 
 	/**
 	 * Returns the meta object for class '{@link studyprograms.Course <em>Course</em>}'.
@@ -647,6 +657,16 @@ public interface StudyprogramsPackage extends EPackage {
 	EEnum getDegreeType();
 
 	/**
+	 * Returns the meta object for enum '{@link studyprograms.CourseGroupType <em>Course Group Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Course Group Type</em>'.
+	 * @see studyprograms.CourseGroupType
+	 * @generated
+	 */
+	EEnum getCourseGroupType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -876,6 +896,16 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum DEGREE_TYPE = eINSTANCE.getDegreeType();
+
+		/**
+		 * The meta object literal for the '{@link studyprograms.CourseGroupType <em>Course Group Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.CourseGroupType
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseGroupType()
+		 * @generated
+		 */
+		EEnum COURSE_GROUP_TYPE = eINSTANCE.getCourseGroupType();
 
 	}
 

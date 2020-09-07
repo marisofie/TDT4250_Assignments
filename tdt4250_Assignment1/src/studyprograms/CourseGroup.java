@@ -26,25 +26,28 @@ import org.eclipse.emf.ecore.EObject;
 public interface CourseGroup extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The literals are from the enumeration {@link studyprograms.CourseGroupType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @see studyprograms.CourseGroupType
+	 * @see #setName(CourseGroupType)
 	 * @see studyprograms.StudyprogramsPackage#getCourseGroup_Name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	CourseGroupType getName();
 
 	/**
 	 * Sets the value of the '{@link studyprograms.CourseGroup#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see studyprograms.CourseGroupType
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(CourseGroupType value);
 
 	/**
 	 * Returns the value of the '<em><b>Courses</b></em>' reference list.

@@ -7,12 +7,13 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EValidator;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import studyprograms.Course;
 import studyprograms.CourseGroup;
+import studyprograms.CourseGroupType;
 import studyprograms.DegreeType;
 import studyprograms.LevelType;
 import studyprograms.Programme;
@@ -21,7 +22,6 @@ import studyprograms.Specialisation;
 import studyprograms.StudyprogramsFactory;
 import studyprograms.StudyprogramsPackage;
 import studyprograms.University;
-
 import studyprograms.util.StudyprogramsValidator;
 
 /**
@@ -86,6 +86,13 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	 * @generated
 	 */
 	private EEnum degreeTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum courseGroupTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -378,6 +385,15 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getCourseGroupType() {
+		return courseGroupTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public StudyprogramsFactory getStudyprogramsFactory() {
 		return (StudyprogramsFactory)getEFactoryInstance();
 	}
@@ -432,6 +448,7 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		// Create enums
 		levelTypeEEnum = createEEnum(LEVEL_TYPE);
 		degreeTypeEEnum = createEEnum(DEGREE_TYPE);
+		courseGroupTypeEEnum = createEEnum(COURSE_GROUP_TYPE);
 	}
 
 	/**
@@ -485,7 +502,7 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		initEReference(getUniversity_Courses(), this.getCourse(), null, "courses", null, 0, -1, University.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(courseGroupEClass, CourseGroup.class, "CourseGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCourseGroup_Name(), ecorePackage.getEString(), "name", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourseGroup_Name(), this.getCourseGroupType(), "name", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCourseGroup_Courses(), this.getCourse(), null, "courses", null, 0, -1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(semesterEClass, Semester.class, "Semester", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -503,6 +520,14 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		addEEnumLiteral(degreeTypeEEnum, DegreeType.BACHELOR);
 		addEEnumLiteral(degreeTypeEEnum, DegreeType.MASTER);
 		addEEnumLiteral(degreeTypeEEnum, DegreeType.INTEGRATED_MASTER);
+
+		initEEnum(courseGroupTypeEEnum, CourseGroupType.class, "CourseGroupType");
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.MANDATORY_SUBJECT);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.COMPLIMENTARY_SUBJECT);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.OPTIONAL_SUBJECT);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.ENGINEERING_SUBJECT_OTHER_PROGRAMME);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.EXPERTS_IN_TEAM);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.SPECIALISATION_SUBJECT);
 
 		// Create resource
 		createResource(eNS_URI);

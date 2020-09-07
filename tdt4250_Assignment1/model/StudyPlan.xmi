@@ -15,7 +15,6 @@
       <semesters
           semesterNumber="1">
         <courseGroups
-            name="Mandatory"
             courses="TDT4250"/>
       </semesters>
     </specialisations>
