@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studyprograms:University
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:studyprograms="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore studyprograms.ecore">
+  <programmes
+      name="Computer Science"
+      degree="integrated master">
+    <specialisations
+        name="Programvaresystemer">
+      <childSpecialisations
+          name="Programvareutvikling"/>
+      <semesters
+          semesterNumber="1">
+        <courseGroups
+            name="Mandatory"
+            courses="TDT4250"/>
+      </semesters>
+    </specialisations>
+    <specialisations
+        name="Artifical Intelligence"/>
+  </programmes>
+  <courses code="TDT4250"
+      name="Avansert Programvaredesign"
+      level="second degree"
+      credit="7.5"/>
+</studyprograms:University>
