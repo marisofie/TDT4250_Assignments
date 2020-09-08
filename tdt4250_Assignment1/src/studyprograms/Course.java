@@ -13,15 +13,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link studyprograms.Course#getName <em>Name</em>}</li>
  *   <li>{@link studyprograms.Course#getCode <em>Code</em>}</li>
  *   <li>{@link studyprograms.Course#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.Course#getLevel <em>Level</em>}</li>
- *   <li>{@link studyprograms.Course#getCredit <em>Credit</em>}</li>
- *   <li>{@link studyprograms.Course#getName <em>Name</em>}</li>
+ *   <li>{@link studyprograms.Course#getCredits <em>Credits</em>}</li>
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getCourse()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='creditBounds'"
+ * @model
  * @generated
  */
 public interface Course extends EObject {
@@ -32,7 +32,7 @@ public interface Course extends EObject {
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Code()
-	 * @model id="true" dataType="studyprograms.CourseCode" transient="true" volatile="true"
+	 * @model id="true" dataType="studyprograms.CourseCode" required="true"
 	 * @generated
 	 */
 	String getCode();
@@ -45,8 +45,6 @@ public interface Course extends EObject {
 	 * @see #getCode()
 	 * @generated
 	 */
-	
-	
 	void setCode(String value);
 
 	/**
@@ -54,22 +52,11 @@ public interface Course extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subject</em>' attribute.
-	 * @see #setSubject(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Subject()
-	 * @model transient="true" volatile="true"
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	String getSubject();
-
-	/**
-	 * Sets the value of the '{@link studyprograms.Course#getSubject <em>Subject</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Subject</em>' attribute.
-	 * @see #getSubject()
-	 * @generated
-	 */
-	void setSubject(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -119,25 +106,25 @@ public interface Course extends EObject {
 	void setLevel(LevelType value);
 
 	/**
-	 * Returns the value of the '<em><b>Credit</b></em>' attribute.
+	 * Returns the value of the '<em><b>Credits</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Credit</em>' attribute.
-	 * @see #setCredit(float)
-	 * @see studyprograms.StudyprogramsPackage#getCourse_Credit()
+	 * @return the value of the '<em>Credits</em>' attribute.
+	 * @see #setCredits(float)
+	 * @see studyprograms.StudyprogramsPackage#getCourse_Credits()
 	 * @model dataType="studyprograms.CourseCredit"
 	 * @generated
 	 */
-	float getCredit();
+	float getCredits();
 
 	/**
-	 * Sets the value of the '{@link studyprograms.Course#getCredit <em>Credit</em>}' attribute.
+	 * Sets the value of the '{@link studyprograms.Course#getCredits <em>Credits</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Credit</em>' attribute.
-	 * @see #getCredit()
+	 * @param value the new value of the '<em>Credits</em>' attribute.
+	 * @see #getCredits()
 	 * @generated
 	 */
-	void setCredit(float value);
+	void setCredits(float value);
 
 } // Course

@@ -10,131 +10,153 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Level Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Course Status Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see studyprograms.StudyprogramsPackage#getLevelType()
+ * @see studyprograms.StudyprogramsPackage#getCourseStatusType()
  * @model
  * @generated
  */
-public enum LevelType implements Enumerator {
+public enum CourseStatusType implements Enumerator {
 	/**
-	 * The '<em><b>Foundation Course Level1</b></em>' literal object.
+	 * The '<em><b>O</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #FOUNDATION_COURSE_LEVEL1_VALUE
+	 * @see #O_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	FOUNDATION_COURSE_LEVEL1(0, "foundationCourseLevel1", "Grunnleggende emner, nivaa 1"),
+	O(0, "O", "O"),
 
 	/**
-	 * The '<em><b>Intermediate Course Level2</b></em>' literal object.
+	 * The '<em><b>V</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INTERMEDIATE_COURSE_LEVEL2_VALUE
+	 * @see #V_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	INTERMEDIATE_COURSE_LEVEL2(1, "intermediateCourseLevel2", "Videregaaende emner, nivaa 2"),
+	V(1, "V", "V"),
 
 	/**
-	 * The '<em><b>Third Year Subjects Level3</b></em>' literal object.
+	 * The '<em><b>VA</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #THIRD_YEAR_SUBJECTS_LEVEL3_VALUE
+	 * @see #VA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	THIRD_YEAR_SUBJECTS_LEVEL3(2, "thirdYearSubjectsLevel3", "Tredjeaarsemner, nivaa 3"),
+	VA(2, "VA", "VA"),
 
 	/**
-	 * The '<em><b>Second Degree</b></em>' literal object.
+	 * The '<em><b>VB</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SECOND_DEGREE_VALUE
+	 * @see #VB_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SECOND_DEGREE(3, "secondDegree", "Hoyere grads nivaa");
+	VB(3, "VB", "VB"),
 
 	/**
-	 * The '<em><b>Foundation Course Level1</b></em>' literal value.
+	 * The '<em><b>MAX1A</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #FOUNDATION_COURSE_LEVEL1
-	 * @model name="foundationCourseLevel1" literal="Grunnleggende emner, nivaa 1"
+	 * @see #MAX1A_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int FOUNDATION_COURSE_LEVEL1_VALUE = 0;
+	MAX1A(4, "MAX1A", "MAX1A");
 
 	/**
-	 * The '<em><b>Intermediate Course Level2</b></em>' literal value.
+	 * The '<em><b>O</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INTERMEDIATE_COURSE_LEVEL2
-	 * @model name="intermediateCourseLevel2" literal="Videregaaende emner, nivaa 2"
+	 * @see #O
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INTERMEDIATE_COURSE_LEVEL2_VALUE = 1;
+	public static final int O_VALUE = 0;
 
 	/**
-	 * The '<em><b>Third Year Subjects Level3</b></em>' literal value.
+	 * The '<em><b>V</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #THIRD_YEAR_SUBJECTS_LEVEL3
-	 * @model name="thirdYearSubjectsLevel3" literal="Tredjeaarsemner, nivaa 3"
+	 * @see #V
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int THIRD_YEAR_SUBJECTS_LEVEL3_VALUE = 2;
+	public static final int V_VALUE = 1;
 
 	/**
-	 * The '<em><b>Second Degree</b></em>' literal value.
+	 * The '<em><b>VA</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SECOND_DEGREE
-	 * @model name="secondDegree" literal="Hoyere grads nivaa"
+	 * @see #VA
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SECOND_DEGREE_VALUE = 3;
+	public static final int VA_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Level Type</b></em>' enumerators.
+	 * The '<em><b>VB</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VB
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VB_VALUE = 3;
+
+	/**
+	 * The '<em><b>MAX1A</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MAX1A
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MAX1A_VALUE = 4;
+
+	/**
+	 * An array of all the '<em><b>Course Status Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final LevelType[] VALUES_ARRAY =
-		new LevelType[] {
-			FOUNDATION_COURSE_LEVEL1,
-			INTERMEDIATE_COURSE_LEVEL2,
-			THIRD_YEAR_SUBJECTS_LEVEL3,
-			SECOND_DEGREE,
+	private static final CourseStatusType[] VALUES_ARRAY =
+		new CourseStatusType[] {
+			O,
+			V,
+			VA,
+			VB,
+			MAX1A,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Level Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Course Status Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<LevelType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<CourseStatusType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Level Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Course Status Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static LevelType get(String literal) {
+	public static CourseStatusType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			LevelType result = VALUES_ARRAY[i];
+			CourseStatusType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -143,16 +165,16 @@ public enum LevelType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Level Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Course Status Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static LevelType getByName(String name) {
+	public static CourseStatusType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			LevelType result = VALUES_ARRAY[i];
+			CourseStatusType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -161,19 +183,20 @@ public enum LevelType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Level Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Course Status Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static LevelType get(int value) {
+	public static CourseStatusType get(int value) {
 		switch (value) {
-			case FOUNDATION_COURSE_LEVEL1_VALUE: return FOUNDATION_COURSE_LEVEL1;
-			case INTERMEDIATE_COURSE_LEVEL2_VALUE: return INTERMEDIATE_COURSE_LEVEL2;
-			case THIRD_YEAR_SUBJECTS_LEVEL3_VALUE: return THIRD_YEAR_SUBJECTS_LEVEL3;
-			case SECOND_DEGREE_VALUE: return SECOND_DEGREE;
+			case O_VALUE: return O;
+			case V_VALUE: return V;
+			case VA_VALUE: return VA;
+			case VB_VALUE: return VB;
+			case MAX1A_VALUE: return MAX1A;
 		}
 		return null;
 	}
@@ -205,7 +228,7 @@ public enum LevelType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private LevelType(int value, String name, String literal) {
+	private CourseStatusType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -249,4 +272,4 @@ public enum LevelType implements Enumerator {
 		return literal;
 	}
 	
-} //LevelType
+} //CourseStatusType

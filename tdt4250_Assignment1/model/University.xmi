@@ -6,31 +6,120 @@
     xmlns:studyprograms="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore"
     xsi:schemaLocation="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore studyprograms.ecore">
   <programmes
-      name="Computer Science"
-      degree="integrated master"
-      courseGroupAllocation="//@programmes.0/@semesters.0/@courseGroupAllocation">
-    <semesters
-        semesterNumber="4">
-      <courseGroupAllocation
-          specialisation="//@programmes.0/@specialisations.0/@childSpecialisations.0"
-          courseGroup="//@programmes.0/@courseGroups.0"
-          programme="//@programmes.0"/>
+      name="Datateknologi"
+      degree="Integrert Master">
+    <semesters>
+      <courseGroups>
+        <courseAllocations
+            course="TMA4100"/>
+        <courseAllocations
+            course="TDT4110"/>
+      </courseGroups>
     </semesters>
     <specialisations
         name="Programvaresystemer">
       <childSpecialisations
-          name="Programvareutvikling"
-          courseGroupAllocation="//@programmes.0/@semesters.0/@courseGroupAllocation"/>
+          name="Programvareutvikling">
+        <semesters
+            semesterNumber="6">
+          <courseGroups>
+            <courseAllocations
+                course="TDT4250"/>
+            <courseAllocations
+                course="TDT4290"/>
+          </courseGroups>
+          <courseGroups
+              name="Komplementaere emner">
+            <courseAllocations
+                status="VB"
+                course="AAR4250"/>
+            <courseAllocations
+                status="VB"
+                course="TIØ4146"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="7">
+          <courseGroups
+              name="Eksperter i Team">
+            <courseAllocations
+                status="V"
+                course="BEIT4014"/>
+          </courseGroups>
+        </semesters>
+      </childSpecialisations>
       <childSpecialisations
           name="Interaksjonsdesign og spillteknologi"/>
       <childSpecialisations
           name="Digital virksomhetsutvikling"/>
+      <semesters
+          semesterNumber="4">
+        <courseGroups>
+          <courseAllocations
+              course="TDT4136"/>
+          <courseAllocations
+              course="TDT4175"/>
+        </courseGroups>
+        <courseGroups
+            name="Valgbare emner">
+          <courseAllocations
+              status="VA"
+              course="IT2810"/>
+        </courseGroups>
+      </semesters>
     </specialisations>
-    <courseGroups
-        courses="TDT4250 Avansert Programvaredesign"
-        courseGroupAllocations="//@programmes.0/@semesters.0/@courseGroupAllocation"/>
   </programmes>
-  <courses level="second degree"
-      credit="7.5"
-      name="TDT4250 Avansert Programvaredesign"/>
+  <programmes
+      name="Informatikk">
+    <specialisations
+        name="Software">
+      <semesters>
+        <courseGroups>
+          <courseAllocations
+              status="M2A"
+              course="TDT4250"/>
+          <courseAllocations
+              course="TDT4175"/>
+        </courseGroups>
+      </semesters>
+    </specialisations>
+  </programmes>
+  <courses name="TDT4250 Avansert Programvaredesign"
+      code="TDT4250"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses name="TMA4100 Matematikk 1"
+      code="TMA4100"
+      credits="7.5"/>
+  <courses name="TDT4110 Informasjonsteknologi grunnkurs"
+      code="TDT4110"
+      credits="7.5"/>
+  <courses name="TDT4136 Introduksjon til kunstig intelligens"
+      code="TDT4136"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses name="IT2810 Webutvikling"
+      code="IT2810"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses name="TDT4290 Kundestyrt prosjekt"
+      code="TDT4290"
+      level="Hoyere grads nivaa"
+      credits="15.0"/>
+  <courses name="AAR4250 Arkitektur som teknologisk praksis"
+      code="AAR4250"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses name="TIØ4146 Finans for teknisk-naturvitenskapelige studenter"
+      code="TIØ4146"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses name="BEIT4014 Eksperter i team - Grønne bygg"
+      code="BEIT4014"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses name="TDT4175 Informasjonssystemer"
+      code="TDT4175"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
 </studyprograms:University>

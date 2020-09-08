@@ -26,7 +26,7 @@ public enum DegreeType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BACHELOR(0, "bachelor", "bachelor"),
+	BACHELOR(0, "bachelor", "Bachelor"),
 
 	/**
 	 * The '<em><b>Master</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum DegreeType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MASTER(1, "master", "master"),
+	MASTER(1, "master", "Master"),
 
 	/**
 	 * The '<em><b>Integrated Master</b></em>' literal object.
@@ -46,14 +46,14 @@ public enum DegreeType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INTEGRATED_MASTER(2, "integratedMaster", "integrated master");
+	INTEGRATED_MASTER(2, "integratedMaster", "Integrert Master");
 
 	/**
 	 * The '<em><b>Bachelor</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BACHELOR
-	 * @model name="bachelor"
+	 * @model name="bachelor" literal="Bachelor"
 	 * @generated
 	 * @ordered
 	 */
@@ -64,7 +64,7 @@ public enum DegreeType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #MASTER
-	 * @model name="master"
+	 * @model name="master" literal="Master"
 	 * @generated
 	 * @ordered
 	 */
@@ -75,7 +75,7 @@ public enum DegreeType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INTEGRATED_MASTER
-	 * @model name="integratedMaster" literal="integrated master"
+	 * @model name="integratedMaster" literal="Integrert Master"
 	 * @generated
 	 * @ordered
 	 */

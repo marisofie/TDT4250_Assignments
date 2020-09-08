@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link studyprograms.CourseGroup#getName <em>Name</em>}</li>
- *   <li>{@link studyprograms.CourseGroup#getCourses <em>Courses</em>}</li>
+ *   <li>{@link studyprograms.CourseGroup#getCourseAllocations <em>Course Allocations</em>}</li>
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getCourseGroup()
@@ -50,15 +50,17 @@ public interface CourseGroup extends EObject {
 	void setName(CourseGroupType value);
 
 	/**
-	 * Returns the value of the '<em><b>Courses</b></em>' reference list.
-	 * The list contents are of type {@link studyprograms.Course}.
+	 * Returns the value of the '<em><b>Course Allocations</b></em>' containment reference list.
+	 * The list contents are of type {@link studyprograms.CourseAllocation}.
+	 * It is bidirectional and its opposite is '{@link studyprograms.CourseAllocation#getCourseGroup <em>Course Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Courses</em>' reference list.
-	 * @see studyprograms.StudyprogramsPackage#getCourseGroup_Courses()
-	 * @model
+	 * @return the value of the '<em>Course Allocations</em>' containment reference list.
+	 * @see studyprograms.StudyprogramsPackage#getCourseGroup_CourseAllocations()
+	 * @see studyprograms.CourseAllocation#getCourseGroup
+	 * @model opposite="courseGroup" containment="true"
 	 * @generated
 	 */
-	EList<Course> getCourses();
+	EList<CourseAllocation> getCourseAllocations();
 
 } // CourseGroup

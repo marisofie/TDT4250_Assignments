@@ -30,6 +30,7 @@ import studyprograms.StudyprogramsPackage;
  * </p>
  * <ul>
  *   <li>{@link studyprograms.impl.SemesterImpl#getSemesterNumber <em>Semester Number</em>}</li>
+ *   <li>{@link studyprograms.impl.SemesterImpl#getMaximumCredits <em>Maximum Credits</em>}</li>
  *   <li>{@link studyprograms.impl.SemesterImpl#getCourseGroups <em>Course Groups</em>}</li>
  * </ul>
  *
@@ -55,6 +56,26 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * @ordered
 	 */
 	protected int semesterNumber = SEMESTER_NUMBER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMaximumCredits() <em>Maximum Credits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaximumCredits()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int MAXIMUM_CREDITS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getMaximumCredits() <em>Maximum Credits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaximumCredits()
+	 * @generated
+	 * @ordered
+	 */
+	protected int maximumCredits = MAXIMUM_CREDITS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getCourseGroups() <em>Course Groups</em>}' containment reference list.
@@ -111,6 +132,27 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getMaximumCredits() {
+		return maximumCredits;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMaximumCredits(int newMaximumCredits) {
+		int oldMaximumCredits = maximumCredits;
+		maximumCredits = newMaximumCredits;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.SEMESTER__MAXIMUM_CREDITS, oldMaximumCredits, maximumCredits));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<CourseGroup> getCourseGroups() {
 		if (courseGroups == null) {
 			courseGroups = new EObjectContainmentEList<CourseGroup>(CourseGroup.class, this, StudyprogramsPackage.SEMESTER__COURSE_GROUPS);
@@ -142,6 +184,8 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 		switch (featureID) {
 			case StudyprogramsPackage.SEMESTER__SEMESTER_NUMBER:
 				return getSemesterNumber();
+			case StudyprogramsPackage.SEMESTER__MAXIMUM_CREDITS:
+				return getMaximumCredits();
 			case StudyprogramsPackage.SEMESTER__COURSE_GROUPS:
 				return getCourseGroups();
 		}
@@ -159,6 +203,9 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 		switch (featureID) {
 			case StudyprogramsPackage.SEMESTER__SEMESTER_NUMBER:
 				setSemesterNumber((Integer)newValue);
+				return;
+			case StudyprogramsPackage.SEMESTER__MAXIMUM_CREDITS:
+				setMaximumCredits((Integer)newValue);
 				return;
 			case StudyprogramsPackage.SEMESTER__COURSE_GROUPS:
 				getCourseGroups().clear();
@@ -179,6 +226,9 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 			case StudyprogramsPackage.SEMESTER__SEMESTER_NUMBER:
 				setSemesterNumber(SEMESTER_NUMBER_EDEFAULT);
 				return;
+			case StudyprogramsPackage.SEMESTER__MAXIMUM_CREDITS:
+				setMaximumCredits(MAXIMUM_CREDITS_EDEFAULT);
+				return;
 			case StudyprogramsPackage.SEMESTER__COURSE_GROUPS:
 				getCourseGroups().clear();
 				return;
@@ -196,6 +246,8 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 		switch (featureID) {
 			case StudyprogramsPackage.SEMESTER__SEMESTER_NUMBER:
 				return semesterNumber != SEMESTER_NUMBER_EDEFAULT;
+			case StudyprogramsPackage.SEMESTER__MAXIMUM_CREDITS:
+				return maximumCredits != MAXIMUM_CREDITS_EDEFAULT;
 			case StudyprogramsPackage.SEMESTER__COURSE_GROUPS:
 				return courseGroups != null && !courseGroups.isEmpty();
 		}
@@ -214,6 +266,8 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (semesterNumber: ");
 		result.append(semesterNumber);
+		result.append(", maximumCredits: ");
+		result.append(maximumCredits);
 		result.append(')');
 		return result.toString();
 	}

@@ -3,8 +3,6 @@
 package studyprograms.util;
 
 import java.util.Map;
-
-import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
 import org.eclipse.emf.common.util.ResourceLocator;
 
@@ -86,24 +84,28 @@ public class StudyprogramsValidator extends EObjectValidator {
 	@Override
 	protected boolean validate(int classifierID, Object value, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		switch (classifierID) {
+			case StudyprogramsPackage.UNIVERSITY:
+				return validateUniversity((University)value, diagnostics, context);
 			case StudyprogramsPackage.COURSE:
 				return validateCourse((Course)value, diagnostics, context);
 			case StudyprogramsPackage.PROGRAMME:
 				return validateProgramme((Programme)value, diagnostics, context);
 			case StudyprogramsPackage.SPECIALISATION:
 				return validateSpecialisation((Specialisation)value, diagnostics, context);
-			case StudyprogramsPackage.UNIVERSITY:
-				return validateUniversity((University)value, diagnostics, context);
-			case StudyprogramsPackage.COURSE_GROUP:
-				return validateCourseGroup((CourseGroup)value, diagnostics, context);
 			case StudyprogramsPackage.SEMESTER:
 				return validateSemester((Semester)value, diagnostics, context);
-			case StudyprogramsPackage.LEVEL_TYPE:
-				return validateLevelType((LevelType)value, diagnostics, context);
+			case StudyprogramsPackage.COURSE_GROUP:
+				return validateCourseGroup((CourseGroup)value, diagnostics, context);
+			case StudyprogramsPackage.COURSE_ALLOCATION:
+				return validateCourseAllocation((CourseAllocation)value, diagnostics, context);
 			case StudyprogramsPackage.DEGREE_TYPE:
 				return validateDegreeType((DegreeType)value, diagnostics, context);
+			case StudyprogramsPackage.LEVEL_TYPE:
+				return validateLevelType((LevelType)value, diagnostics, context);
 			case StudyprogramsPackage.COURSE_GROUP_TYPE:
 				return validateCourseGroupType((CourseGroupType)value, diagnostics, context);
+			case StudyprogramsPackage.COURSE_STATUS_TYPE:
+				return validateCourseStatusType((CourseStatusType)value, diagnostics, context);
 			case StudyprogramsPackage.COURSE_CODE:
 				return validateCourseCode((String)value, diagnostics, context);
 			case StudyprogramsPackage.COURSE_CREDIT:
@@ -119,16 +121,7 @@ public class StudyprogramsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCourse(Course course, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		if (!validate_NoCircularContainment(course, diagnostics, context)) return false;
-		boolean result = validate_EveryMultiplicityConforms(course, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(course, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(course, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(course, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryProxyResolves(course, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_UniqueID(course, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryKeyUnique(course, diagnostics, context);
-		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(course, diagnostics, context);
-		return result;
+		return validate_EveryDefaultConstraint(course, diagnostics, context);
 	}
 
 	/**
@@ -181,6 +174,15 @@ public class StudyprogramsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateCourseAllocation(CourseAllocation courseAllocation, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(courseAllocation, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateLevelType(LevelType levelType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -208,6 +210,15 @@ public class StudyprogramsValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean validateCourseStatusType(CourseStatusType courseStatusType, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean validateCourseCode(String courseCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return true;
 	}
@@ -218,7 +229,51 @@ public class StudyprogramsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateCourseCredit(float courseCredit, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
+		boolean result = validateCourseCredit_Min(courseCredit, diagnostics, context);
+		if (result || diagnostics != null) result &= validateCourseCredit_Max(courseCredit, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateCourseCredit_Min
+	 */
+	public static final float COURSE_CREDIT__MIN__VALUE = 0.0F;
+
+	/**
+	 * Validates the Min constraint of '<em>Course Credit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCourseCredit_Min(float courseCredit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = courseCredit >= COURSE_CREDIT__MIN__VALUE;
+		if (!result && diagnostics != null)
+			reportMinViolation(StudyprogramsPackage.Literals.COURSE_CREDIT, courseCredit, COURSE_CREDIT__MIN__VALUE, true, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @see #validateCourseCredit_Max
+	 */
+	public static final float COURSE_CREDIT__MAX__VALUE = 60.0F;
+
+	/**
+	 * Validates the Max constraint of '<em>Course Credit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateCourseCredit_Max(float courseCredit, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean result = courseCredit <= COURSE_CREDIT__MAX__VALUE;
+		if (!result && diagnostics != null)
+			reportMaxViolation(StudyprogramsPackage.Literals.COURSE_CREDIT, courseCredit, COURSE_CREDIT__MAX__VALUE, true, diagnostics, context);
+		return result;
 	}
 
 	/**

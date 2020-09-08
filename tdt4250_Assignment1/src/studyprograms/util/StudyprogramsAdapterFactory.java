@@ -68,6 +68,10 @@ public class StudyprogramsAdapterFactory extends AdapterFactoryImpl {
 	protected StudyprogramsSwitch<Adapter> modelSwitch =
 		new StudyprogramsSwitch<Adapter>() {
 			@Override
+			public Adapter caseUniversity(University object) {
+				return createUniversityAdapter();
+			}
+			@Override
 			public Adapter caseCourse(Course object) {
 				return createCourseAdapter();
 			}
@@ -80,16 +84,16 @@ public class StudyprogramsAdapterFactory extends AdapterFactoryImpl {
 				return createSpecialisationAdapter();
 			}
 			@Override
-			public Adapter caseUniversity(University object) {
-				return createUniversityAdapter();
+			public Adapter caseSemester(Semester object) {
+				return createSemesterAdapter();
 			}
 			@Override
 			public Adapter caseCourseGroup(CourseGroup object) {
 				return createCourseGroupAdapter();
 			}
 			@Override
-			public Adapter caseSemester(Semester object) {
-				return createSemesterAdapter();
+			public Adapter caseCourseAllocation(CourseAllocation object) {
+				return createCourseAllocationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -192,6 +196,20 @@ public class StudyprogramsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSemesterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link studyprograms.CourseAllocation <em>Course Allocation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see studyprograms.CourseAllocation
+	 * @generated
+	 */
+	public Adapter createCourseAllocationAdapter() {
 		return null;
 	}
 

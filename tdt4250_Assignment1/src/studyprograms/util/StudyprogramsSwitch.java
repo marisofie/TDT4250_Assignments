@@ -66,6 +66,12 @@ public class StudyprogramsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case StudyprogramsPackage.UNIVERSITY: {
+				University university = (University)theEObject;
+				T result = caseUniversity(university);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case StudyprogramsPackage.COURSE: {
 				Course course = (Course)theEObject;
 				T result = caseCourse(course);
@@ -84,9 +90,9 @@ public class StudyprogramsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StudyprogramsPackage.UNIVERSITY: {
-				University university = (University)theEObject;
-				T result = caseUniversity(university);
+			case StudyprogramsPackage.SEMESTER: {
+				Semester semester = (Semester)theEObject;
+				T result = caseSemester(semester);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -96,9 +102,9 @@ public class StudyprogramsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StudyprogramsPackage.SEMESTER: {
-				Semester semester = (Semester)theEObject;
-				T result = caseSemester(semester);
+			case StudyprogramsPackage.COURSE_ALLOCATION: {
+				CourseAllocation courseAllocation = (CourseAllocation)theEObject;
+				T result = caseCourseAllocation(courseAllocation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -193,6 +199,21 @@ public class StudyprogramsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSemester(Semester object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Course Allocation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Course Allocation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCourseAllocation(CourseAllocation object) {
 		return null;
 	}
 

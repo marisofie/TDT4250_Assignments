@@ -57,12 +57,13 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case StudyprogramsPackage.UNIVERSITY: return createUniversity();
 			case StudyprogramsPackage.COURSE: return createCourse();
 			case StudyprogramsPackage.PROGRAMME: return createProgramme();
 			case StudyprogramsPackage.SPECIALISATION: return createSpecialisation();
-			case StudyprogramsPackage.UNIVERSITY: return createUniversity();
-			case StudyprogramsPackage.COURSE_GROUP: return createCourseGroup();
 			case StudyprogramsPackage.SEMESTER: return createSemester();
+			case StudyprogramsPackage.COURSE_GROUP: return createCourseGroup();
+			case StudyprogramsPackage.COURSE_ALLOCATION: return createCourseAllocation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -76,12 +77,14 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case StudyprogramsPackage.LEVEL_TYPE:
-				return createLevelTypeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.DEGREE_TYPE:
 				return createDegreeTypeFromString(eDataType, initialValue);
+			case StudyprogramsPackage.LEVEL_TYPE:
+				return createLevelTypeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.COURSE_GROUP_TYPE:
 				return createCourseGroupTypeFromString(eDataType, initialValue);
+			case StudyprogramsPackage.COURSE_STATUS_TYPE:
+				return createCourseStatusTypeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.COURSE_CODE:
 				return createCourseCodeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.COURSE_CREDIT:
@@ -99,12 +102,14 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case StudyprogramsPackage.LEVEL_TYPE:
-				return convertLevelTypeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.DEGREE_TYPE:
 				return convertDegreeTypeToString(eDataType, instanceValue);
+			case StudyprogramsPackage.LEVEL_TYPE:
+				return convertLevelTypeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.COURSE_GROUP_TYPE:
 				return convertCourseGroupTypeToString(eDataType, instanceValue);
+			case StudyprogramsPackage.COURSE_STATUS_TYPE:
+				return convertCourseStatusTypeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.COURSE_CODE:
 				return convertCourseCodeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.COURSE_CREDIT:
@@ -179,6 +184,16 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public CourseAllocation createCourseAllocation() {
+		CourseAllocationImpl courseAllocation = new CourseAllocationImpl();
+		return courseAllocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public LevelType createLevelTypeFromString(EDataType eDataType, String initialValue) {
 		LevelType result = LevelType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -237,6 +252,26 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CourseStatusType createCourseStatusTypeFromString(EDataType eDataType, String initialValue) {
+		CourseStatusType result = CourseStatusType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCourseStatusTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String createCourseCodeFromString(EDataType eDataType, String initialValue) {
@@ -258,13 +293,9 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	public Float createCourseCreditFromString(EDataType eDataType, String initialValue) {
-		float value = Float.parseFloat(initialValue);
-		if (value < 0 || value > 30) {
-			throw new IllegalArgumentException("Credit can not be negative or higher than 30");
-		}
 		return (Float)super.createFromString(eDataType, initialValue);
 	}
 
