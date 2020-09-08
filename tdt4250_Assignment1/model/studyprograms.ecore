@@ -19,13 +19,17 @@
         eType="#//Semester" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="specialisations" upperBound="-1"
         eType="#//Specialisation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroupAllocation"
+        upperBound="-1" eType="#//CourseGroupAllocation" eOpposite="#//CourseGroupAllocation/programme"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroups" upperBound="-1"
+        eType="#//CourseGroup" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Specialisation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="childSpecialisations" eType="#//Specialisation"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroups" eType="#//CourseGroup"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childSpecialisations" upperBound="-1"
+        eType="#//Specialisation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroupAllocation"
+        upperBound="-1" eType="#//CourseGroupAllocation" eOpposite="#//CourseGroupAllocation/specialisation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="University">
     <eStructuralFeatures xsi:type="ecore:EReference" name="programmes" upperBound="-1"
@@ -48,13 +52,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CourseGroupType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courses" upperBound="-1"
         eType="#//Course"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroupAllocations"
+        eType="#//CourseGroupAllocation" eOpposite="#//CourseGroupAllocation/courseGroup"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Semester">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="semesterNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroups" upperBound="-1"
-        eType="#//CourseGroup" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroupAllocation"
-        eType="#//CourseGroupAllocation"/>
+        eType="#//CourseGroupAllocation" containment="true" eOpposite="#//CourseGroupAllocation/semester"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CourseGroupType">
     <eLiterals name="mandatorySubject" literal="mandatory subject"/>
@@ -67,7 +71,13 @@
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCredit" instanceClassName="float"/>
   <eClassifiers xsi:type="ecore:EClass" name="CourseGroupAllocation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="specialisation" eType="#//Semester"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroup" eType="#//CourseGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specialisation" eType="#//Specialisation"
+        eOpposite="#//Specialisation/courseGroupAllocation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroup" eType="#//CourseGroup"
+        eOpposite="#//CourseGroup/courseGroupAllocations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semester" eType="#//Semester"
+        eOpposite="#//Semester/courseGroupAllocation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programme" eType="#//Programme"
+        eOpposite="#//Programme/courseGroupAllocation"/>
   </eClassifiers>
 </ecore:EPackage>
