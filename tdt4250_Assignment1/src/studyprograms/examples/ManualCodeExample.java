@@ -10,7 +10,7 @@ public class ManualCodeExample {
 		System.out.println(course.getName() + " == " + course.getCode() + "+ " + course.getSubject());
 		course.setCode("TDT4250");
 		System.out.println(course.getName() + " == " + course.getCode() + " + " + course.getSubject());
-		course.setSubject("AvansertProgramvaredesign");
+		course.setSubject("Avansert Programvaredesign");
 		System.out.println(course.getName() + " == " + course.getCode() + " + " + course.getSubject());
 	}
 
