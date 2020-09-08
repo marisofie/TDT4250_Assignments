@@ -53,6 +53,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="semesterNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroups" upperBound="-1"
         eType="#//CourseGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroupAllocation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CourseGroupType">
     <eLiterals name="mandatorySubject" literal="mandatory subject"/>
@@ -64,4 +65,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCredit" instanceClassName="float"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CourseGroupAllocation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specialisation" eType="#//Semester"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroup" eType="#//CourseGroup"/>
+  </eClassifiers>
 </ecore:EPackage>
