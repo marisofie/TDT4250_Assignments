@@ -140,7 +140,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			return null;
 		}
 		
-		int pos = name.lastIndexOf(' ');
+		int pos = name.indexOf(' ');
 		if (pos < 0) {
 			return null;
 		}
@@ -176,7 +176,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			return null;
 		}
 		
-		int pos = name.lastIndexOf(' ');
+		int pos = name.indexOf(' ');
 		if (pos < 0) {
 			return name;
 		}

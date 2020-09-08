@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studyprograms:University
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:studyprograms="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore studyprograms.ecore">
+  <programmes
+      name="Computer Science"
+      degree="integrated master"
+      courseGroupAllocation="//@programmes.0/@semesters.0/@courseGroupAllocation">
+    <semesters
+        semesterNumber="4">
+      <courseGroupAllocation
+          specialisation="//@programmes.0/@specialisations.0/@childSpecialisations.0"
+          courseGroup="//@programmes.0/@courseGroups.0"
+          programme="//@programmes.0"/>
+    </semesters>
+    <specialisations
+        name="Programvaresystemer">
+      <childSpecialisations
+          name="Programvareutvikling"
+          courseGroupAllocation="//@programmes.0/@semesters.0/@courseGroupAllocation"/>
+      <childSpecialisations
+          name="Interaksjonsdesign og spillteknologi"/>
+      <childSpecialisations
+          name="Digital virksomhetsutvikling"/>
+    </specialisations>
+    <courseGroups
+        courses="TDT4250 Avansert Programvaredesign"
+        courseGroupAllocations="//@programmes.0/@semesters.0/@courseGroupAllocation"/>
+  </programmes>
+  <courses level="second degree"
+      credit="7.5"
+      name="TDT4250 Avansert Programvaredesign"/>
+</studyprograms:University>
