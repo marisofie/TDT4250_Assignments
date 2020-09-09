@@ -66,7 +66,23 @@ public enum CourseStatusType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MAX1A(4, "MAX1A", "MAX1A");
+	MAX1A(4, "MAX1A", "MAX1A"), /**
+	 * The '<em><b>M1A</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #M1A_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	M1A(5, "M1A", "M1A"), /**
+	 * The '<em><b>M2A</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #M2A_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	M2A(6, "M2A", "M2A");
 
 	/**
 	 * The '<em><b>O</b></em>' literal value.
@@ -124,6 +140,28 @@ public enum CourseStatusType implements Enumerator {
 	public static final int MAX1A_VALUE = 4;
 
 	/**
+	 * The '<em><b>M1A</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #M1A
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int M1A_VALUE = 5;
+
+	/**
+	 * The '<em><b>M2A</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #M2A
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int M2A_VALUE = 6;
+
+	/**
 	 * An array of all the '<em><b>Course Status Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -136,6 +174,8 @@ public enum CourseStatusType implements Enumerator {
 			VA,
 			VB,
 			MAX1A,
+			M1A,
+			M2A,
 		};
 
 	/**
@@ -197,6 +237,8 @@ public enum CourseStatusType implements Enumerator {
 			case VA_VALUE: return VA;
 			case VB_VALUE: return VB;
 			case MAX1A_VALUE: return MAX1A;
+			case M1A_VALUE: return M1A;
+			case M2A_VALUE: return M2A;
 		}
 		return null;
 	}

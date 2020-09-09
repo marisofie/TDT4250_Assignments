@@ -19,34 +19,38 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum CourseGroupType implements Enumerator {
 	/**
-	 * The '<em><b>Mandatory Optional Subjects</b></em>' literal object.
+	 * The '<em><b>Mandatory Subjects</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MANDATORY_OPTIONAL_SUBJECTS_VALUE
+	 * @see #MANDATORY_SUBJECTS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	MANDATORY_OPTIONAL_SUBJECTS(0, "mandatoryOptionalSubjects", "Obligatoriske og valgbare emner"), /**
-	 * The '<em><b>Complimentary Subject</b></em>' literal object.
+	MANDATORY_SUBJECTS(0, "mandatorySubjects", "Obligatoriske emner"), /**
+	 * The '<em><b>Elective Subjects</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COMPLIMENTARY_SUBJECT_VALUE
+	 * @see #ELECTIVE_SUBJECTS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	COMPLIMENTARY_SUBJECT(1, "complimentarySubject", "Komplementaere emner"),
-
-	/**
-	 * The '<em><b>Engineering Subject Other Programme</b></em>' literal object.
+	ELECTIVE_SUBJECTS(1, "electiveSubjects", "Valgbare emner"), /**
+	 * The '<em><b>Complimentary Subjects</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENGINEERING_SUBJECT_OTHER_PROGRAMME_VALUE
+	 * @see #COMPLIMENTARY_SUBJECTS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ENGINEERING_SUBJECT_OTHER_PROGRAMME(2, "engineeringSubjectOtherProgramme", "Ingenioremne annet studieprogram"),
-
-	/**
+	COMPLIMENTARY_SUBJECTS(2, "complimentarySubjects", "Komplementaere emner"), /**
+	 * The '<em><b>Engineering Subjects Other Programme</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENGINEERING_SUBJECTS_OTHER_PROGRAMME_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ENGINEERING_SUBJECTS_OTHER_PROGRAMME(3, "engineeringSubjectsOtherProgramme", "Ingenioremne annet studieprogram"), /**
 	 * The '<em><b>Experts In Team</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -54,50 +58,61 @@ public enum CourseGroupType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EXPERTS_IN_TEAM(3, "expertsInTeam", "Eksperter i Team"),
+	EXPERTS_IN_TEAM(4, "expertsInTeam", "Eksperter i Team"),
 
 	/**
-	 * The '<em><b>Specialisation Subject Thesis</b></em>' literal object.
+	 * The '<em><b>Specialisation Subjects Thesis</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SPECIALISATION_SUBJECT_THESIS_VALUE
+	 * @see #SPECIALISATION_SUBJECTS_THESIS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SPECIALISATION_SUBJECT_THESIS(4, "specialisationSubjectThesis", "Fordypningsemner og masteroppgave");
+	SPECIALISATION_SUBJECTS_THESIS(5, "specialisationSubjectsThesis", "Fordypningsemner og masteroppgave");
 
 	/**
-	 * The '<em><b>Mandatory Optional Subjects</b></em>' literal value.
+	 * The '<em><b>Mandatory Subjects</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MANDATORY_OPTIONAL_SUBJECTS
-	 * @model name="mandatoryOptionalSubjects" literal="Obligatoriske og valgbare emner"
+	 * @see #MANDATORY_SUBJECTS
+	 * @model name="mandatorySubjects" literal="Obligatoriske emner"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MANDATORY_OPTIONAL_SUBJECTS_VALUE = 0;
+	public static final int MANDATORY_SUBJECTS_VALUE = 0;
 
 	/**
-	 * The '<em><b>Complimentary Subject</b></em>' literal value.
+	 * The '<em><b>Elective Subjects</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COMPLIMENTARY_SUBJECT
-	 * @model name="complimentarySubject" literal="Komplementaere emner"
+	 * @see #ELECTIVE_SUBJECTS
+	 * @model name="electiveSubjects" literal="Valgbare emner"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COMPLIMENTARY_SUBJECT_VALUE = 1;
+	public static final int ELECTIVE_SUBJECTS_VALUE = 1;
 
 	/**
-	 * The '<em><b>Engineering Subject Other Programme</b></em>' literal value.
+	 * The '<em><b>Complimentary Subjects</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ENGINEERING_SUBJECT_OTHER_PROGRAMME
-	 * @model name="engineeringSubjectOtherProgramme" literal="Ingenioremne annet studieprogram"
+	 * @see #COMPLIMENTARY_SUBJECTS
+	 * @model name="complimentarySubjects" literal="Komplementaere emner"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENGINEERING_SUBJECT_OTHER_PROGRAMME_VALUE = 2;
+	public static final int COMPLIMENTARY_SUBJECTS_VALUE = 2;
+
+	/**
+	 * The '<em><b>Engineering Subjects Other Programme</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ENGINEERING_SUBJECTS_OTHER_PROGRAMME
+	 * @model name="engineeringSubjectsOtherProgramme" literal="Ingenioremne annet studieprogram"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENGINEERING_SUBJECTS_OTHER_PROGRAMME_VALUE = 3;
 
 	/**
 	 * The '<em><b>Experts In Team</b></em>' literal value.
@@ -108,18 +123,18 @@ public enum CourseGroupType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int EXPERTS_IN_TEAM_VALUE = 3;
+	public static final int EXPERTS_IN_TEAM_VALUE = 4;
 
 	/**
-	 * The '<em><b>Specialisation Subject Thesis</b></em>' literal value.
+	 * The '<em><b>Specialisation Subjects Thesis</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SPECIALISATION_SUBJECT_THESIS
-	 * @model name="specialisationSubjectThesis" literal="Fordypningsemner og masteroppgave"
+	 * @see #SPECIALISATION_SUBJECTS_THESIS
+	 * @model name="specialisationSubjectsThesis" literal="Fordypningsemner og masteroppgave"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SPECIALISATION_SUBJECT_THESIS_VALUE = 4;
+	public static final int SPECIALISATION_SUBJECTS_THESIS_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>Course Group Type</b></em>' enumerators.
@@ -129,11 +144,12 @@ public enum CourseGroupType implements Enumerator {
 	 */
 	private static final CourseGroupType[] VALUES_ARRAY =
 		new CourseGroupType[] {
-			MANDATORY_OPTIONAL_SUBJECTS,
-			COMPLIMENTARY_SUBJECT,
-			ENGINEERING_SUBJECT_OTHER_PROGRAMME,
+			MANDATORY_SUBJECTS,
+			ELECTIVE_SUBJECTS,
+			COMPLIMENTARY_SUBJECTS,
+			ENGINEERING_SUBJECTS_OTHER_PROGRAMME,
 			EXPERTS_IN_TEAM,
-			SPECIALISATION_SUBJECT_THESIS,
+			SPECIALISATION_SUBJECTS_THESIS,
 		};
 
 	/**
@@ -190,11 +206,12 @@ public enum CourseGroupType implements Enumerator {
 	 */
 	public static CourseGroupType get(int value) {
 		switch (value) {
-			case MANDATORY_OPTIONAL_SUBJECTS_VALUE: return MANDATORY_OPTIONAL_SUBJECTS;
-			case COMPLIMENTARY_SUBJECT_VALUE: return COMPLIMENTARY_SUBJECT;
-			case ENGINEERING_SUBJECT_OTHER_PROGRAMME_VALUE: return ENGINEERING_SUBJECT_OTHER_PROGRAMME;
+			case MANDATORY_SUBJECTS_VALUE: return MANDATORY_SUBJECTS;
+			case ELECTIVE_SUBJECTS_VALUE: return ELECTIVE_SUBJECTS;
+			case COMPLIMENTARY_SUBJECTS_VALUE: return COMPLIMENTARY_SUBJECTS;
+			case ENGINEERING_SUBJECTS_OTHER_PROGRAMME_VALUE: return ENGINEERING_SUBJECTS_OTHER_PROGRAMME;
 			case EXPERTS_IN_TEAM_VALUE: return EXPERTS_IN_TEAM;
-			case SPECIALISATION_SUBJECT_THESIS_VALUE: return SPECIALISATION_SUBJECT_THESIS;
+			case SPECIALISATION_SUBJECTS_THESIS_VALUE: return SPECIALISATION_SUBJECTS_THESIS;
 		}
 		return null;
 	}

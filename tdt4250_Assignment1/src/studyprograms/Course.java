@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link studyprograms.Course#getName <em>Name</em>}</li>
+ *   <li>{@link studyprograms.Course#getLabel <em>Label</em>}</li>
  *   <li>{@link studyprograms.Course#getCode <em>Code</em>}</li>
  *   <li>{@link studyprograms.Course#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.Course#getLevel <em>Level</em>}</li>
@@ -26,13 +26,24 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Course extends EObject {
 	/**
+	 * Returns the value of the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Label</em>' attribute.
+	 * @see studyprograms.StudyprogramsPackage#getCourse_Label()
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @generated
+	 */
+	String getLabel();
+
+	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Code()
-	 * @model id="true" dataType="studyprograms.CourseCode" required="true"
+	 * @model id="true" dataType="studyprograms.CourseCode"
 	 * @generated
 	 */
 	String getCode();
@@ -52,33 +63,22 @@ public interface Course extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Subject</em>' attribute.
+	 * @see #setSubject(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Subject()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model
 	 * @generated
 	 */
 	String getSubject();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Sets the value of the '{@link studyprograms.Course#getSubject <em>Subject</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see studyprograms.StudyprogramsPackage#getCourse_Name()
-	 * @model
+	 * @param value the new value of the '<em>Subject</em>' attribute.
+	 * @see #getSubject()
 	 * @generated
 	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link studyprograms.Course#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
+	void setSubject(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Level</b></em>' attribute.

@@ -135,13 +135,13 @@ public interface StudyprogramsPackage extends EPackage {
 	int UNIVERSITY_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE__NAME = 0;
+	int COURSE__LABEL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -525,6 +525,17 @@ public interface StudyprogramsPackage extends EPackage {
 	EClass getCourse();
 
 	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.Course#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see studyprograms.Course#getLabel()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_Label();
+
+	/**
 	 * Returns the meta object for the attribute '{@link studyprograms.Course#getCode <em>Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -545,17 +556,6 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCourse_Subject();
-
-	/**
-	 * Returns the meta object for the attribute '{@link studyprograms.Course#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see studyprograms.Course#getName()
-	 * @see #getCourse()
-	 * @generated
-	 */
-	EAttribute getCourse_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link studyprograms.Course#getLevel <em>Level</em>}'.
@@ -922,6 +922,14 @@ public interface StudyprogramsPackage extends EPackage {
 		EClass COURSE = eINSTANCE.getCourse();
 
 		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__LABEL = eINSTANCE.getCourse_Label();
+
+		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -936,14 +944,6 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COURSE__SUBJECT = eINSTANCE.getCourse_Subject();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COURSE__NAME = eINSTANCE.getCourse_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.

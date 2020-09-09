@@ -45,7 +45,7 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * @generated
 	 * @ordered
 	 */
-	protected static final CourseGroupType NAME_EDEFAULT = CourseGroupType.MANDATORY_OPTIONAL_SUBJECTS;
+	protected static final CourseGroupType NAME_EDEFAULT = CourseGroupType.MANDATORY_SUBJECTS;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.

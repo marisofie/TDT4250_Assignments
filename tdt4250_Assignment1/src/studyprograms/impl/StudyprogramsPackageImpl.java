@@ -209,6 +209,15 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCourse_Label() {
+		return (EAttribute)courseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getCourse_Code() {
 		return (EAttribute)courseEClass.getEStructuralFeatures().get(1);
 	}
@@ -220,15 +229,6 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	 */
 	public EAttribute getCourse_Subject() {
 		return (EAttribute)courseEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCourse_Name() {
-		return (EAttribute)courseEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -543,7 +543,7 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		createEReference(universityEClass, UNIVERSITY__COURSES);
 
 		courseEClass = createEClass(COURSE);
-		createEAttribute(courseEClass, COURSE__NAME);
+		createEAttribute(courseEClass, COURSE__LABEL);
 		createEAttribute(courseEClass, COURSE__CODE);
 		createEAttribute(courseEClass, COURSE__SUBJECT);
 		createEAttribute(courseEClass, COURSE__LEVEL);
@@ -620,9 +620,9 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		initEReference(getUniversity_Courses(), this.getCourse(), null, "courses", null, 0, -1, University.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(courseEClass, Course.class, "Course", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCourse_Name(), ecorePackage.getEString(), "name", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCourse_Code(), this.getCourseCode(), "code", null, 1, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCourse_Subject(), ecorePackage.getEString(), "subject", null, 0, 1, Course.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_Label(), ecorePackage.getEString(), "label", null, 0, 1, Course.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_Code(), this.getCourseCode(), "code", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_Subject(), ecorePackage.getEString(), "subject", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Level(), this.getLevelType(), "level", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Credits(), this.getCourseCredit(), "credits", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -664,11 +664,12 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		addEEnumLiteral(levelTypeEEnum, LevelType.SECOND_DEGREE);
 
 		initEEnum(courseGroupTypeEEnum, CourseGroupType.class, "CourseGroupType");
-		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.MANDATORY_OPTIONAL_SUBJECTS);
-		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.COMPLIMENTARY_SUBJECT);
-		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.ENGINEERING_SUBJECT_OTHER_PROGRAMME);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.MANDATORY_SUBJECTS);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.ELECTIVE_SUBJECTS);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.COMPLIMENTARY_SUBJECTS);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.ENGINEERING_SUBJECTS_OTHER_PROGRAMME);
 		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.EXPERTS_IN_TEAM);
-		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.SPECIALISATION_SUBJECT_THESIS);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.SPECIALISATION_SUBJECTS_THESIS);
 
 		initEEnum(courseStatusTypeEEnum, CourseStatusType.class, "CourseStatusType");
 		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.O);
@@ -676,6 +677,8 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.VA);
 		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.VB);
 		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.MAX1A);
+		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.M1A);
+		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.M2A);
 
 		// Initialize data types
 		initEDataType(courseCodeEDataType, String.class, "CourseCode", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

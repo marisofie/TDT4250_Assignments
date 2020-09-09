@@ -18,11 +18,12 @@
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//LevelType/secondDegree"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="studyprograms.ecore#//CourseGroupType">
-      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/mandatoryOptionalSubjects"/>
-      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/complimentarySubject"/>
-      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/engineeringSubjectOtherProgramme"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/mandatorySubjects"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/electiveSubjects"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/complimentarySubjects"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/engineeringSubjectsOtherProgramme"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/expertsInTeam"/>
-      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/specialisationSubjectThesis"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/specialisationSubjectsThesis"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="studyprograms.ecore#//CourseStatusType">
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/O"/>
@@ -30,6 +31,8 @@
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/VA"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/VB"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/MAX1A"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/M1A"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/M2A"/>
     </genEnums>
     <genDataTypes ecoreDataType="studyprograms.ecore#//CourseCode"/>
     <genDataTypes ecoreDataType="studyprograms.ecore#//CourseCredit"/>
@@ -38,7 +41,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//University/courses"/>
     </genClasses>
     <genClasses ecoreClass="studyprograms.ecore#//Course">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/code"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/subject"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/level"/>
