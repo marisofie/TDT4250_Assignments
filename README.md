@@ -6,6 +6,7 @@ Group: Sigrid Marita Kvamme & Mari Sofie Lerfaldet
 - tdt4250_Assignment1 : 
   - /model
      - Contains ecore model, genmodel and xmi structure with real world data
+     - University.xmi contains a portion of the real world study programs it models, enough to show the usage of the model.
      
      #TODO: insert screen shot of tree structure
   - /src/studyprograms
