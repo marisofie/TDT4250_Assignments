@@ -48,26 +48,16 @@ public interface Specialisation extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Child Specialisations</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Child Specialisations</b></em>' containment reference list.
+	 * The list contents are of type {@link studyprograms.Specialisation}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Child Specialisations</em>' containment reference.
-	 * @see #setChildSpecialisations(Specialisation)
+	 * @return the value of the '<em>Child Specialisations</em>' containment reference list.
 	 * @see studyprograms.StudyprogramsPackage#getSpecialisation_ChildSpecialisations()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Specialisation getChildSpecialisations();
-
-	/**
-	 * Sets the value of the '{@link studyprograms.Specialisation#getChildSpecialisations <em>Child Specialisations</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Child Specialisations</em>' containment reference.
-	 * @see #getChildSpecialisations()
-	 * @generated
-	 */
-	void setChildSpecialisations(Specialisation value);
+	EList<Specialisation> getChildSpecialisations();
 
 	/**
 	 * Returns the value of the '<em><b>Semesters</b></em>' containment reference list.

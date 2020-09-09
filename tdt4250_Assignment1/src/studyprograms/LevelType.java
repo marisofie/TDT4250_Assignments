@@ -26,7 +26,7 @@ public enum LevelType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FOUNDATION_COURSE_LEVEL1(0, "foundationCourseLevel1", "foundation Course, Level1"),
+	FOUNDATION_COURSE_LEVEL1(0, "foundationCourseLevel1", "Grunnleggende emner, nivaa 1"),
 
 	/**
 	 * The '<em><b>Intermediate Course Level2</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum LevelType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INTERMEDIATE_COURSE_LEVEL2(1, "intermediateCourseLevel2", "intermediate Course, Level2"),
+	INTERMEDIATE_COURSE_LEVEL2(1, "intermediateCourseLevel2", "Videregaaende emner, nivaa 2"),
 
 	/**
 	 * The '<em><b>Third Year Subjects Level3</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum LevelType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	THIRD_YEAR_SUBJECTS_LEVEL3(2, "thirdYearSubjectsLevel3", "third Year Subjects, Level3"),
+	THIRD_YEAR_SUBJECTS_LEVEL3(2, "thirdYearSubjectsLevel3", "Tredjeaarsemner, nivaa 3"),
 
 	/**
 	 * The '<em><b>Second Degree</b></em>' literal object.
@@ -56,14 +56,14 @@ public enum LevelType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SECOND_DEGREE(3, "secondDegree", "second degree");
+	SECOND_DEGREE(3, "secondDegree", "Hoyere grads nivaa");
 
 	/**
 	 * The '<em><b>Foundation Course Level1</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #FOUNDATION_COURSE_LEVEL1
-	 * @model name="foundationCourseLevel1" literal="foundation Course, Level1"
+	 * @model name="foundationCourseLevel1" literal="Grunnleggende emner, nivaa 1"
 	 * @generated
 	 * @ordered
 	 */
@@ -74,7 +74,7 @@ public enum LevelType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #INTERMEDIATE_COURSE_LEVEL2
-	 * @model name="intermediateCourseLevel2" literal="intermediate Course, Level2"
+	 * @model name="intermediateCourseLevel2" literal="Videregaaende emner, nivaa 2"
 	 * @generated
 	 * @ordered
 	 */
@@ -85,7 +85,7 @@ public enum LevelType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #THIRD_YEAR_SUBJECTS_LEVEL3
-	 * @model name="thirdYearSubjectsLevel3" literal="third Year Subjects, Level3"
+	 * @model name="thirdYearSubjectsLevel3" literal="Tredjeaarsemner, nivaa 3"
 	 * @generated
 	 * @ordered
 	 */
@@ -96,7 +96,7 @@ public enum LevelType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #SECOND_DEGREE
-	 * @model name="secondDegree" literal="second degree"
+	 * @model name="secondDegree" literal="Hoyere grads nivaa"
 	 * @generated
 	 * @ordered
 	 */

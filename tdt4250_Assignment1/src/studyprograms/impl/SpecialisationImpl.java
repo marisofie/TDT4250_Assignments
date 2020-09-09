@@ -59,14 +59,14 @@ public class SpecialisationImpl extends MinimalEObjectImpl.Container implements 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getChildSpecialisations() <em>Child Specialisations</em>}' containment reference.
+	 * The cached value of the '{@link #getChildSpecialisations() <em>Child Specialisations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getChildSpecialisations()
 	 * @generated
 	 * @ordered
 	 */
-	protected Specialisation childSpecialisations;
+	protected EList<Specialisation> childSpecialisations;
 
 	/**
 	 * The cached value of the '{@link #getSemesters() <em>Semesters</em>}' containment reference list.
@@ -123,42 +123,11 @@ public class SpecialisationImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Specialisation getChildSpecialisations() {
+	public EList<Specialisation> getChildSpecialisations() {
+		if (childSpecialisations == null) {
+			childSpecialisations = new EObjectContainmentEList<Specialisation>(Specialisation.class, this, StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS);
+		}
 		return childSpecialisations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetChildSpecialisations(Specialisation newChildSpecialisations, NotificationChain msgs) {
-		Specialisation oldChildSpecialisations = childSpecialisations;
-		childSpecialisations = newChildSpecialisations;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS, oldChildSpecialisations, newChildSpecialisations);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setChildSpecialisations(Specialisation newChildSpecialisations) {
-		if (newChildSpecialisations != childSpecialisations) {
-			NotificationChain msgs = null;
-			if (childSpecialisations != null)
-				msgs = ((InternalEObject)childSpecialisations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS, null, msgs);
-			if (newChildSpecialisations != null)
-				msgs = ((InternalEObject)newChildSpecialisations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS, null, msgs);
-			msgs = basicSetChildSpecialisations(newChildSpecialisations, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS, newChildSpecialisations, newChildSpecialisations));
 	}
 
 	/**
@@ -182,7 +151,7 @@ public class SpecialisationImpl extends MinimalEObjectImpl.Container implements 
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS:
-				return basicSetChildSpecialisations(null, msgs);
+				return ((InternalEList<?>)getChildSpecialisations()).basicRemove(otherEnd, msgs);
 			case StudyprogramsPackage.SPECIALISATION__SEMESTERS:
 				return ((InternalEList<?>)getSemesters()).basicRemove(otherEnd, msgs);
 		}
@@ -220,7 +189,8 @@ public class SpecialisationImpl extends MinimalEObjectImpl.Container implements 
 				setName((String)newValue);
 				return;
 			case StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS:
-				setChildSpecialisations((Specialisation)newValue);
+				getChildSpecialisations().clear();
+				getChildSpecialisations().addAll((Collection<? extends Specialisation>)newValue);
 				return;
 			case StudyprogramsPackage.SPECIALISATION__SEMESTERS:
 				getSemesters().clear();
@@ -242,7 +212,7 @@ public class SpecialisationImpl extends MinimalEObjectImpl.Container implements 
 				setName(NAME_EDEFAULT);
 				return;
 			case StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS:
-				setChildSpecialisations((Specialisation)null);
+				getChildSpecialisations().clear();
 				return;
 			case StudyprogramsPackage.SPECIALISATION__SEMESTERS:
 				getSemesters().clear();
@@ -262,7 +232,7 @@ public class SpecialisationImpl extends MinimalEObjectImpl.Container implements 
 			case StudyprogramsPackage.SPECIALISATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case StudyprogramsPackage.SPECIALISATION__CHILD_SPECIALISATIONS:
-				return childSpecialisations != null;
+				return childSpecialisations != null && !childSpecialisations.isEmpty();
 			case StudyprogramsPackage.SPECIALISATION__SEMESTERS:
 				return semesters != null && !semesters.isEmpty();
 		}

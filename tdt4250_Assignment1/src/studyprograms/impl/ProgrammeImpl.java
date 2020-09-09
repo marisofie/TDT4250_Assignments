@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import studyprograms.DegreeType;
 import studyprograms.Programme;
+import studyprograms.Semester;
 import studyprograms.Specialisation;
 import studyprograms.StudyprogramsPackage;
 
@@ -33,6 +34,7 @@ import studyprograms.StudyprogramsPackage;
  * <ul>
  *   <li>{@link studyprograms.impl.ProgrammeImpl#getName <em>Name</em>}</li>
  *   <li>{@link studyprograms.impl.ProgrammeImpl#getDegree <em>Degree</em>}</li>
+ *   <li>{@link studyprograms.impl.ProgrammeImpl#getSemesters <em>Semesters</em>}</li>
  *   <li>{@link studyprograms.impl.ProgrammeImpl#getSpecialisations <em>Specialisations</em>}</li>
  * </ul>
  *
@@ -78,6 +80,16 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	 * @ordered
 	 */
 	protected DegreeType degree = DEGREE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getSemesters() <em>Semesters</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSemesters()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Semester> semesters;
 
 	/**
 	 * The cached value of the '{@link #getSpecialisations() <em>Specialisations</em>}' containment reference list.
@@ -155,6 +167,18 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Semester> getSemesters() {
+		if (semesters == null) {
+			semesters = new EObjectContainmentEList<Semester>(Semester.class, this, StudyprogramsPackage.PROGRAMME__SEMESTERS);
+		}
+		return semesters;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Specialisation> getSpecialisations() {
 		if (specialisations == null) {
 			specialisations = new EObjectContainmentEList<Specialisation>(Specialisation.class, this, StudyprogramsPackage.PROGRAMME__SPECIALISATIONS);
@@ -170,6 +194,8 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case StudyprogramsPackage.PROGRAMME__SEMESTERS:
+				return ((InternalEList<?>)getSemesters()).basicRemove(otherEnd, msgs);
 			case StudyprogramsPackage.PROGRAMME__SPECIALISATIONS:
 				return ((InternalEList<?>)getSpecialisations()).basicRemove(otherEnd, msgs);
 		}
@@ -188,6 +214,8 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 				return getName();
 			case StudyprogramsPackage.PROGRAMME__DEGREE:
 				return getDegree();
+			case StudyprogramsPackage.PROGRAMME__SEMESTERS:
+				return getSemesters();
 			case StudyprogramsPackage.PROGRAMME__SPECIALISATIONS:
 				return getSpecialisations();
 		}
@@ -208,6 +236,10 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 				return;
 			case StudyprogramsPackage.PROGRAMME__DEGREE:
 				setDegree((DegreeType)newValue);
+				return;
+			case StudyprogramsPackage.PROGRAMME__SEMESTERS:
+				getSemesters().clear();
+				getSemesters().addAll((Collection<? extends Semester>)newValue);
 				return;
 			case StudyprogramsPackage.PROGRAMME__SPECIALISATIONS:
 				getSpecialisations().clear();
@@ -231,6 +263,9 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 			case StudyprogramsPackage.PROGRAMME__DEGREE:
 				setDegree(DEGREE_EDEFAULT);
 				return;
+			case StudyprogramsPackage.PROGRAMME__SEMESTERS:
+				getSemesters().clear();
+				return;
 			case StudyprogramsPackage.PROGRAMME__SPECIALISATIONS:
 				getSpecialisations().clear();
 				return;
@@ -250,6 +285,8 @@ public class ProgrammeImpl extends MinimalEObjectImpl.Container implements Progr
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case StudyprogramsPackage.PROGRAMME__DEGREE:
 				return degree != DEGREE_EDEFAULT;
+			case StudyprogramsPackage.PROGRAMME__SEMESTERS:
+				return semesters != null && !semesters.isEmpty();
 			case StudyprogramsPackage.PROGRAMME__SPECIALISATIONS:
 				return specialisations != null && !specialisations.isEmpty();
 		}

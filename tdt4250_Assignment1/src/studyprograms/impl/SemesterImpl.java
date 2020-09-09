@@ -14,8 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import studyprograms.CourseGroup;
 import studyprograms.Semester;
@@ -113,9 +112,24 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 */
 	public EList<CourseGroup> getCourseGroups() {
 		if (courseGroups == null) {
-			courseGroups = new EObjectContainmentEList<CourseGroup>(CourseGroup.class, this, StudyprogramsPackage.SEMESTER__COURSE_GROUPS);
+			courseGroups = new EObjectContainmentWithInverseEList<CourseGroup>(CourseGroup.class, this, StudyprogramsPackage.SEMESTER__COURSE_GROUPS, StudyprogramsPackage.COURSE_GROUP__SEMESTER);
 		}
 		return courseGroups;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case StudyprogramsPackage.SEMESTER__COURSE_GROUPS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCourseGroups()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

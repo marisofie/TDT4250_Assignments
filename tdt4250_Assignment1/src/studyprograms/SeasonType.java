@@ -10,109 +10,109 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Degree Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Season Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see studyprograms.StudyprogramsPackage#getDegreeType()
+ * @see studyprograms.StudyprogramsPackage#getSeasonType()
  * @model
  * @generated
  */
-public enum DegreeType implements Enumerator {
+public enum SeasonType implements Enumerator {
 	/**
-	 * The '<em><b>Bachelor</b></em>' literal object.
+	 * The '<em><b>Fall</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BACHELOR_VALUE
+	 * @see #FALL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	BACHELOR(0, "bachelor", "Bachelor"),
+	FALL(0, "fall", "Host"),
 
 	/**
-	 * The '<em><b>Master</b></em>' literal object.
+	 * The '<em><b>Spring</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MASTER_VALUE
+	 * @see #SPRING_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	MASTER(1, "master", "Master"),
+	SPRING(1, "spring", "Vaar"),
 
 	/**
-	 * The '<em><b>Integrated Master</b></em>' literal object.
+	 * The '<em><b>Both</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INTEGRATED_MASTER_VALUE
+	 * @see #BOTH_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	INTEGRATED_MASTER(2, "integratedMaster", "Integrert Master");
+	BOTH(2, "both", "Begge");
 
 	/**
-	 * The '<em><b>Bachelor</b></em>' literal value.
+	 * The '<em><b>Fall</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #BACHELOR
-	 * @model name="bachelor" literal="Bachelor"
+	 * @see #FALL
+	 * @model name="fall" literal="Host"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BACHELOR_VALUE = 0;
+	public static final int FALL_VALUE = 0;
 
 	/**
-	 * The '<em><b>Master</b></em>' literal value.
+	 * The '<em><b>Spring</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MASTER
-	 * @model name="master" literal="Master"
+	 * @see #SPRING
+	 * @model name="spring" literal="Vaar"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MASTER_VALUE = 1;
+	public static final int SPRING_VALUE = 1;
 
 	/**
-	 * The '<em><b>Integrated Master</b></em>' literal value.
+	 * The '<em><b>Both</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INTEGRATED_MASTER
-	 * @model name="integratedMaster" literal="Integrert Master"
+	 * @see #BOTH
+	 * @model name="both" literal="Begge"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INTEGRATED_MASTER_VALUE = 2;
+	public static final int BOTH_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Degree Type</b></em>' enumerators.
+	 * An array of all the '<em><b>Season Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final DegreeType[] VALUES_ARRAY =
-		new DegreeType[] {
-			BACHELOR,
-			MASTER,
-			INTEGRATED_MASTER,
+	private static final SeasonType[] VALUES_ARRAY =
+		new SeasonType[] {
+			FALL,
+			SPRING,
+			BOTH,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Degree Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Season Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<DegreeType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<SeasonType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Degree Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Season Type</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DegreeType get(String literal) {
+	public static SeasonType get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			DegreeType result = VALUES_ARRAY[i];
+			SeasonType result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -121,16 +121,16 @@ public enum DegreeType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Degree Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Season Type</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DegreeType getByName(String name) {
+	public static SeasonType getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			DegreeType result = VALUES_ARRAY[i];
+			SeasonType result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -139,18 +139,18 @@ public enum DegreeType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Degree Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Season Type</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static DegreeType get(int value) {
+	public static SeasonType get(int value) {
 		switch (value) {
-			case BACHELOR_VALUE: return BACHELOR;
-			case MASTER_VALUE: return MASTER;
-			case INTEGRATED_MASTER_VALUE: return INTEGRATED_MASTER;
+			case FALL_VALUE: return FALL;
+			case SPRING_VALUE: return SPRING;
+			case BOTH_VALUE: return BOTH;
 		}
 		return null;
 	}
@@ -182,7 +182,7 @@ public enum DegreeType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private DegreeType(int value, String name, String literal) {
+	private SeasonType(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -226,4 +226,4 @@ public enum DegreeType implements Enumerator {
 		return literal;
 	}
 	
-} //DegreeType
+} //SeasonType

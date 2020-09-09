@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see studyprograms.StudyprogramsFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore validationDelegates='http://www.eclipse.org/acceleo/query/1.0'"
  * @generated
  */
 public interface StudyprogramsPackage extends EPackage {
@@ -66,70 +67,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourse()
 	 * @generated
 	 */
-	int COURSE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE__CODE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Subject</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE__SUBJECT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE__LEVEL = 2;
-
-	/**
-	 * The feature id for the '<em><b>Credit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE__CREDIT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE__NAME = 4;
-
-	/**
-	 * The number of structural features of the '<em>Course</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE_FEATURE_COUNT = 5;
-
-	/**
-	 * The number of operations of the '<em>Course</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE_OPERATION_COUNT = 0;
+	int COURSE = 1;
 
 	/**
 	 * The meta object id for the '{@link studyprograms.impl.ProgrammeImpl <em>Programme</em>}' class.
@@ -139,52 +77,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getProgramme()
 	 * @generated
 	 */
-	int PROGRAMME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMME__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Degree</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMME__DEGREE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Specialisations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMME__SPECIALISATIONS = 2;
-
-	/**
-	 * The number of structural features of the '<em>Programme</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMME_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Programme</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAMME_OPERATION_COUNT = 0;
+	int PROGRAMME = 2;
 
 	/**
 	 * The meta object id for the '{@link studyprograms.impl.SpecialisationImpl <em>Specialisation</em>}' class.
@@ -194,52 +87,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getSpecialisation()
 	 * @generated
 	 */
-	int SPECIALISATION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIALISATION__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Child Specialisations</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIALISATION__CHILD_SPECIALISATIONS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Semesters</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIALISATION__SEMESTERS = 2;
-
-	/**
-	 * The number of structural features of the '<em>Specialisation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIALISATION_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Specialisation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIALISATION_OPERATION_COUNT = 0;
+	int SPECIALISATION = 3;
 
 	/**
 	 * The meta object id for the '{@link studyprograms.impl.UniversityImpl <em>University</em>}' class.
@@ -249,7 +97,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getUniversity()
 	 * @generated
 	 */
-	int UNIVERSITY = 3;
+	int UNIVERSITY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Programmes</b></em>' containment reference list.
@@ -288,14 +136,76 @@ public interface StudyprogramsPackage extends EPackage {
 	int UNIVERSITY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link studyprograms.impl.CourseGroupImpl <em>Course Group</em>}' class.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see studyprograms.impl.CourseGroupImpl
-	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseGroup()
 	 * @generated
+	 * @ordered
 	 */
-	int COURSE_GROUP = 4;
+	int COURSE__LABEL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__CODE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Subject</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__SUBJECT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__LEVEL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__CREDITS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Season</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__SEASON = 5;
+
+	/**
+	 * The number of structural features of the '<em>Course</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Course</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -304,34 +214,107 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_GROUP__NAME = 0;
+	int PROGRAMME__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Courses</b></em>' reference list.
+	 * The feature id for the '<em><b>Degree</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_GROUP__COURSES = 1;
+	int PROGRAMME__DEGREE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Course Group</em>' class.
+	 * The feature id for the '<em><b>Semesters</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_GROUP_FEATURE_COUNT = 2;
+	int PROGRAMME__SEMESTERS = 2;
 
 	/**
-	 * The number of operations of the '<em>Course Group</em>' class.
+	 * The feature id for the '<em><b>Specialisations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_GROUP_OPERATION_COUNT = 0;
+	int PROGRAMME__SPECIALISATIONS = 3;
+
+	/**
+	 * The number of structural features of the '<em>Programme</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMME_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Programme</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAMME_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALISATION__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Child Specialisations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALISATION__CHILD_SPECIALISATIONS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Semesters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALISATION__SEMESTERS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Specialisation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALISATION_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Specialisation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIALISATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link studyprograms.impl.CourseGroupImpl <em>Course Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.impl.CourseGroupImpl
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseGroup()
+	 * @generated
+	 */
+	int COURSE_GROUP = 5;
 
 	/**
 	 * The meta object id for the '{@link studyprograms.impl.SemesterImpl <em>Semester</em>}' class.
@@ -341,7 +324,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getSemester()
 	 * @generated
 	 */
-	int SEMESTER = 5;
+	int SEMESTER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Semester Number</b></em>' attribute.
@@ -380,6 +363,115 @@ public interface StudyprogramsPackage extends EPackage {
 	int SEMESTER_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Course Allocations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP__COURSE_ALLOCATIONS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Min Required Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP__MIN_REQUIRED_CREDITS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Semester</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP__SEMESTER = 3;
+
+	/**
+	 * The number of structural features of the '<em>Course Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Course Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link studyprograms.impl.CourseAllocationImpl <em>Course Allocation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.impl.CourseAllocationImpl
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseAllocation()
+	 * @generated
+	 */
+	int COURSE_ALLOCATION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION__STATUS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Course Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION__COURSE_GROUP = 1;
+
+	/**
+	 * The feature id for the '<em><b>Course</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION__COURSE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Course Allocation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Course Allocation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link studyprograms.LevelType <em>Level Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -387,7 +479,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getLevelType()
 	 * @generated
 	 */
-	int LEVEL_TYPE = 6;
+	int LEVEL_TYPE = 8;
 
 	/**
 	 * The meta object id for the '{@link studyprograms.DegreeType <em>Degree Type</em>}' enum.
@@ -407,8 +499,28 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseGroupType()
 	 * @generated
 	 */
-	int COURSE_GROUP_TYPE = 8;
+	int COURSE_GROUP_TYPE = 9;
 
+
+	/**
+	 * The meta object id for the '{@link studyprograms.CourseStatusType <em>Course Status Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.CourseStatusType
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseStatusType()
+	 * @generated
+	 */
+	int COURSE_STATUS_TYPE = 10;
+
+	/**
+	 * The meta object id for the '{@link studyprograms.SeasonType <em>Season Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.SeasonType
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getSeasonType()
+	 * @generated
+	 */
+	int SEASON_TYPE = 11;
 
 	/**
 	 * The meta object id for the '<em>Course Code</em>' data type.
@@ -418,7 +530,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseCode()
 	 * @generated
 	 */
-	int COURSE_CODE = 9;
+	int COURSE_CODE = 12;
 
 
 	/**
@@ -428,7 +540,17 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseCredit()
 	 * @generated
 	 */
-	int COURSE_CREDIT = 10;
+	int COURSE_CREDIT = 13;
+
+
+	/**
+	 * The meta object id for the '<em>Semester Number</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getSemesterNumber()
+	 * @generated
+	 */
+	int SEMESTER_NUMBER = 14;
 
 
 	/**
@@ -440,6 +562,17 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCourse();
+
+	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.Course#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see studyprograms.Course#getLabel()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_Label();
 
 	/**
 	 * Returns the meta object for the attribute '{@link studyprograms.Course#getCode <em>Code</em>}'.
@@ -464,17 +597,6 @@ public interface StudyprogramsPackage extends EPackage {
 	EAttribute getCourse_Subject();
 
 	/**
-	 * Returns the meta object for the attribute '{@link studyprograms.Course#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see studyprograms.Course#getName()
-	 * @see #getCourse()
-	 * @generated
-	 */
-	EAttribute getCourse_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link studyprograms.Course#getLevel <em>Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -486,15 +608,26 @@ public interface StudyprogramsPackage extends EPackage {
 	EAttribute getCourse_Level();
 
 	/**
-	 * Returns the meta object for the attribute '{@link studyprograms.Course#getCredit <em>Credit</em>}'.
+	 * Returns the meta object for the attribute '{@link studyprograms.Course#getCredits <em>Credits</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Credit</em>'.
-	 * @see studyprograms.Course#getCredit()
+	 * @return the meta object for the attribute '<em>Credits</em>'.
+	 * @see studyprograms.Course#getCredits()
 	 * @see #getCourse()
 	 * @generated
 	 */
-	EAttribute getCourse_Credit();
+	EAttribute getCourse_Credits();
+
+	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.Course#getSeason <em>Season</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Season</em>'.
+	 * @see studyprograms.Course#getSeason()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_Season();
 
 	/**
 	 * Returns the meta object for class '{@link studyprograms.Programme <em>Programme</em>}'.
@@ -529,6 +662,17 @@ public interface StudyprogramsPackage extends EPackage {
 	EAttribute getProgramme_Degree();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link studyprograms.Programme#getSemesters <em>Semesters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Semesters</em>'.
+	 * @see studyprograms.Programme#getSemesters()
+	 * @see #getProgramme()
+	 * @generated
+	 */
+	EReference getProgramme_Semesters();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link studyprograms.Programme#getSpecialisations <em>Specialisations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -561,10 +705,10 @@ public interface StudyprogramsPackage extends EPackage {
 	EAttribute getSpecialisation_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link studyprograms.Specialisation#getChildSpecialisations <em>Child Specialisations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link studyprograms.Specialisation#getChildSpecialisations <em>Child Specialisations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Child Specialisations</em>'.
+	 * @return the meta object for the containment reference list '<em>Child Specialisations</em>'.
 	 * @see studyprograms.Specialisation#getChildSpecialisations()
 	 * @see #getSpecialisation()
 	 * @generated
@@ -636,15 +780,37 @@ public interface StudyprogramsPackage extends EPackage {
 	EAttribute getCourseGroup_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link studyprograms.CourseGroup#getCourses <em>Courses</em>}'.
+	 * Returns the meta object for the containment reference list '{@link studyprograms.CourseGroup#getCourseAllocations <em>Course Allocations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Courses</em>'.
-	 * @see studyprograms.CourseGroup#getCourses()
+	 * @return the meta object for the containment reference list '<em>Course Allocations</em>'.
+	 * @see studyprograms.CourseGroup#getCourseAllocations()
 	 * @see #getCourseGroup()
 	 * @generated
 	 */
-	EReference getCourseGroup_Courses();
+	EReference getCourseGroup_CourseAllocations();
+
+	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.CourseGroup#getMinRequiredCredits <em>Min Required Credits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min Required Credits</em>'.
+	 * @see studyprograms.CourseGroup#getMinRequiredCredits()
+	 * @see #getCourseGroup()
+	 * @generated
+	 */
+	EAttribute getCourseGroup_MinRequiredCredits();
+
+	/**
+	 * Returns the meta object for the container reference '{@link studyprograms.CourseGroup#getSemester <em>Semester</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Semester</em>'.
+	 * @see studyprograms.CourseGroup#getSemester()
+	 * @see #getCourseGroup()
+	 * @generated
+	 */
+	EReference getCourseGroup_Semester();
 
 	/**
 	 * Returns the meta object for class '{@link studyprograms.Semester <em>Semester</em>}'.
@@ -679,6 +845,49 @@ public interface StudyprogramsPackage extends EPackage {
 	EReference getSemester_CourseGroups();
 
 	/**
+	 * Returns the meta object for class '{@link studyprograms.CourseAllocation <em>Course Allocation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Course Allocation</em>'.
+	 * @see studyprograms.CourseAllocation
+	 * @generated
+	 */
+	EClass getCourseAllocation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.CourseAllocation#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Status</em>'.
+	 * @see studyprograms.CourseAllocation#getStatus()
+	 * @see #getCourseAllocation()
+	 * @generated
+	 */
+	EAttribute getCourseAllocation_Status();
+
+	/**
+	 * Returns the meta object for the container reference '{@link studyprograms.CourseAllocation#getCourseGroup <em>Course Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Course Group</em>'.
+	 * @see studyprograms.CourseAllocation#getCourseGroup()
+	 * @see #getCourseAllocation()
+	 * @generated
+	 */
+	EReference getCourseAllocation_CourseGroup();
+
+	/**
+	 * Returns the meta object for the reference '{@link studyprograms.CourseAllocation#getCourse <em>Course</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Course</em>'.
+	 * @see studyprograms.CourseAllocation#getCourse()
+	 * @see #getCourseAllocation()
+	 * @generated
+	 */
+	EReference getCourseAllocation_Course();
+
+	/**
 	 * Returns the meta object for enum '{@link studyprograms.LevelType <em>Level Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -709,6 +918,26 @@ public interface StudyprogramsPackage extends EPackage {
 	EEnum getCourseGroupType();
 
 	/**
+	 * Returns the meta object for enum '{@link studyprograms.CourseStatusType <em>Course Status Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Course Status Type</em>'.
+	 * @see studyprograms.CourseStatusType
+	 * @generated
+	 */
+	EEnum getCourseStatusType();
+
+	/**
+	 * Returns the meta object for enum '{@link studyprograms.SeasonType <em>Season Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Season Type</em>'.
+	 * @see studyprograms.SeasonType
+	 * @generated
+	 */
+	EEnum getSeasonType();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Course Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -725,9 +954,21 @@ public interface StudyprogramsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Course Credit</em>'.
 	 * @model instanceClass="float"
+	 *        extendedMetaData="maxInclusive='60' minInclusive='0'"
 	 * @generated
 	 */
 	EDataType getCourseCredit();
+
+	/**
+	 * Returns the meta object for data type '<em>Semester Number</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Semester Number</em>'.
+	 * @model instanceClass="int"
+	 *        extendedMetaData="minInclusive='1'"
+	 * @generated
+	 */
+	EDataType getSemesterNumber();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -763,6 +1004,14 @@ public interface StudyprogramsPackage extends EPackage {
 		EClass COURSE = eINSTANCE.getCourse();
 
 		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__LABEL = eINSTANCE.getCourse_Label();
+
+		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -779,14 +1028,6 @@ public interface StudyprogramsPackage extends EPackage {
 		EAttribute COURSE__SUBJECT = eINSTANCE.getCourse_Subject();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COURSE__NAME = eINSTANCE.getCourse_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -795,12 +1036,20 @@ public interface StudyprogramsPackage extends EPackage {
 		EAttribute COURSE__LEVEL = eINSTANCE.getCourse_Level();
 
 		/**
-		 * The meta object literal for the '<em><b>Credit</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Credits</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COURSE__CREDIT = eINSTANCE.getCourse_Credit();
+		EAttribute COURSE__CREDITS = eINSTANCE.getCourse_Credits();
+
+		/**
+		 * The meta object literal for the '<em><b>Season</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__SEASON = eINSTANCE.getCourse_Season();
 
 		/**
 		 * The meta object literal for the '{@link studyprograms.impl.ProgrammeImpl <em>Programme</em>}' class.
@@ -829,6 +1078,14 @@ public interface StudyprogramsPackage extends EPackage {
 		EAttribute PROGRAMME__DEGREE = eINSTANCE.getProgramme_Degree();
 
 		/**
+		 * The meta object literal for the '<em><b>Semesters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROGRAMME__SEMESTERS = eINSTANCE.getProgramme_Semesters();
+
+		/**
 		 * The meta object literal for the '<em><b>Specialisations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -855,7 +1112,7 @@ public interface StudyprogramsPackage extends EPackage {
 		EAttribute SPECIALISATION__NAME = eINSTANCE.getSpecialisation_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Child Specialisations</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Child Specialisations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -915,12 +1172,28 @@ public interface StudyprogramsPackage extends EPackage {
 		EAttribute COURSE_GROUP__NAME = eINSTANCE.getCourseGroup_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Courses</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Course Allocations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COURSE_GROUP__COURSES = eINSTANCE.getCourseGroup_Courses();
+		EReference COURSE_GROUP__COURSE_ALLOCATIONS = eINSTANCE.getCourseGroup_CourseAllocations();
+
+		/**
+		 * The meta object literal for the '<em><b>Min Required Credits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE_GROUP__MIN_REQUIRED_CREDITS = eINSTANCE.getCourseGroup_MinRequiredCredits();
+
+		/**
+		 * The meta object literal for the '<em><b>Semester</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_GROUP__SEMESTER = eINSTANCE.getCourseGroup_Semester();
 
 		/**
 		 * The meta object literal for the '{@link studyprograms.impl.SemesterImpl <em>Semester</em>}' class.
@@ -947,6 +1220,40 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SEMESTER__COURSE_GROUPS = eINSTANCE.getSemester_CourseGroups();
+
+		/**
+		 * The meta object literal for the '{@link studyprograms.impl.CourseAllocationImpl <em>Course Allocation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.impl.CourseAllocationImpl
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseAllocation()
+		 * @generated
+		 */
+		EClass COURSE_ALLOCATION = eINSTANCE.getCourseAllocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE_ALLOCATION__STATUS = eINSTANCE.getCourseAllocation_Status();
+
+		/**
+		 * The meta object literal for the '<em><b>Course Group</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_ALLOCATION__COURSE_GROUP = eINSTANCE.getCourseAllocation_CourseGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Course</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_ALLOCATION__COURSE = eINSTANCE.getCourseAllocation_Course();
 
 		/**
 		 * The meta object literal for the '{@link studyprograms.LevelType <em>Level Type</em>}' enum.
@@ -979,6 +1286,26 @@ public interface StudyprogramsPackage extends EPackage {
 		EEnum COURSE_GROUP_TYPE = eINSTANCE.getCourseGroupType();
 
 		/**
+		 * The meta object literal for the '{@link studyprograms.CourseStatusType <em>Course Status Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.CourseStatusType
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseStatusType()
+		 * @generated
+		 */
+		EEnum COURSE_STATUS_TYPE = eINSTANCE.getCourseStatusType();
+
+		/**
+		 * The meta object literal for the '{@link studyprograms.SeasonType <em>Season Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.SeasonType
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getSeasonType()
+		 * @generated
+		 */
+		EEnum SEASON_TYPE = eINSTANCE.getSeasonType();
+
+		/**
 		 * The meta object literal for the '<em>Course Code</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -996,6 +1323,15 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType COURSE_CREDIT = eINSTANCE.getCourseCredit();
+
+		/**
+		 * The meta object literal for the '<em>Semester Number</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getSemesterNumber()
+		 * @generated
+		 */
+		EDataType SEMESTER_NUMBER = eINSTANCE.getSemesterNumber();
 
 	}
 
