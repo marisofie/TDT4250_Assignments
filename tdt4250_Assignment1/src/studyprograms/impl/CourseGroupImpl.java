@@ -16,10 +16,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import studyprograms.CourseAllocation;
 import studyprograms.CourseGroup;
 import studyprograms.CourseGroupType;
+import studyprograms.Semester;
 import studyprograms.StudyprogramsPackage;
 
 /**
@@ -32,6 +34,8 @@ import studyprograms.StudyprogramsPackage;
  * <ul>
  *   <li>{@link studyprograms.impl.CourseGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link studyprograms.impl.CourseGroupImpl#getCourseAllocations <em>Course Allocations</em>}</li>
+ *   <li>{@link studyprograms.impl.CourseGroupImpl#getMinRequiredCredits <em>Min Required Credits</em>}</li>
+ *   <li>{@link studyprograms.impl.CourseGroupImpl#getSemester <em>Semester</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +70,26 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * @ordered
 	 */
 	protected EList<CourseAllocation> courseAllocations;
+
+	/**
+	 * The default value of the '{@link #getMinRequiredCredits() <em>Min Required Credits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinRequiredCredits()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float MIN_REQUIRED_CREDITS_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getMinRequiredCredits() <em>Min Required Credits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinRequiredCredits()
+	 * @generated
+	 * @ordered
+	 */
+	protected float minRequiredCredits = MIN_REQUIRED_CREDITS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,12 +148,78 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getMinRequiredCredits() {
+		return minRequiredCredits;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMinRequiredCredits(float newMinRequiredCredits) {
+		float oldMinRequiredCredits = minRequiredCredits;
+		minRequiredCredits = newMinRequiredCredits;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.COURSE_GROUP__MIN_REQUIRED_CREDITS, oldMinRequiredCredits, minRequiredCredits));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Semester getSemester() {
+		if (eContainerFeatureID() != StudyprogramsPackage.COURSE_GROUP__SEMESTER) return null;
+		return (Semester)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSemester(Semester newSemester, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newSemester, StudyprogramsPackage.COURSE_GROUP__SEMESTER, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSemester(Semester newSemester) {
+		if (newSemester != eInternalContainer() || (eContainerFeatureID() != StudyprogramsPackage.COURSE_GROUP__SEMESTER && newSemester != null)) {
+			if (EcoreUtil.isAncestor(this, newSemester))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newSemester != null)
+				msgs = ((InternalEObject)newSemester).eInverseAdd(this, StudyprogramsPackage.SEMESTER__COURSE_GROUPS, Semester.class, msgs);
+			msgs = basicSetSemester(newSemester, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.COURSE_GROUP__SEMESTER, newSemester, newSemester));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case StudyprogramsPackage.COURSE_GROUP__COURSE_ALLOCATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCourseAllocations()).basicAdd(otherEnd, msgs);
+			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetSemester((Semester)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -144,8 +234,24 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 		switch (featureID) {
 			case StudyprogramsPackage.COURSE_GROUP__COURSE_ALLOCATIONS:
 				return ((InternalEList<?>)getCourseAllocations()).basicRemove(otherEnd, msgs);
+			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
+				return basicSetSemester(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
+				return eInternalContainer().eInverseRemove(this, StudyprogramsPackage.SEMESTER__COURSE_GROUPS, Semester.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
 
 	/**
@@ -160,6 +266,10 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 				return getName();
 			case StudyprogramsPackage.COURSE_GROUP__COURSE_ALLOCATIONS:
 				return getCourseAllocations();
+			case StudyprogramsPackage.COURSE_GROUP__MIN_REQUIRED_CREDITS:
+				return getMinRequiredCredits();
+			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
+				return getSemester();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,6 +290,12 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 				getCourseAllocations().clear();
 				getCourseAllocations().addAll((Collection<? extends CourseAllocation>)newValue);
 				return;
+			case StudyprogramsPackage.COURSE_GROUP__MIN_REQUIRED_CREDITS:
+				setMinRequiredCredits((Float)newValue);
+				return;
+			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
+				setSemester((Semester)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -198,6 +314,12 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 			case StudyprogramsPackage.COURSE_GROUP__COURSE_ALLOCATIONS:
 				getCourseAllocations().clear();
 				return;
+			case StudyprogramsPackage.COURSE_GROUP__MIN_REQUIRED_CREDITS:
+				setMinRequiredCredits(MIN_REQUIRED_CREDITS_EDEFAULT);
+				return;
+			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
+				setSemester((Semester)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -214,6 +336,10 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 				return name != NAME_EDEFAULT;
 			case StudyprogramsPackage.COURSE_GROUP__COURSE_ALLOCATIONS:
 				return courseAllocations != null && !courseAllocations.isEmpty();
+			case StudyprogramsPackage.COURSE_GROUP__MIN_REQUIRED_CREDITS:
+				return minRequiredCredits != MIN_REQUIRED_CREDITS_EDEFAULT;
+			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
+				return getSemester() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -230,6 +356,8 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", minRequiredCredits: ");
+		result.append(minRequiredCredits);
 		result.append(')');
 		return result.toString();
 	}

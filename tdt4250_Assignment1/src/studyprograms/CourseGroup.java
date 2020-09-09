@@ -17,10 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link studyprograms.CourseGroup#getName <em>Name</em>}</li>
  *   <li>{@link studyprograms.CourseGroup#getCourseAllocations <em>Course Allocations</em>}</li>
+ *   <li>{@link studyprograms.CourseGroup#getMinRequiredCredits <em>Min Required Credits</em>}</li>
+ *   <li>{@link studyprograms.CourseGroup#getSemester <em>Semester</em>}</li>
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getCourseGroup()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='courseSeasonMatchesSemester'"
  * @generated
  */
 public interface CourseGroup extends EObject {
@@ -62,5 +64,51 @@ public interface CourseGroup extends EObject {
 	 * @generated
 	 */
 	EList<CourseAllocation> getCourseAllocations();
+
+	/**
+	 * Returns the value of the '<em><b>Min Required Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Min Required Credits</em>' attribute.
+	 * @see #setMinRequiredCredits(float)
+	 * @see studyprograms.StudyprogramsPackage#getCourseGroup_MinRequiredCredits()
+	 * @model
+	 * @generated
+	 */
+	float getMinRequiredCredits();
+
+	/**
+	 * Sets the value of the '{@link studyprograms.CourseGroup#getMinRequiredCredits <em>Min Required Credits</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Min Required Credits</em>' attribute.
+	 * @see #getMinRequiredCredits()
+	 * @generated
+	 */
+	void setMinRequiredCredits(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Semester</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link studyprograms.Semester#getCourseGroups <em>Course Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Semester</em>' container reference.
+	 * @see #setSemester(Semester)
+	 * @see studyprograms.StudyprogramsPackage#getCourseGroup_Semester()
+	 * @see studyprograms.Semester#getCourseGroups
+	 * @model opposite="courseGroups" transient="false"
+	 * @generated
+	 */
+	Semester getSemester();
+
+	/**
+	 * Sets the value of the '{@link studyprograms.CourseGroup#getSemester <em>Semester</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Semester</em>' container reference.
+	 * @see #getSemester()
+	 * @generated
+	 */
+	void setSemester(Semester value);
 
 } // CourseGroup

@@ -85,10 +85,14 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 				return createCourseGroupTypeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.COURSE_STATUS_TYPE:
 				return createCourseStatusTypeFromString(eDataType, initialValue);
+			case StudyprogramsPackage.SEASON_TYPE:
+				return createSeasonTypeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.COURSE_CODE:
 				return createCourseCodeFromString(eDataType, initialValue);
 			case StudyprogramsPackage.COURSE_CREDIT:
 				return createCourseCreditFromString(eDataType, initialValue);
+			case StudyprogramsPackage.SEMESTER_NUMBER:
+				return createSemesterNumberFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -110,10 +114,14 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 				return convertCourseGroupTypeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.COURSE_STATUS_TYPE:
 				return convertCourseStatusTypeToString(eDataType, instanceValue);
+			case StudyprogramsPackage.SEASON_TYPE:
+				return convertSeasonTypeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.COURSE_CODE:
 				return convertCourseCodeToString(eDataType, instanceValue);
 			case StudyprogramsPackage.COURSE_CREDIT:
 				return convertCourseCreditToString(eDataType, instanceValue);
+			case StudyprogramsPackage.SEMESTER_NUMBER:
+				return convertSemesterNumberToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -272,6 +280,26 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SeasonType createSeasonTypeFromString(EDataType eDataType, String initialValue) {
+		SeasonType result = SeasonType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSeasonTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String createCourseCodeFromString(EDataType eDataType, String initialValue) {
@@ -305,6 +333,24 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 	 * @generated
 	 */
 	public String convertCourseCreditToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Integer createSemesterNumberFromString(EDataType eDataType, String initialValue) {
+		return (Integer)super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSemesterNumberToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

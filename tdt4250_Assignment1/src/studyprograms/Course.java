@@ -18,10 +18,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link studyprograms.Course#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.Course#getLevel <em>Level</em>}</li>
  *   <li>{@link studyprograms.Course#getCredits <em>Credits</em>}</li>
+ *   <li>{@link studyprograms.Course#getSeason <em>Season</em>}</li>
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getCourse()
- * @model
+ * @model annotation="http://www.eclipse.org/acceleo/query/1.0 derivation='self.label = self.code + self.subject'"
  * @generated
  */
 public interface Course extends EObject {
@@ -30,11 +31,22 @@ public interface Course extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Label</em>' attribute.
+	 * @see #setLabel(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Label()
-	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 * @model transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
 	String getLabel();
+
+	/**
+	 * Sets the value of the '{@link studyprograms.Course#getLabel <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Label</em>' attribute.
+	 * @see #getLabel()
+	 * @generated
+	 */
+	void setLabel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
@@ -126,5 +138,30 @@ public interface Course extends EObject {
 	 * @generated
 	 */
 	void setCredits(float value);
+
+	/**
+	 * Returns the value of the '<em><b>Season</b></em>' attribute.
+	 * The literals are from the enumeration {@link studyprograms.SeasonType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Season</em>' attribute.
+	 * @see studyprograms.SeasonType
+	 * @see #setSeason(SeasonType)
+	 * @see studyprograms.StudyprogramsPackage#getCourse_Season()
+	 * @model
+	 * @generated
+	 */
+	SeasonType getSeason();
+
+	/**
+	 * Sets the value of the '{@link studyprograms.Course#getSeason <em>Season</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Season</em>' attribute.
+	 * @see studyprograms.SeasonType
+	 * @see #getSeason()
+	 * @generated
+	 */
+	void setSeason(SeasonType value);
 
 } // Course

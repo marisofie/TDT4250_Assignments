@@ -8,8 +8,10 @@
   <programmes
       name="Datateknologi"
       degree="Integrert Master">
-    <semesters>
-      <courseGroups>
+    <semesters
+        semesterNumber="1">
+      <courseGroups
+          minRequiredCredits="30.0">
         <courseAllocations
             course="TMA4100"/>
         <courseAllocations
@@ -21,15 +23,17 @@
       <childSpecialisations
           name="Programvareutvikling">
         <semesters
-            semesterNumber="6">
-          <courseGroups>
+            semesterNumber="7">
+          <courseGroups
+              minRequiredCredits="22.5">
             <courseAllocations
                 course="TDT4250"/>
             <courseAllocations
                 course="TDT4290"/>
           </courseGroups>
           <courseGroups
-              name="Komplementaere emner">
+              name="Komplementaere emner"
+              minRequiredCredits="7.5">
             <courseAllocations
                 status="VB"
                 course="AAR4250"/>
@@ -39,13 +43,22 @@
           </courseGroups>
         </semesters>
         <semesters
-            semesterNumber="7">
+            semesterNumber="8">
           <courseGroups
-              name="Eksperter i Team">
+              name="Eksperter i Team"
+              minRequiredCredits="7.5">
             <courseAllocations
                 status="V"
                 course="BEIT4014"/>
           </courseGroups>
+          <courseGroups
+              minRequiredCredits="7.5"/>
+          <courseGroups
+              name="Ingenioremne annet studieprogram"
+              minRequiredCredits="7.5"/>
+          <courseGroups
+              name="Valgbare emner"
+              minRequiredCredits="7.5"/>
         </semesters>
       </childSpecialisations>
       <childSpecialisations
@@ -53,15 +66,17 @@
       <childSpecialisations
           name="Digital virksomhetsutvikling"/>
       <semesters
-          semesterNumber="4">
-        <courseGroups>
+          semesterNumber="5">
+        <courseGroups
+            minRequiredCredits="22.5">
           <courseAllocations
               course="TDT4136"/>
           <courseAllocations
               course="TDT4175"/>
         </courseGroups>
         <courseGroups
-            name="Valgbare emner">
+            name="Valgbare emner"
+            minRequiredCredits="7.5">
           <courseAllocations
               status="VA"
               course="IT2810"/>
@@ -73,52 +88,57 @@
       name="Informatikk">
     <specialisations
         name="Software">
-      <semesters>
-        <courseGroups>
+      <semesters
+          semesterNumber="1">
+        <courseGroups
+            minRequiredCredits="22.5">
           <courseAllocations
               status="M2A"
               course="TDT4250"/>
           <courseAllocations
               course="TDT4175"/>
         </courseGroups>
+        <courseGroups
+            minRequiredCredits="7.5"/>
       </semesters>
     </specialisations>
   </programmes>
-  <courses label="TDT4250 Avansert Programvaredesign"
+  <courses subject="Avansert programvaredesign"
       code="TDT4250"
       level="Hoyere grads nivaa"
       credits="7.5"/>
-  <courses label="TMA4100 Matematikk 1"
+  <courses subject="Matematikk 1"
       code="TMA4100"
       credits="7.5"/>
-  <courses label="TDT4110 Informasjonsteknologi grunnkurs"
+  <courses subject="Informasjonsteknologi, grunnkurs"
       code="TDT4110"
       credits="7.5"/>
-  <courses label="TDT4136 Introduksjon til kunstig intelligens"
+  <courses subject="Introduksjon til kunstig intelligens"
       code="TDT4136"
       level="Tredjeaarsemner, nivaa 3"
       credits="7.5"/>
-  <courses label="IT2810 Webutvikling"
+  <courses subject="Webutvikling"
       code="IT2810"
       level="Tredjeaarsemner, nivaa 3"
       credits="7.5"/>
-  <courses label="TDT4290 Kundestyrt prosjekt"
+  <courses subject="Kundestyrt prosjekt"
       code="TDT4290"
       level="Hoyere grads nivaa"
       credits="15.0"/>
-  <courses label="AAR4250 Arkitektur som teknologisk praksis"
+  <courses subject="Arkitektur som teknologisk praksis"
       code="AAR4250"
       level="Hoyere grads nivaa"
       credits="7.5"/>
-  <courses label="TIØ4146 Finans for teknisk-naturvitenskapelige studenter"
+  <courses subject="Finans for teknisk-naturvitenskapelige studenter"
       code="TIØ4146"
       level="Hoyere grads nivaa"
       credits="7.5"/>
-  <courses label="BEIT4014 Eksperter i team - Grønne bygg"
+  <courses subject="Eksperter i Team - Grønne bygg"
       code="BEIT4014"
       level="Hoyere grads nivaa"
-      credits="7.5"/>
-  <courses label="TDT4175 Informasjonssystemer"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Informasjonssystemer"
       code="TDT4175"
       level="Tredjeaarsemner, nivaa 3"
       credits="7.5"/>

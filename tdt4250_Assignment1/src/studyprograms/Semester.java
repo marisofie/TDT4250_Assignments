@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link studyprograms.Semester#getSemesterNumber <em>Semester Number</em>}</li>
- *   <li>{@link studyprograms.Semester#getMaximumCredits <em>Maximum Credits</em>}</li>
  *   <li>{@link studyprograms.Semester#getCourseGroups <em>Course Groups</em>}</li>
  * </ul>
  *
@@ -32,7 +31,7 @@ public interface Semester extends EObject {
 	 * @return the value of the '<em>Semester Number</em>' attribute.
 	 * @see #setSemesterNumber(int)
 	 * @see studyprograms.StudyprogramsPackage#getSemester_SemesterNumber()
-	 * @model
+	 * @model dataType="studyprograms.SemesterNumber"
 	 * @generated
 	 */
 	int getSemesterNumber();
@@ -48,35 +47,15 @@ public interface Semester extends EObject {
 	void setSemesterNumber(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Maximum Credits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Maximum Credits</em>' attribute.
-	 * @see #setMaximumCredits(int)
-	 * @see studyprograms.StudyprogramsPackage#getSemester_MaximumCredits()
-	 * @model
-	 * @generated
-	 */
-	int getMaximumCredits();
-
-	/**
-	 * Sets the value of the '{@link studyprograms.Semester#getMaximumCredits <em>Maximum Credits</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Maximum Credits</em>' attribute.
-	 * @see #getMaximumCredits()
-	 * @generated
-	 */
-	void setMaximumCredits(int value);
-
-	/**
 	 * Returns the value of the '<em><b>Course Groups</b></em>' containment reference list.
 	 * The list contents are of type {@link studyprograms.CourseGroup}.
+	 * It is bidirectional and its opposite is '{@link studyprograms.CourseGroup#getSemester <em>Semester</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Course Groups</em>' containment reference list.
 	 * @see studyprograms.StudyprogramsPackage#getSemester_CourseGroups()
-	 * @model containment="true"
+	 * @see studyprograms.CourseGroup#getSemester
+	 * @model opposite="semester" containment="true"
 	 * @generated
 	 */
 	EList<CourseGroup> getCourseGroups();

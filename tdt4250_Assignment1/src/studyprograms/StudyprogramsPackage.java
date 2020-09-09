@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see studyprograms.StudyprogramsFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore validationDelegates='http://www.eclipse.org/acceleo/query/1.0'"
  * @generated
  */
 public interface StudyprogramsPackage extends EPackage {
@@ -180,13 +181,22 @@ public interface StudyprogramsPackage extends EPackage {
 	int COURSE__CREDITS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Season</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__SEASON = 5;
+
+	/**
 	 * The number of structural features of the '<em>Course</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_FEATURE_COUNT = 5;
+	int COURSE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Course</em>' class.
@@ -326,22 +336,13 @@ public interface StudyprogramsPackage extends EPackage {
 	int SEMESTER__SEMESTER_NUMBER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Maximum Credits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEMESTER__MAXIMUM_CREDITS = 1;
-
-	/**
 	 * The feature id for the '<em><b>Course Groups</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER__COURSE_GROUPS = 2;
+	int SEMESTER__COURSE_GROUPS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Semester</em>' class.
@@ -350,7 +351,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER_FEATURE_COUNT = 3;
+	int SEMESTER_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Semester</em>' class.
@@ -380,13 +381,31 @@ public interface StudyprogramsPackage extends EPackage {
 	int COURSE_GROUP__COURSE_ALLOCATIONS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Min Required Credits</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP__MIN_REQUIRED_CREDITS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Semester</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP__SEMESTER = 3;
+
+	/**
 	 * The number of structural features of the '<em>Course Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_GROUP_FEATURE_COUNT = 2;
+	int COURSE_GROUP_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Course Group</em>' class.
@@ -494,6 +513,16 @@ public interface StudyprogramsPackage extends EPackage {
 	int COURSE_STATUS_TYPE = 10;
 
 	/**
+	 * The meta object id for the '{@link studyprograms.SeasonType <em>Season Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.SeasonType
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getSeasonType()
+	 * @generated
+	 */
+	int SEASON_TYPE = 11;
+
+	/**
 	 * The meta object id for the '<em>Course Code</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -501,7 +530,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseCode()
 	 * @generated
 	 */
-	int COURSE_CODE = 11;
+	int COURSE_CODE = 12;
 
 
 	/**
@@ -511,7 +540,17 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseCredit()
 	 * @generated
 	 */
-	int COURSE_CREDIT = 12;
+	int COURSE_CREDIT = 13;
+
+
+	/**
+	 * The meta object id for the '<em>Semester Number</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getSemesterNumber()
+	 * @generated
+	 */
+	int SEMESTER_NUMBER = 14;
 
 
 	/**
@@ -578,6 +617,17 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCourse_Credits();
+
+	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.Course#getSeason <em>Season</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Season</em>'.
+	 * @see studyprograms.Course#getSeason()
+	 * @see #getCourse()
+	 * @generated
+	 */
+	EAttribute getCourse_Season();
 
 	/**
 	 * Returns the meta object for class '{@link studyprograms.Programme <em>Programme</em>}'.
@@ -741,6 +791,28 @@ public interface StudyprogramsPackage extends EPackage {
 	EReference getCourseGroup_CourseAllocations();
 
 	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.CourseGroup#getMinRequiredCredits <em>Min Required Credits</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Min Required Credits</em>'.
+	 * @see studyprograms.CourseGroup#getMinRequiredCredits()
+	 * @see #getCourseGroup()
+	 * @generated
+	 */
+	EAttribute getCourseGroup_MinRequiredCredits();
+
+	/**
+	 * Returns the meta object for the container reference '{@link studyprograms.CourseGroup#getSemester <em>Semester</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Semester</em>'.
+	 * @see studyprograms.CourseGroup#getSemester()
+	 * @see #getCourseGroup()
+	 * @generated
+	 */
+	EReference getCourseGroup_Semester();
+
+	/**
 	 * Returns the meta object for class '{@link studyprograms.Semester <em>Semester</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -760,17 +832,6 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSemester_SemesterNumber();
-
-	/**
-	 * Returns the meta object for the attribute '{@link studyprograms.Semester#getMaximumCredits <em>Maximum Credits</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Maximum Credits</em>'.
-	 * @see studyprograms.Semester#getMaximumCredits()
-	 * @see #getSemester()
-	 * @generated
-	 */
-	EAttribute getSemester_MaximumCredits();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link studyprograms.Semester#getCourseGroups <em>Course Groups</em>}'.
@@ -867,6 +928,16 @@ public interface StudyprogramsPackage extends EPackage {
 	EEnum getCourseStatusType();
 
 	/**
+	 * Returns the meta object for enum '{@link studyprograms.SeasonType <em>Season Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Season Type</em>'.
+	 * @see studyprograms.SeasonType
+	 * @generated
+	 */
+	EEnum getSeasonType();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Course Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -887,6 +958,17 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getCourseCredit();
+
+	/**
+	 * Returns the meta object for data type '<em>Semester Number</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Semester Number</em>'.
+	 * @model instanceClass="int"
+	 *        extendedMetaData="minInclusive='1'"
+	 * @generated
+	 */
+	EDataType getSemesterNumber();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -960,6 +1042,14 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COURSE__CREDITS = eINSTANCE.getCourse_Credits();
+
+		/**
+		 * The meta object literal for the '<em><b>Season</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE__SEASON = eINSTANCE.getCourse_Season();
 
 		/**
 		 * The meta object literal for the '{@link studyprograms.impl.ProgrammeImpl <em>Programme</em>}' class.
@@ -1090,6 +1180,22 @@ public interface StudyprogramsPackage extends EPackage {
 		EReference COURSE_GROUP__COURSE_ALLOCATIONS = eINSTANCE.getCourseGroup_CourseAllocations();
 
 		/**
+		 * The meta object literal for the '<em><b>Min Required Credits</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE_GROUP__MIN_REQUIRED_CREDITS = eINSTANCE.getCourseGroup_MinRequiredCredits();
+
+		/**
+		 * The meta object literal for the '<em><b>Semester</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COURSE_GROUP__SEMESTER = eINSTANCE.getCourseGroup_Semester();
+
+		/**
 		 * The meta object literal for the '{@link studyprograms.impl.SemesterImpl <em>Semester</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1106,14 +1212,6 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SEMESTER__SEMESTER_NUMBER = eINSTANCE.getSemester_SemesterNumber();
-
-		/**
-		 * The meta object literal for the '<em><b>Maximum Credits</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SEMESTER__MAXIMUM_CREDITS = eINSTANCE.getSemester_MaximumCredits();
 
 		/**
 		 * The meta object literal for the '<em><b>Course Groups</b></em>' containment reference list feature.
@@ -1198,6 +1296,16 @@ public interface StudyprogramsPackage extends EPackage {
 		EEnum COURSE_STATUS_TYPE = eINSTANCE.getCourseStatusType();
 
 		/**
+		 * The meta object literal for the '{@link studyprograms.SeasonType <em>Season Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.SeasonType
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getSeasonType()
+		 * @generated
+		 */
+		EEnum SEASON_TYPE = eINSTANCE.getSeasonType();
+
+		/**
 		 * The meta object literal for the '<em>Course Code</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1215,6 +1323,15 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType COURSE_CREDIT = eINSTANCE.getCourseCredit();
+
+		/**
+		 * The meta object literal for the '<em>Semester Number</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see studyprograms.impl.StudyprogramsPackageImpl#getSemesterNumber()
+		 * @generated
+		 */
+		EDataType SEMESTER_NUMBER = eINSTANCE.getSemesterNumber();
 
 	}
 
