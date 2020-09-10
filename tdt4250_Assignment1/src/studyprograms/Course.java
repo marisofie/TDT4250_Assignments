@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link studyprograms.Course#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.Course#getLabel <em>Label</em>}</li>
  *   <li>{@link studyprograms.Course#getCode <em>Code</em>}</li>
- *   <li>{@link studyprograms.Course#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.Course#getLevel <em>Level</em>}</li>
  *   <li>{@link studyprograms.Course#getCredits <em>Credits</em>}</li>
  *   <li>{@link studyprograms.Course#getSeason <em>Season</em>}</li>
