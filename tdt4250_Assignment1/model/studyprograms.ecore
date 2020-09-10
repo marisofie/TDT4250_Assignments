@@ -42,7 +42,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Semester">
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
-      <details key="validateSemesterCredits" value=" let mc = (self.courseGroups ->collect(cg | cg.minRequiredCredits) -> sum()) in  (if mc >= 30.0 then mc else mc = 0.0 endif)"/>
+      <details key="validateSemesterCredits" value=" let mc = self.courseGroups ->collect(cg | cg.minRequiredCredits) -> sum()  in  (if mc >= 30.0 then true else false endif)"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="validateSemesterCredits"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="semesterNumber" eType="#//SemesterNumber"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroups" upperBound="-1"
