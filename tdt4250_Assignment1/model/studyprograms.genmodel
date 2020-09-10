@@ -47,9 +47,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//University/courses"/>
     </genClasses>
     <genClasses ecoreClass="studyprograms.ecore#//Course">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/subject"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/code"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/subject"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/level"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/credits"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Course/season"/>

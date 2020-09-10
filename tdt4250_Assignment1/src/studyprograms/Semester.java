@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getSemester()
- * @model
+ * @model annotation="http://www.eclipse.org/acceleo/query/1.0 validateSemesterCredits=''"
  * @generated
  */
 public interface Semester extends EObject {

@@ -18,7 +18,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="subject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        volatile="true" transient="true" derived="true"/>
+        changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="#//CourseCode"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//LevelType"/>

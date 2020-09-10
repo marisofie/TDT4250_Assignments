@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see studyprograms.StudyprogramsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore validationDelegates='http://www.eclipse.org/acceleo/query/1.0'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore settingDelegates='http://www.eclipse.org/acceleo/query/1.0' validationDelegates='http://www.eclipse.org/acceleo/query/1.0'"
  * @generated
  */
 public interface StudyprogramsPackage extends EPackage {
@@ -136,13 +136,22 @@ public interface StudyprogramsPackage extends EPackage {
 	int UNIVERSITY_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Subject</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE__SUBJECT = 0;
+
+	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE__LABEL = 0;
+	int COURSE__LABEL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -151,16 +160,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE__CODE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Subject</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE__SUBJECT = 2;
+	int COURSE__CODE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.

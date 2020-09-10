@@ -225,15 +225,6 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	 * @generated
 	 */
 	public EAttribute getCourse_Label() {
-		return (EAttribute)courseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCourse_Code() {
 		return (EAttribute)courseEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -242,8 +233,17 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCourse_Subject() {
+	public EAttribute getCourse_Code() {
 		return (EAttribute)courseEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCourse_Subject() {
+		return (EAttribute)courseEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -594,9 +594,9 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		createEReference(universityEClass, UNIVERSITY__COURSES);
 
 		courseEClass = createEClass(COURSE);
+		createEAttribute(courseEClass, COURSE__SUBJECT);
 		createEAttribute(courseEClass, COURSE__LABEL);
 		createEAttribute(courseEClass, COURSE__CODE);
-		createEAttribute(courseEClass, COURSE__SUBJECT);
 		createEAttribute(courseEClass, COURSE__LEVEL);
 		createEAttribute(courseEClass, COURSE__CREDITS);
 		createEAttribute(courseEClass, COURSE__SEASON);
@@ -675,9 +675,9 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		initEReference(getUniversity_Courses(), this.getCourse(), null, "courses", null, 0, -1, University.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(courseEClass, Course.class, "Course", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCourse_Label(), ecorePackage.getEString(), "label", null, 0, 1, Course.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCourse_Code(), this.getCourseCode(), "code", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Subject(), ecorePackage.getEString(), "subject", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_Label(), ecorePackage.getEString(), "label", null, 0, 1, Course.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourse_Code(), this.getCourseCode(), "code", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Level(), this.getLevelType(), "level", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Credits(), this.getCourseCredit(), "credits", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourse_Season(), this.getSeasonType(), "season", null, 0, 1, Course.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -771,6 +771,7 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		  (this,
 		   source,
 		   new String[] {
+			   "settingDelegates", "http://www.eclipse.org/acceleo/query/1.0",
 			   "validationDelegates", "http://www.eclipse.org/acceleo/query/1.0"
 		   });
 		addAnnotation
@@ -794,6 +795,12 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		   source,
 		   new String[] {
 			   "derivation", "self.label = self.code + self.subject"
+		   });
+		addAnnotation
+		  (semesterEClass,
+		   source,
+		   new String[] {
+			   "validateSemesterCredits", ""
 		   });
 	}
 

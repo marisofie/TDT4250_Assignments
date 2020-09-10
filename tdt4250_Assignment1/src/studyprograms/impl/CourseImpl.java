@@ -22,9 +22,9 @@ import studyprograms.StudyprogramsPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link studyprograms.impl.CourseImpl#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.impl.CourseImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link studyprograms.impl.CourseImpl#getCode <em>Code</em>}</li>
- *   <li>{@link studyprograms.impl.CourseImpl#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.impl.CourseImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link studyprograms.impl.CourseImpl#getCredits <em>Credits</em>}</li>
  *   <li>{@link studyprograms.impl.CourseImpl#getSeason <em>Season</em>}</li>
@@ -33,6 +33,26 @@ import studyprograms.StudyprogramsPackage;
  * @generated
  */
 public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
+	/**
+	 * The default value of the '{@link #getSubject() <em>Subject</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubject()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SUBJECT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSubject() <em>Subject</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSubject()
+	 * @generated
+	 * @ordered
+	 */
+	protected String subject = SUBJECT_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -62,26 +82,6 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 * @ordered
 	 */
 	protected String code = CODE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSubject() <em>Subject</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubject()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SUBJECT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSubject() <em>Subject</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubject()
-	 * @generated
-	 * @ordered
-	 */
-	protected String subject = SUBJECT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
@@ -169,17 +169,6 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	 */
 	public String getLabel() {
 		return getCode() + " - " + getSubject();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLabel(String newLabel) {
-		// TODO: implement this method to set the 'Label' attribute
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -295,12 +284,12 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case StudyprogramsPackage.COURSE__SUBJECT:
+				return getSubject();
 			case StudyprogramsPackage.COURSE__LABEL:
 				return getLabel();
 			case StudyprogramsPackage.COURSE__CODE:
 				return getCode();
-			case StudyprogramsPackage.COURSE__SUBJECT:
-				return getSubject();
 			case StudyprogramsPackage.COURSE__LEVEL:
 				return getLevel();
 			case StudyprogramsPackage.COURSE__CREDITS:
@@ -319,14 +308,11 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StudyprogramsPackage.COURSE__LABEL:
-				setLabel((String)newValue);
+			case StudyprogramsPackage.COURSE__SUBJECT:
+				setSubject((String)newValue);
 				return;
 			case StudyprogramsPackage.COURSE__CODE:
 				setCode((String)newValue);
-				return;
-			case StudyprogramsPackage.COURSE__SUBJECT:
-				setSubject((String)newValue);
 				return;
 			case StudyprogramsPackage.COURSE__LEVEL:
 				setLevel((LevelType)newValue);
@@ -349,14 +335,11 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StudyprogramsPackage.COURSE__LABEL:
-				setLabel(LABEL_EDEFAULT);
+			case StudyprogramsPackage.COURSE__SUBJECT:
+				setSubject(SUBJECT_EDEFAULT);
 				return;
 			case StudyprogramsPackage.COURSE__CODE:
 				setCode(CODE_EDEFAULT);
-				return;
-			case StudyprogramsPackage.COURSE__SUBJECT:
-				setSubject(SUBJECT_EDEFAULT);
 				return;
 			case StudyprogramsPackage.COURSE__LEVEL:
 				setLevel(LEVEL_EDEFAULT);
@@ -379,12 +362,12 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case StudyprogramsPackage.COURSE__SUBJECT:
+				return SUBJECT_EDEFAULT == null ? subject != null : !SUBJECT_EDEFAULT.equals(subject);
 			case StudyprogramsPackage.COURSE__LABEL:
 				return LABEL_EDEFAULT == null ? getLabel() != null : !LABEL_EDEFAULT.equals(getLabel());
 			case StudyprogramsPackage.COURSE__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
-			case StudyprogramsPackage.COURSE__SUBJECT:
-				return SUBJECT_EDEFAULT == null ? subject != null : !SUBJECT_EDEFAULT.equals(subject);
 			case StudyprogramsPackage.COURSE__LEVEL:
 				return level != LEVEL_EDEFAULT;
 			case StudyprogramsPackage.COURSE__CREDITS:
@@ -405,10 +388,10 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (code: ");
-		result.append(code);
-		result.append(", subject: ");
+		result.append(" (subject: ");
 		result.append(subject);
+		result.append(", code: ");
+		result.append(code);
 		result.append(", level: ");
 		result.append(level);
 		result.append(", credits: ");

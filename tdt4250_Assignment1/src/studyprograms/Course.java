@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link studyprograms.Course#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.Course#getLabel <em>Label</em>}</li>
  *   <li>{@link studyprograms.Course#getCode <em>Code</em>}</li>
- *   <li>{@link studyprograms.Course#getSubject <em>Subject</em>}</li>
  *   <li>{@link studyprograms.Course#getLevel <em>Level</em>}</li>
  *   <li>{@link studyprograms.Course#getCredits <em>Credits</em>}</li>
  *   <li>{@link studyprograms.Course#getSeason <em>Season</em>}</li>
@@ -31,22 +31,11 @@ public interface Course extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Label</em>' attribute.
-	 * @see #setLabel(String)
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Label()
-	 * @model transient="true" volatile="true" derived="true"
+	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
 	String getLabel();
-
-	/**
-	 * Sets the value of the '{@link studyprograms.Course#getLabel <em>Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Label</em>' attribute.
-	 * @see #getLabel()
-	 * @generated
-	 */
-	void setLabel(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
