@@ -775,6 +775,12 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 			   "validationDelegates", "http://www.eclipse.org/acceleo/query/1.0"
 		   });
 		addAnnotation
+		  (semesterEClass,
+		   source,
+		   new String[] {
+			   "constraints", "validateSemesterCredits"
+		   });
+		addAnnotation
 		  (courseGroupEClass,
 		   source,
 		   new String[] {
@@ -791,16 +797,16 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	protected void create_1Annotations() {
 		String source = "http://www.eclipse.org/acceleo/query/1.0";
 		addAnnotation
-		  (courseEClass,
+		  (getCourse_Label(),
 		   source,
 		   new String[] {
-			   "derivation", "self.label = self.code + self.subject"
+			   "derivation", "self.code + \' - \'+ self.subject"
 		   });
 		addAnnotation
 		  (semesterEClass,
 		   source,
 		   new String[] {
-			   "validateSemesterCredits", ""
+			   "validateSemesterCredits", " let mc = self.courseGroups ->collect(cg | cg.minRequiredCredits) -> sum()  in  (if mc >= 30.0 then true else false endif)"
 		   });
 	}
 

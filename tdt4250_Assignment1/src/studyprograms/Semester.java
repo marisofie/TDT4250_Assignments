@@ -20,7 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getSemester()
- * @model annotation="http://www.eclipse.org/acceleo/query/1.0 validateSemesterCredits=''"
+ * @model annotation="http://www.eclipse.org/acceleo/query/1.0 validateSemesterCredits=' let mc = self.courseGroups -&gt;collect(cg | cg.minRequiredCredits) -&gt; sum()  in  (if mc &gt;= 30.0 then true else false endif)'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='validateSemesterCredits'"
  * @generated
  */
 public interface Semester extends EObject {

@@ -229,7 +229,46 @@ public class StudyprogramsValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateSemester(Semester semester, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(semester, diagnostics, context);
+		if (!validate_NoCircularContainment(semester, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(semester, diagnostics, context);
+		if (result || diagnostics != null) result &= validateSemester_validateSemesterCredits(semester, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the validateSemesterCredits constraint of '<em>Semester</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String SEMESTER__VALIDATE_SEMESTER_CREDITS__EEXPRESSION = " let mc = self.courseGroups ->collect(cg | cg.minRequiredCredits) -> sum()  in  (if mc >= 30.0 then true else false endif)";
+
+	/**
+	 * Validates the validateSemesterCredits constraint of '<em>Semester</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateSemester_validateSemesterCredits(Semester semester, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(StudyprogramsPackage.Literals.SEMESTER,
+				 semester,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/acceleo/query/1.0",
+				 "validateSemesterCredits",
+				 SEMESTER__VALIDATE_SEMESTER_CREDITS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**

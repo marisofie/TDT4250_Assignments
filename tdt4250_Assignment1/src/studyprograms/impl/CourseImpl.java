@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -54,14 +55,14 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 	protected String subject = SUBJECT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * The cached setting delegate for the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LABEL_EDEFAULT = null;
+	protected EStructuralFeature.Internal.SettingDelegate LABEL__ESETTING_DELEGATE = ((EStructuralFeature.Internal)StudyprogramsPackage.Literals.COURSE__LABEL).getSettingDelegate();
 
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -365,7 +366,7 @@ public class CourseImpl extends MinimalEObjectImpl.Container implements Course {
 			case StudyprogramsPackage.COURSE__SUBJECT:
 				return SUBJECT_EDEFAULT == null ? subject != null : !SUBJECT_EDEFAULT.equals(subject);
 			case StudyprogramsPackage.COURSE__LABEL:
-				return LABEL_EDEFAULT == null ? getLabel() != null : !LABEL_EDEFAULT.equals(getLabel());
+				return LABEL__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 			case StudyprogramsPackage.COURSE__CODE:
 				return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 			case StudyprogramsPackage.COURSE__LEVEL:

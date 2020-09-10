@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getCourse()
- * @model annotation="http://www.eclipse.org/acceleo/query/1.0 derivation='self.label = self.code + self.subject'"
+ * @model
  * @generated
  */
 public interface Course extends EObject {
@@ -33,6 +33,7 @@ public interface Course extends EObject {
 	 * @return the value of the '<em>Label</em>' attribute.
 	 * @see studyprograms.StudyprogramsPackage#getCourse_Label()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/acceleo/query/1.0 derivation='self.code + \' - \'+ self.subject'"
 	 * @generated
 	 */
 	String getLabel();

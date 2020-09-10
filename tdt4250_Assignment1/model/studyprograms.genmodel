@@ -68,7 +68,6 @@
     <genClasses ecoreClass="studyprograms.ecore#//Semester">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Semester/semesterNumber"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//Semester/courseGroups"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Semester/semesterCredits"/>
     </genClasses>
     <genClasses ecoreClass="studyprograms.ecore#//CourseGroup">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//CourseGroup/name"/>
