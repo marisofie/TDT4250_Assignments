@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/MariSofieLerfaldet/Documents/Skole/Høst2020/TDT4250_Programvaredesign/Assignments/TDT4250_Assignments/tdt4250_Assignment1"/>
+			<item value="/Users/MariSofieLerfaldet/Documents/Skole/Høst2020/TDT4250_Programvaredesign/Assignments"/>
 			<item value="/Users/MariSofieLerfaldet/OneDrive - NTNU/Skole/Høst2020/TDT4250_Programvaredesign/Assignments"/>
 			<item value="/Users/MariSofieLerfaldet/OneDrive - NTNU/Skole/Høst2020/TDT4250_Programvaredesign/Assignments/TDT4250_Assignment1/tdt4250_Assignment1"/>
 			<item value="/Users/MariSofieLerfaldet/OneDrive - NTNU/Skole/Høst2020/TDT4250_Programvaredesign/Assignments/TDT4250_Assignment1"/>
@@ -13,15 +15,20 @@
 	</section>
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
 		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/MariSofieLerfaldet/Documents/Skole/Høst2020/TDT4250_Programvaredesign/Assignments"/>
+			<item value="/Users/MariSofieLerfaldet/Documents/Skole/Høst2020/TDT4250_Programvaredesign/Assignments/TDT4250_Assignments"/>
+			<item value="/Users/MariSofieLerfaldet/Documents/Skole/Høst2020/TDT4250_Programvaredesign/Assignments/TDT4250_Assignments/tdt4250_Assignment1"/>
 			<item value="/Users/MariSofieLerfaldet/OneDrive - NTNU/Skole/Høst2020/TDT4250_Programvaredesign/Assignments/TDT4250_Assignment1/tdt4250_Assignment1"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
