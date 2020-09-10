@@ -11,8 +11,8 @@ Group: Sigrid Marita Kvamme & Mari Sofie Lerfaldet
      #TODO: insert screen shot of tree structure
   - /src/studyprograms
      - Contains generated model code 
-       - impl/StudyprogramsFactoryImpl.java
+       - .impl/StudyprogramsFactoryImpl.java
           - Contains manually-written code for handling courseCode datatype 
-       - impl/CourseImpl.java
-          - TODO: Er dette fortsatt her? 
-  - 
+       - .util/StudyprogramsValidator.java
+          - Contains manually-written code for handling validation of seson for course and semesterNumber. (e.g.if semester is in the fall, the course is also      lectured in fall)
+ 
