@@ -12,5 +12,7 @@ Export-Package: studyprograms.tests
 Require-Bundle: org.eclipse.core.runtime,
  tdt4250_Assignment1;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.junit;visibility:=reexport
+ org.junit;visibility:=reexport,
+ org.eclipse.acceleo.query;bundle-version="7.0.0",
+ org.antlr.runtime;bundle-version="3.2.0"
 Bundle-ActivationPolicy: lazy

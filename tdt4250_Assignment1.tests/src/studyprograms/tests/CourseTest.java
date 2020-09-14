@@ -2,6 +2,11 @@
  */
 package studyprograms.tests;
 
+import org.eclipse.acceleo.query.delegates.AQLSettingDelegate;
+import org.eclipse.acceleo.query.delegates.AQLValidationDelegate;
+import org.eclipse.emf.ecore.EValidator.ValidationDelegate;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
@@ -99,7 +104,7 @@ public class CourseTest extends TestCase {
 	 * @see studyprograms.Course#getLabel()
 	 * @generated NOT
 	 */
-	public void testGetLabel() {
+	public void testGetLabel() {		
 		Course course = StudyprogramsFactory.eINSTANCE.createCourse();
 		course.setCode("TDT4250");
 		course.setSubject("Avansert Programvaredesign");
