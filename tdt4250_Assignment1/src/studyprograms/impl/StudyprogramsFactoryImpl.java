@@ -308,7 +308,7 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 		}
 		return (String)super.createFromString(eDataType, initialValue);
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

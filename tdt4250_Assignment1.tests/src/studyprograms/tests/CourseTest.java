@@ -2,15 +2,8 @@
  */
 package studyprograms.tests;
 
-import org.eclipse.acceleo.query.delegates.AQLSettingDelegate;
-import org.eclipse.acceleo.query.delegates.AQLValidationDelegate;
-import org.eclipse.emf.ecore.EValidator.ValidationDelegate;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-
 import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
-
 import studyprograms.Course;
 import studyprograms.StudyprogramsFactory;
 
