@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Acceleo Acceleo Module Runtime Plug-in
-Bundle-SymbolicName: tdt4250.assignment2.acceleo
+Bundle-Name: Acceleo Html Module Runtime Plug-in
+Bundle-SymbolicName: tdt4250.assignment2.html
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: tdt4250.assignment2.acceleo.Activator
+Bundle-Activator: tdt4250.assignment2.html.University2TextGenerator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.core.runtime, 
  org.eclipse.emf.ecore,
@@ -18,5 +18,8 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-RequiredExecutionEnvironment: JavaSE-14
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Export-Package: tdt4250.assignment2.acceleo.main
+Export-Package: tdt4250.assignment2.html.acceleo
+Import-Package: studyprograms,
+ studyprograms.impl,
+ studyprograms.util
 

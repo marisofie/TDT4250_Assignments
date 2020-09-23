@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package tdt4250.assignment2.acceleo.main;
+package tdt4250.assignment2.html.acceleo;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,20 +29,20 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
  *
  * @generated
  */
-public class Generate extends AbstractAcceleoGenerator {
+public class University2TextGenerator extends AbstractAcceleoGenerator {
     /**
      * The name of the module.
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/tdt4250/assignment2/acceleo/main/generate";
+    public static final String MODULE_FILE_NAME = "/tdt4250/assignment2/html/main/generate";
     
     /**
      * The name of the templates that are to be generated.
      *
      * @generated
      */
-    public static final String[] TEMPLATE_NAMES = { "generateElement" };
+    public static final String[] TEMPLATE_NAMES = { "University2TextGenerator" };
     
     /**
      * The list of properties files from the launch parameters (Launch configuration).
@@ -65,7 +65,7 @@ public class Generate extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public Generate() {
+    public University2TextGenerator() {
         // Empty implementation
     }
 
@@ -85,7 +85,7 @@ public class Generate extends AbstractAcceleoGenerator {
      *             the model cannot be loaded.
      * @generated
      */
-    public Generate(URI modelURI, File targetFolder,
+    public University2TextGenerator(URI modelURI, File targetFolder,
             List<? extends Object> arguments) throws IOException {
         initialize(modelURI, targetFolder, arguments);
     }
@@ -106,7 +106,7 @@ public class Generate extends AbstractAcceleoGenerator {
      *             This can be thrown in two scenarios : the module cannot be found, or it cannot be loaded.
      * @generated
      */
-    public Generate(EObject model, File targetFolder,
+    public University2TextGenerator(EObject model, File targetFolder,
             List<? extends Object> arguments) throws IOException {
         initialize(model, targetFolder, arguments);
     }
@@ -141,7 +141,7 @@ public class Generate extends AbstractAcceleoGenerator {
                  * add in "arguments" this "String" attribute.
                  */
                 
-                Generate generator = new Generate(modelURI, folder, arguments);
+                University2TextGenerator generator = new University2TextGenerator(modelURI, folder, arguments);
                 
                 /*
                  * Add the properties from the launch arguments.
@@ -342,6 +342,10 @@ public class Generate extends AbstractAcceleoGenerator {
         super.registerPackages(resourceSet);
         if (!isInWorkspace(org.eclipse.emf.ecore.EcorePackage.class)) {
             resourceSet.getPackageRegistry().put(org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getNsURI(), org.eclipse.emf.ecore.EcorePackage.eINSTANCE);
+        }
+        
+        if (!isInWorkspace(studyprograms.StudyprogramsPackage.class)) {
+        	resourceSet.getPackageRegistry().put(studyprograms.StudyprogramsPackage.eINSTANCE.getNsURI(), studyprograms.StudyprogramsPackage.eINSTANCE);
         }
         
         /*

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="generate" nsURI="tdt4250::assignment2::acceleo::main::generate" startHeaderPosition="29" endHeaderPosition="157">
+  <mtl:Module name="generate" nsURI="tdt4250::assignment2::html::main::generate" startHeaderPosition="29" endHeaderPosition="166">
     <input>
       <takesTypesFrom href="http://www.eclipse.org/emf/2002/Ecore#/"/>
     </input>
-    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
+    <ownedModuleElement xsi:type="mtl:Template" name="University2TextGenerator" visibility="Public" main="true">
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="anEClass" referredVariable="/0/generateElement/anEClass">
+          <source xsi:type="ocl.ecore:VariableExp" name="anEClass" referredVariable="/0/University2TextGenerator/anEClass">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/emf/2002/Ecore#//ENamedElement/name"/>
@@ -43,11 +43,11 @@
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
       </eAnnotations>
-      <eOperations name="generateElement">
+      <eOperations name="University2TextGenerator">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
-        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eAnnotations source="MTL" references="/0/University2TextGenerator"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="anEClass">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
@@ -102,39 +102,39 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
-    <eAnnotations source="positions.0" references="/0/generateElement">
+    <eAnnotations source="positions.0" references="/0/University2TextGenerator">
       <details key="start" value="90"/>
-      <details key="end" value="219"/>
+      <details key="end" value="228"/>
       <details key="line" value="5"/>
     </eAnnotations>
-    <eAnnotations source="positions.1" references="/0/generateElement/%">
-      <details key="start" value="160"/>
-      <details key="end" value="207"/>
+    <eAnnotations source="positions.1" references="/0/University2TextGenerator/%">
+      <details key="start" value="169"/>
+      <details key="end" value="216"/>
       <details key="line" value="7"/>
     </eAnnotations>
-    <eAnnotations source="positions.2" references="/0/generateElement/%/%">
-      <details key="start" value="199"/>
-      <details key="end" value="200"/>
+    <eAnnotations source="positions.2" references="/0/University2TextGenerator/%/%">
+      <details key="start" value="208"/>
+      <details key="end" value="209"/>
       <details key="line" value="8"/>
     </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/generateElement/%/%.1">
-      <details key="start" value="167"/>
-      <details key="end" value="180"/>
+    <eAnnotations source="positions.3" references="/0/University2TextGenerator/%/%.1">
+      <details key="start" value="176"/>
+      <details key="end" value="189"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/generateElement/%/%.1/anEClass">
-      <details key="start" value="167"/>
-      <details key="end" value="175"/>
+    <eAnnotations source="positions.4" references="/0/University2TextGenerator/%/%.1/anEClass">
+      <details key="start" value="176"/>
+      <details key="end" value="184"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateElement/%/%.2">
-      <details key="start" value="189"/>
-      <details key="end" value="196"/>
+    <eAnnotations source="positions.5" references="/0/University2TextGenerator/%/%.2">
+      <details key="start" value="198"/>
+      <details key="end" value="205"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateElement/anEClass">
-      <details key="start" value="123"/>
-      <details key="end" value="140"/>
+    <eAnnotations source="positions.6" references="/0/University2TextGenerator/anEClass">
+      <details key="start" value="132"/>
+      <details key="end" value="149"/>
       <details key="line" value="5"/>
     </eAnnotations>
   </ecore:EAnnotation>
