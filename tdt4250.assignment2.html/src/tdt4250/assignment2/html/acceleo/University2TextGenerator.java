@@ -35,12 +35,12 @@ public class University2TextGenerator extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/tdt4250/assignment2/html/main/generate";
+    public static final String MODULE_FILE_NAME = "/tdt4250/assignment2/html/acceleo/university2TextGenerator";
     
     /**
      * The name of the templates that are to be generated.
      *
-     * @generated
+     * @generated 
      */
     public static final String[] TEMPLATE_NAMES = { "University2TextGenerator" };
     
@@ -335,7 +335,7 @@ public class University2TextGenerator extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated NOT
      */
     @Override
     public void registerPackages(ResourceSet resourceSet) {
@@ -343,7 +343,6 @@ public class University2TextGenerator extends AbstractAcceleoGenerator {
         if (!isInWorkspace(org.eclipse.emf.ecore.EcorePackage.class)) {
             resourceSet.getPackageRegistry().put(org.eclipse.emf.ecore.EcorePackage.eINSTANCE.getNsURI(), org.eclipse.emf.ecore.EcorePackage.eINSTANCE);
         }
-        
         if (!isInWorkspace(studyprograms.StudyprogramsPackage.class)) {
         	resourceSet.getPackageRegistry().put(studyprograms.StudyprogramsPackage.eINSTANCE.getNsURI(), studyprograms.StudyprogramsPackage.eINSTANCE);
         }
@@ -386,7 +385,7 @@ public class University2TextGenerator extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated NOT
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
@@ -407,7 +406,7 @@ public class University2TextGenerator extends AbstractAcceleoGenerator {
          * To learn more about the registration of Resource Factories, have a look at the Acceleo documentation (Help -> Help Contents). 
          */ 
         
-        // resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(XyzResource.FILE_EXTENSION, XyzResource.Factory.INSTANCE);
+        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("university", new studyprograms.util.StudyprogramsResourceFactoryImpl());
         
         /*
          * Some metamodels require a very complex setup for standalone usage. For example, if you want to use a generator
