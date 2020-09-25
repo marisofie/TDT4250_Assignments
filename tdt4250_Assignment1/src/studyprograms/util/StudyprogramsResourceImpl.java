@@ -23,4 +23,4 @@ public class StudyprogramsResourceImpl extends XMIResourceImpl {
 		super(uri);
 	}
 
-} //QuizResourceImpl
+} //StudyprogramsResourceImpl

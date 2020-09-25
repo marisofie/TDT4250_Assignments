@@ -27,6 +27,9 @@
 		[for (semester : Semester | programme.semesters)] 
 			[generate(semester)/]
 		[/for]	
+		[for (semester : Semester | programme.semesters)] 
+			[generate(semester)/]
+		[/for]	
 [/template]
 
 [template public generate(semester : Semester)]

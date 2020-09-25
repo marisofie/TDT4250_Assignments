@@ -38,4 +38,4 @@ public class StudyprogramsResourceFactoryImpl extends ResourceFactoryImpl {
 		return result;
 	}
 
-} //QuizResourceFactoryImpl
+} //StudyprogramsResourceFactoryImpl
