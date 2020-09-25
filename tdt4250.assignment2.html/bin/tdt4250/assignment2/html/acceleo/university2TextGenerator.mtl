@@ -26,16 +26,56 @@
 		[comment now generate each semester. First those not within any specialisation (those will be first in the order/]
 		[for (semester : Semester | programme.semesters)] 
 			[generate(semester)/]
-		[/for]	
-		[for (semester : Semester | programme.semesters)] 
-			[generate(semester)/]
-		[/for]	
+		[/for]
+		<h2>[specialisation(programme)/]</h2>
 [/template]
 
 [template public generate(semester : Semester)]
 		<h3>[season(semester)/] - [semester.semesterNumber/]. semester</h3>
+		[for (coursegroup : CourseGroup | semester.courseGroups)]
+			[generate(coursegroup)/]
+		[/for]
+[/template]
+
+[template public generate(coursegroup : CourseGroup)]
+		
+		 <li>
+		  <span>[coursegroup.name/]</span>
+		   <table border="2">
+		    <thead>
+          	 <tr>
+              <th>Kode</th>
+              <th>Navn</th>
+              <th>Status</th>
+             </tr>
+            </thead>
+			<tbody>
+			 [for (courseallocation : CourseAllocation | coursegroup.courseAllocations)]
+			 	[generate(courseallocation)/]
+			 [/for]			
+		    </tbody>
+		 </li>
+	    
+[/template]
+
+[template public generate(courseallocation : CourseAllocation)]
+	<tr>
+	[for (course : Course | courseallocation.course)]
+		[generate(course)/]
+		<td>[courseallocation.status/]</td>
+	[/for]
+	</tr>
+[/template]
+
+[template public generate(course : Course)]
+	<td>[course.code/]</td>
+	<td>[course.subject/]</td>
 [/template]
 
 [query public season(semester : Semester) : String = 
 	 if semester.semesterNumber.mod(2) = 1 then 'Høst' else 'Vår' endif
  /]
+
+[query public specialisation(programme : Programme) : String = 
+	if programme.specialisations -> notEmpty() then programme.specialisations.name else '' endif
+/]

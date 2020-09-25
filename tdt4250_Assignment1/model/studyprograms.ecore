@@ -41,6 +41,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="semesters" upperBound="-1"
         eType="#//Semester" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CourseAllocation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//CourseStatusType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroup" lowerBound="1"
+        eType="#//CourseGroup" eOpposite="#//CourseGroup/courseAllocations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="course" lowerBound="1"
+        eType="#//Course"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Semester">
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
       <details key="validateSemesterCredits" value=" let mc = self.courseGroups ->collect(cg | cg.minRequiredCredits) -> sum()  in  (if mc >= 30.0 then true else false endif)"/>
@@ -62,13 +69,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minRequiredCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="semester" eType="#//Semester"
         eOpposite="#//Semester/courseGroups"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CourseAllocation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//CourseStatusType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroup" lowerBound="1"
-        eType="#//CourseGroup" eOpposite="#//CourseGroup/courseAllocations"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="course" lowerBound="1"
-        eType="#//Course"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCredit" instanceClassName="float">
