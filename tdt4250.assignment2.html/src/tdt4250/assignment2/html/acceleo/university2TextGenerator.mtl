@@ -1,0 +1,41 @@
+[comment encoding = UTF-8 /]
+[module university2TextGenerator('platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore', 'http://www.eclipse.org/emf/2002/Ecore')]
+
+
+[template public University2TextGenerator(university : University)]
+[comment @main/]
+	[file (university.eClass().instanceClassName.concat('.html'), false, 'UTF-8')]
+<html>
+<head>
+	<title>Studiets oppbygning</title>
+	<meta charset="utf-8"/>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+	[for (programme : Programme | university.programmes)]
+		[generate(programme)/]
+	[/for]
+</body>
+</html>
+	[/file]
+[/template]
+
+[template public generate(programme : Programme)]
+		<h1>[programme.name/] - Studiets oppbygning</h1>
+    	<div>Grad: [programme.degree/]</div>
+		[comment now generate each semester. First those not within any specialisation (those will be first in the order/]
+		[for (semester : Semester | programme.semesters)] 
+			[generate(semester)/]
+		[/for]	
+		[for (semester : Semester | programme.semesters)] 
+			[generate(semester)/]
+		[/for]	
+[/template]
+
+[template public generate(semester : Semester)]
+		<h3>[season(semester)/] - [semester.semesterNumber/]. semester</h3>
+[/template]
+
+[query public season(semester : Semester) : String = 
+	 if semester.semesterNumber.mod(2) = 1 then 'Høst' else 'Vår' endif
+ /]

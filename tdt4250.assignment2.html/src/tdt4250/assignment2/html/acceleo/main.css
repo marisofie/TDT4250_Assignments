@@ -1,0 +1,28 @@
+body {
+  font-family: monospace;
+}
+h1 {
+  color: darkblue;
+}
+
+h2 {
+  color: orangered;
+}
+
+h3 {
+  color: darkorange;
+}
+
+ol {
+  list-style: none;
+}
+
+div {
+  padding: 20px;
+  border: 2px solid green;
+  margin-bottom: 10px;
+}
+
+div > div {
+  border: 2px solid greenyellow;
+}
