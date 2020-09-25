@@ -18,6 +18,12 @@
             course="TDT4110"/>
       </courseGroups>
     </semesters>
+    <semesters
+        semesterNumber="2"/>
+    <semesters
+        semesterNumber="3"/>
+    <semesters
+        semesterNumber="4"/>
     <specialisations
         name="Programvaresystemer">
       <childSpecialisations
@@ -60,6 +66,10 @@
               name="Valgbare emner"
               minRequiredCredits="7.5"/>
         </semesters>
+        <semesters
+            semesterNumber="9"/>
+        <semesters
+            semesterNumber="10"/>
       </childSpecialisations>
       <childSpecialisations
           name="Interaksjonsdesign og spillteknologi"/>
@@ -82,6 +92,8 @@
               course="IT2810"/>
         </courseGroups>
       </semesters>
+      <semesters
+          semesterNumber="6"/>
     </specialisations>
   </programmes>
   <programmes
