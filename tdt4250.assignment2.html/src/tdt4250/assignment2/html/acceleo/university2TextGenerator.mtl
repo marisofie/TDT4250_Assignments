@@ -23,7 +23,6 @@
 [template public generate(programme : Programme)]
 		<h1>[programme.name/] - Studiets oppbygning</h1>
     	<div>Grad: [programme.degree/]</div>
-		[comment now generate each semester. First those not within any specialisation (those will be first in the order/]
 		[for (semester : Semester | programme.semesters)] 
 			[generate(semester)/]
 		[/for]
@@ -32,44 +31,45 @@
 
 [template public generate(semester : Semester)]
 		<h3>[season(semester)/] - [semester.semesterNumber/]. semester</h3>
-		[for (coursegroup : CourseGroup | semester.courseGroups)]
-			[generate(coursegroup)/]
-		[/for]
+		<ul>
+			[for (coursegroup : CourseGroup | semester.courseGroups)]
+				[generate(coursegroup)/]
+			[/for]
+		</ul>
 [/template]
 
 [template public generate(coursegroup : CourseGroup)]
-		
 		 <li>
 		  <span>[coursegroup.name/]</span>
 		   <table border="2">
 		    <thead>
-          	 <tr>
-              <th>Kode</th>
-              <th>Navn</th>
-              <th>Status</th>
-             </tr>
-            </thead>
+		  	 <tr>
+		      <th>Kode</th>
+		      <th>Navn</th>
+		      <th>SP</th>
+		      <th>Status</th>
+		     </tr>
+		    </thead>
 			<tbody>
 			 [for (courseallocation : CourseAllocation | coursegroup.courseAllocations)]
-			 	[generate(courseallocation)/]
-			 [/for]			
-		    </tbody>
+		 	[generate(courseallocation)/]
+		 [/for]			
+		</tbody>
+		</table>
 		 </li>
-	    
 [/template]
 
 [template public generate(courseallocation : CourseAllocation)]
 	<tr>
-	[for (course : Course | courseallocation.course)]
-		[generate(course)/]
+		[generate(courseallocation.course)/]
 		<td>[courseallocation.status/]</td>
-	[/for]
 	</tr>
 [/template]
 
-[template public generate(course : Course)]
-	<td>[course.code/]</td>
-	<td>[course.subject/]</td>
+[template public generate(courses : Course)]
+	<td>[courses.code/]</td>
+	<td>[courses.subject/]</td>
+	<td>[courses.credits/]</td>
 [/template]
 
 [query public season(semester : Semester) : String = 
