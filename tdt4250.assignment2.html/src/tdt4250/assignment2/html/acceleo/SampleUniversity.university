@@ -16,6 +16,12 @@
             course="TMA4100"/>
         <courseAllocations
             course="TDT4110"/>
+        <courseAllocations
+            course="EXPH0004"/>
+        <courseAllocations
+            course="HMS0002"/>
+        <courseAllocations
+            course="TMA4140"/>
       </courseGroups>
     </semesters>
     <semesters
@@ -23,7 +29,13 @@
       <courseGroups
           minRequiredCredits="30.0">
         <courseAllocations
-            course="IT2810"/>
+            course="TDT4112"/>
+        <courseAllocations
+            course="TDT4100"/>
+        <courseAllocations
+            course="TFE4101"/>
+        <courseAllocations
+            course="TMA4115"/>
       </courseGroups>
     </semesters>
     <semesters
@@ -31,7 +43,13 @@
       <courseGroups
           minRequiredCredits="30.0">
         <courseAllocations
-            course="IT2810"/>
+            course="TDT4113"/>
+        <courseAllocations
+            course="TDT4120"/>
+        <courseAllocations
+            course="TDT4160"/>
+        <courseAllocations
+            course="TMA4240"/>
       </courseGroups>
     </semesters>
     <semesters
@@ -39,7 +57,13 @@
       <courseGroups
           minRequiredCredits="30.0">
         <courseAllocations
-            course="TDT4136"/>
+            course="TDT4140"/>
+        <courseAllocations
+            course="TDT4145"/>
+        <courseAllocations
+            course="TDT4180"/>
+        <courseAllocations
+            course="TTM4100"/>
       </courseGroups>
     </semesters>
     <specialisations
@@ -76,19 +100,274 @@
                 course="BEIT4014"/>
           </courseGroups>
           <courseGroups
-              minRequiredCredits="7.5"/>
+              minRequiredCredits="7.5">
+            <courseAllocations
+                course="TDT4242"/>
+          </courseGroups>
           <courseGroups
               name="Ingenioremne annet studieprogram"
-              minRequiredCredits="7.5"/>
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="MEDT4165"/>
+            <courseAllocations
+                status="VB"
+                course="MOL4010"/>
+            <courseAllocations
+                status="VB"
+                course="TET4120"/>
+          </courseGroups>
           <courseGroups
               name="Valgbare emner"
-              minRequiredCredits="7.5"/>
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VA"
+                course="TDT4215"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4237"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4245"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4257"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="9">
+          <courseGroups
+              name="Fordypningsemner og masteroppgave"
+              minRequiredCredits="22.5">
+            <courseAllocations
+                course="TDT4501"/>
+            <courseAllocations
+                course="TDT4506"/>
+          </courseGroups>
+          <courseGroups
+              name="Komplementaere emner"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="AAR4250"/>
+            <courseAllocations
+                status="VB"
+                course="BSOL4610"/>
+            <courseAllocations
+                status="VB"
+                course="FI3107"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="10">
+          <courseGroups
+              name="Fordypningsemner og masteroppgave"
+              minRequiredCredits="30.0">
+            <courseAllocations
+                course="TDT4900"/>
+          </courseGroups>
         </semesters>
       </childSpecialisations>
       <childSpecialisations
-          name="Interaksjonsdesign og spillteknologi"/>
+          name="Interaksjonsdesign og spillteknologi">
+        <semesters
+            semesterNumber="7">
+          <courseGroups
+              minRequiredCredits="22.5">
+            <courseAllocations
+                course="IT3402"/>
+            <courseAllocations
+                course="TDT4290"/>
+          </courseGroups>
+          <courseGroups
+              name="Komplementaere emner"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="AAR4250"/>
+            <courseAllocations
+                status="VB"
+                course="TIØ4146"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="8">
+          <courseGroups
+              minRequiredCredits="7.5">
+            <courseAllocations
+                course="TDT4245"/>
+          </courseGroups>
+          <courseGroups
+              name="Ingenioremne annet studieprogram"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="MEDT4165"/>
+            <courseAllocations
+                status="VB"
+                course="MOL4010"/>
+            <courseAllocations
+                status="VB"
+                course="TET4120"/>
+          </courseGroups>
+          <courseGroups
+              name="Eksperter i Team"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="V"
+                course="BEIT4014"/>
+          </courseGroups>
+          <courseGroups
+              name="Valgbare emner"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VA"
+                course="TDT4215"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4237"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4242"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4257"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="9">
+          <courseGroups
+              name="Fordypningsemner og masteroppgave"
+              minRequiredCredits="22.5">
+            <courseAllocations
+                course="TDT4501"/>
+            <courseAllocations
+                course="TDT4506"/>
+          </courseGroups>
+          <courseGroups
+              name="Komplementaere emner"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="AAR4250"/>
+            <courseAllocations
+                status="VB"
+                course="BSOL4610"/>
+            <courseAllocations
+                status="VB"
+                course="FI3107"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="10">
+          <courseGroups
+              name="Fordypningsemner og masteroppgave"
+              minRequiredCredits="30.0">
+            <courseAllocations
+                course="TDT4900"/>
+          </courseGroups>
+        </semesters>
+      </childSpecialisations>
       <childSpecialisations
-          name="Digital virksomhetsutvikling"/>
+          name="Digital virksomhetsutvikling">
+        <semesters
+            semesterNumber="7">
+          <courseGroups
+              minRequiredCredits="22.5">
+            <courseAllocations
+                course="TDT4252"/>
+            <courseAllocations
+                course="TDT4290"/>
+          </courseGroups>
+          <courseGroups
+              name="Komplementaere emner"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="AAR4250"/>
+            <courseAllocations
+                status="VB"
+                course="TIØ4146"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="8">
+          <courseGroups
+              name="Eksperter i Team"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="V"
+                course="BEIT4014"/>
+          </courseGroups>
+          <courseGroups
+              minRequiredCredits="7.5">
+            <courseAllocations
+                course="TDT4257"/>
+          </courseGroups>
+          <courseGroups
+              name="Ingenioremne annet studieprogram"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="MEDT4165"/>
+            <courseAllocations
+                status="VB"
+                course="MOL4010"/>
+            <courseAllocations
+                status="VB"
+                course="TET4120"/>
+          </courseGroups>
+          <courseGroups
+              name="Valgbare emner"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VA"
+                course="TDT4215"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4237"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4245"/>
+            <courseAllocations
+                status="VA"
+                course="TDT4242"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="9">
+          <courseGroups
+              name="Fordypningsemner og masteroppgave"
+              minRequiredCredits="22.5">
+            <courseAllocations
+                course="TDT4501"/>
+            <courseAllocations
+                course="TDT4506"/>
+          </courseGroups>
+          <courseGroups
+              name="Komplementaere emner"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="AAR4250"/>
+            <courseAllocations
+                status="VB"
+                course="BSOL4610"/>
+            <courseAllocations
+                status="VB"
+                course="FI3107"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="10">
+          <courseGroups
+              name="Fordypningsemner og masteroppgave"
+              minRequiredCredits="30.0">
+            <courseAllocations
+                course="TDT4900"/>
+          </courseGroups>
+        </semesters>
+      </childSpecialisations>
       <semesters
           semesterNumber="5">
         <courseGroups
@@ -97,6 +376,8 @@
               course="TDT4136"/>
           <courseAllocations
               course="TDT4175"/>
+          <courseAllocations
+              course="TMA4135"/>
         </courseGroups>
         <courseGroups
             name="Valgbare emner"
@@ -104,28 +385,197 @@
           <courseAllocations
               status="VA"
               course="IT2810"/>
+          <courseAllocations
+              status="VA"
+              course="TDT4117"/>
+          <courseAllocations
+              status="VA"
+              course="TDT4137"/>
+          <courseAllocations
+              status="VA"
+              course="TDT4165"/>
+          <courseAllocations
+              status="VA"
+              course="TDT4258"/>
+        </courseGroups>
+      </semesters>
+      <semesters
+          semesterNumber="6">
+        <courseGroups
+            minRequiredCredits="30.0">
+          <courseAllocations
+              course="TDT4186"/>
+          <courseAllocations
+              course="TDT4240"/>
+          <courseAllocations
+              course="TFY4125"/>
+          <courseAllocations
+              course="TIØ4258"/>
         </courseGroups>
       </semesters>
     </specialisations>
   </programmes>
   <programmes
       name="Informatikk">
-    <specialisations
-        name="Software">
-      <semesters
-          semesterNumber="1">
-        <courseGroups
-            minRequiredCredits="22.5">
-          <courseAllocations
-              status="M2A"
-              course="TDT4250"/>
-          <courseAllocations
-              course="TDT4175"/>
-        </courseGroups>
-        <courseGroups
-            minRequiredCredits="7.5"/>
-      </semesters>
-    </specialisations>
+    <semesters
+        semesterNumber="1">
+      <courseGroups
+          minRequiredCredits="30.0">
+        <courseAllocations
+            course="EXPH0004"/>
+        <courseAllocations
+            course="TDT4110"/>
+        <courseAllocations
+            course="MA0001"/>
+        <courseAllocations
+            course="IT2805"/>
+        <courseAllocations
+            course="HMS0002"/>
+      </courseGroups>
+    </semesters>
+    <semesters
+        semesterNumber="2">
+      <courseGroups
+          minRequiredCredits="30.0">
+        <courseAllocations
+            course="TDT4100"/>
+        <courseAllocations
+            course="TDT4180"/>
+        <courseAllocations
+            course="TTM4100"/>
+        <courseAllocations
+            course="MA0301"/>
+      </courseGroups>
+    </semesters>
+    <semesters
+        semesterNumber="3">
+      <courseGroups
+          minRequiredCredits="22.5">
+        <courseAllocations
+            course="TDT4120"/>
+        <courseAllocations
+            course="TDT4160"/>
+        <courseAllocations
+            course="IT1901"/>
+      </courseGroups>
+      <courseGroups
+          name="Valgbare emner"
+          minRequiredCredits="7.5">
+        <courseAllocations
+            status="VA"
+            course="IT604"/>
+        <courseAllocations
+            status="VA"
+            course="TTM4185"/>
+        <courseAllocations
+            status="VA"
+            course="TTM4135"/>
+      </courseGroups>
+      <courseGroups
+          name="Områdeemne"
+          minRequiredCredits="7.5">
+        <courseAllocations
+            status="M"
+            course="BI2081"/>
+        <courseAllocations
+            status="M"
+            course="IØ2000"/>
+        <courseAllocations
+            status="M"
+            course="ØKO1001"/>
+      </courseGroups>
+    </semesters>
+    <semesters
+        semesterNumber="4">
+      <courseGroups
+          minRequiredCredits="15.0">
+        <courseAllocations
+            course="TDT4140"/>
+        <courseAllocations
+            course="TDT4145"/>
+      </courseGroups>
+      <courseGroups
+          name="Valgbare emner"
+          minRequiredCredits="7.5">
+        <courseAllocations
+            status="VA"
+            course="IT604"/>
+        <courseAllocations
+            status="VA"
+            course="TTM4185"/>
+        <courseAllocations
+            status="VA"
+            course="TTM4135"/>
+      </courseGroups>
+      <courseGroups
+          name="Områdeemne"
+          minRequiredCredits="7.5">
+        <courseAllocations
+            status="M"
+            course="BI2081"/>
+        <courseAllocations
+            status="M"
+            course="IØ2000"/>
+        <courseAllocations
+            status="M"
+            course="ØKO1001"/>
+      </courseGroups>
+    </semesters>
+    <semesters
+        semesterNumber="5">
+      <courseGroups
+          name="Valgbare emner"
+          minRequiredCredits="30.0">
+        <courseAllocations
+            status="M2A"
+            course="IT2810"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4117"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4136"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4137"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4165"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4175"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4258"/>
+      </courseGroups>
+    </semesters>
+    <semesters
+        semesterNumber="6">
+      <courseGroups
+          minRequiredCredits="15.0">
+        <courseAllocations
+            course="IT2901"/>
+      </courseGroups>
+      <courseGroups
+          name="Valgbare emner"
+          minRequiredCredits="15.0">
+        <courseAllocations
+            status="M2A"
+            course="TDT4186"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4240"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4186"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4171"/>
+        <courseAllocations
+            status="M2A"
+            course="TDT4205"/>
+      </courseGroups>
+    </semesters>
   </programmes>
   <courses subject="Avansert programvaredesign"
       code="TDT4250"
@@ -166,4 +616,223 @@
       code="TDT4175"
       level="Tredjeaarsemner, nivaa 3"
       credits="7.5"/>
+  <courses subject="Exphil"
+      code="EXPH0004"
+      credits="7.5"/>
+  <courses subject="HMS-kurs for 1.årsstudenter"
+      code="HMS0002"/>
+  <courses subject="Objektorientert programmering"
+      code="TDT4100"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Programmeringslab for datateknologi"
+      code="TDT4112"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Krets- og digitalteknikk"
+      code="TFE4101"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Matematikk 3"
+      code="TMA4115"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Datateknologi, programmeringsprosjekt"
+      code="TDT4113"
+      credits="7.5"/>
+  <courses subject="Algoritmer og datastrukturer"
+      code="TDT4120"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"/>
+  <courses subject="Datamaskiner og digitalteknikk"
+      code="TDT4160"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"/>
+  <courses subject="Statistikk"
+      code="TMA4240"
+      credits="7.5"/>
+  <courses subject="Programvareutvikling"
+      code="TDT4140"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Datamodellering og databasesystemer"
+      code="TDT4145"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Menneske-maskin interaksjon"
+      code="TDT4180"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Kommunikasjon - Tjenester og nett"
+      code="TTM4100"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Diskret matematikk"
+      code="TMA4140"
+      credits="7.5"/>
+  <courses subject="Matematikk 4D"
+      code="TMA4135"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses subject="Informasjonsgjenfinning"
+      code="TDT4117"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses subject="Kognitive arkitekturer"
+      code="TDT4137"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses subject="Programmeringsspråk"
+      code="TDT4165"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses subject="Maskinnær programmering"
+      code="TDT4258"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses subject="Operativsystemer"
+      code="TDT4186"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Programvarearkitektur"
+      code="TDT4240"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Fysikk"
+      code="TFY4125"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Teknologiledelse"
+      code="TIØ4258"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Avansert programvareutvikling"
+      code="TDT4242"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Web-intelligens"
+      code="TDT4215"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Programvaresikkerhet"
+      code="TDT4237"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Samhandlingsteknologi og sosiale medier"
+      code="TDT4245"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Digital tjenesteinnovasjon"
+      code="TDT4257"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Signalbehandling i ultralyd-avbildning"
+      code="MEDT4165"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Grunnleggende molekylærbiologi"
+      code="MOL4010"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Elektriske motordrifter"
+      code="TET4120"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Datateknologi, fordypningsprosjekt"
+      code="TDT4501"
+      level="Hoyere grads nivaa"
+      credits="15.0"/>
+  <courses subject="Datateknologi, fordypningsemne"
+      code="TDT4506"
+      level="Hoyere grads nivaa"
+      credits="15.0"/>
+  <courses subject="Strategi og endring"
+      code="BSOL4610"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses subject="Bioteknologi og etikk"
+      code="FI3107"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses subject="Datateknologi, masteroppgave"
+      code="TDT4900"
+      level="Hoyere grads nivaa"
+      credits="30.0"
+      season="Vaar"/>
+  <courses subject="Design av grafiske brukergrensesnitt"
+      code="IT3402"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses subject="Virksomhets-arkitektur og -innovasjon"
+      code="TDT4252"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses subject="Brukerkurs i matematikk A"
+      code="MA0001"
+      credits="7.5"/>
+  <courses subject="Webteknologi"
+      code="IT2805"
+      credits="7.5"/>
+  <courses subject="Elementær diskret matematikk "
+      code="MA0301"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Informatikk prosjektarbeid 1"
+      code="IT1901"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"/>
+  <courses subject="Digitalt samfunn"
+      code="IT604"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"/>
+  <courses subject="Sikkerhet og robusthet i IKT system"
+      code="TTM4185"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"/>
+  <courses subject="Anvendt kryptografi og nettverksikkerhet"
+      code="TTM4135"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"/>
+  <courses subject="Natur, miljø og bærekraft"
+      code="BI2081"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"/>
+  <courses subject="Hvordan bli en endringsagent? Innovasjon og entreprenørskap i praksis"
+      code="IØ2000"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"/>
+  <courses subject="Ledelse"
+      code="ØKO1001"
+      level="Videregaaende emner, nivaa 2"
+      credits="7.5"
+      season="Begge"/>
+  <courses subject="Informatikk prosjektarbeid II"
+      code="IT2901"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="15.0"
+      season="Vaar"/>
+  <courses subject="Metoder i kunstig intelligens"
+      code="TDT4171"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Kompilatorteknikk"
+      code="TDT4205"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"
+      season="Vaar"/>
 </studyprograms:University>

@@ -24,6 +24,7 @@
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/engineeringSubjectsOtherProgramme"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/expertsInTeam"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/specialisationSubjectsThesis"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseGroupType/omradeemne"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="studyprograms.ecore#//CourseStatusType">
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/O"/>
@@ -33,6 +34,7 @@
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/MAX1A"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/M1A"/>
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/M2A"/>
+      <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//CourseStatusType/M"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="studyprograms.ecore#//SeasonType">
       <genEnumLiterals ecoreEnumLiteral="studyprograms.ecore#//SeasonType/fall"/>
@@ -65,6 +67,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//Specialisation/childSpecialisations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//Specialisation/semesters"/>
     </genClasses>
+    <genClasses ecoreClass="studyprograms.ecore#//CourseAllocation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//CourseAllocation/status"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference studyprograms.ecore#//CourseAllocation/courseGroup"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference studyprograms.ecore#//CourseAllocation/course"/>
+    </genClasses>
     <genClasses ecoreClass="studyprograms.ecore#//Semester">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Semester/semesterNumber"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//Semester/courseGroups"/>
@@ -74,11 +81,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//CourseGroup/courseAllocations"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//CourseGroup/minRequiredCredits"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference studyprograms.ecore#//CourseGroup/semester"/>
-    </genClasses>
-    <genClasses ecoreClass="studyprograms.ecore#//CourseAllocation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//CourseAllocation/status"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference studyprograms.ecore#//CourseAllocation/courseGroup"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference studyprograms.ecore#//CourseAllocation/course"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

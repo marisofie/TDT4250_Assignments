@@ -612,6 +612,11 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		createEReference(specialisationEClass, SPECIALISATION__CHILD_SPECIALISATIONS);
 		createEReference(specialisationEClass, SPECIALISATION__SEMESTERS);
 
+		courseAllocationEClass = createEClass(COURSE_ALLOCATION);
+		createEAttribute(courseAllocationEClass, COURSE_ALLOCATION__STATUS);
+		createEReference(courseAllocationEClass, COURSE_ALLOCATION__COURSE_GROUP);
+		createEReference(courseAllocationEClass, COURSE_ALLOCATION__COURSE);
+
 		semesterEClass = createEClass(SEMESTER);
 		createEAttribute(semesterEClass, SEMESTER__SEMESTER_NUMBER);
 		createEReference(semesterEClass, SEMESTER__COURSE_GROUPS);
@@ -621,11 +626,6 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		createEReference(courseGroupEClass, COURSE_GROUP__COURSE_ALLOCATIONS);
 		createEAttribute(courseGroupEClass, COURSE_GROUP__MIN_REQUIRED_CREDITS);
 		createEReference(courseGroupEClass, COURSE_GROUP__SEMESTER);
-
-		courseAllocationEClass = createEClass(COURSE_ALLOCATION);
-		createEAttribute(courseAllocationEClass, COURSE_ALLOCATION__STATUS);
-		createEReference(courseAllocationEClass, COURSE_ALLOCATION__COURSE_GROUP);
-		createEReference(courseAllocationEClass, COURSE_ALLOCATION__COURSE);
 
 		// Create enums
 		degreeTypeEEnum = createEEnum(DEGREE_TYPE);
@@ -693,6 +693,11 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		initEReference(getSpecialisation_ChildSpecialisations(), this.getSpecialisation(), null, "childSpecialisations", null, 0, -1, Specialisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecialisation_Semesters(), this.getSemester(), null, "semesters", null, 0, -1, Specialisation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(courseAllocationEClass, CourseAllocation.class, "CourseAllocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCourseAllocation_Status(), this.getCourseStatusType(), "status", null, 0, 1, CourseAllocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCourseAllocation_CourseGroup(), this.getCourseGroup(), this.getCourseGroup_CourseAllocations(), "courseGroup", null, 1, 1, CourseAllocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCourseAllocation_Course(), this.getCourse(), null, "course", null, 1, 1, CourseAllocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(semesterEClass, Semester.class, "Semester", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSemester_SemesterNumber(), this.getSemesterNumber(), "semesterNumber", null, 0, 1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSemester_CourseGroups(), this.getCourseGroup(), this.getCourseGroup_Semester(), "courseGroups", null, 0, -1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -702,11 +707,6 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		initEReference(getCourseGroup_CourseAllocations(), this.getCourseAllocation(), this.getCourseAllocation_CourseGroup(), "courseAllocations", null, 0, -1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourseGroup_MinRequiredCredits(), ecorePackage.getEFloat(), "minRequiredCredits", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCourseGroup_Semester(), this.getSemester(), this.getSemester_CourseGroups(), "semester", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(courseAllocationEClass, CourseAllocation.class, "CourseAllocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCourseAllocation_Status(), this.getCourseStatusType(), "status", null, 0, 1, CourseAllocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCourseAllocation_CourseGroup(), this.getCourseGroup(), this.getCourseGroup_CourseAllocations(), "courseGroup", null, 1, 1, CourseAllocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCourseAllocation_Course(), this.getCourse(), null, "course", null, 1, 1, CourseAllocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(degreeTypeEEnum, DegreeType.class, "DegreeType");
@@ -727,6 +727,7 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.ENGINEERING_SUBJECTS_OTHER_PROGRAMME);
 		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.EXPERTS_IN_TEAM);
 		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.SPECIALISATION_SUBJECTS_THESIS);
+		addEEnumLiteral(courseGroupTypeEEnum, CourseGroupType.OMRADEEMNE);
 
 		initEEnum(courseStatusTypeEEnum, CourseStatusType.class, "CourseStatusType");
 		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.O);
@@ -736,6 +737,7 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.MAX1A);
 		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.M1A);
 		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.M2A);
+		addEEnumLiteral(courseStatusTypeEEnum, CourseStatusType.M);
 
 		initEEnum(seasonTypeEEnum, SeasonType.class, "SeasonType");
 		addEEnumLiteral(seasonTypeEEnum, SeasonType.FALL);

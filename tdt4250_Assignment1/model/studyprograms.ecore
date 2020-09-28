@@ -100,6 +100,7 @@
     <eLiterals name="engineeringSubjectsOtherProgramme" value="3" literal="Ingenioremne annet studieprogram"/>
     <eLiterals name="expertsInTeam" value="4" literal="Eksperter i Team"/>
     <eLiterals name="specialisationSubjectsThesis" value="5" literal="Fordypningsemner og masteroppgave"/>
+    <eLiterals name="omradeemne" value="6" literal="Områdeemne"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CourseStatusType">
     <eLiterals name="O" literal="O"/>
@@ -109,6 +110,7 @@
     <eLiterals name="MAX1A" value="4" literal="MAX1A"/>
     <eLiterals name="M1A" value="5" literal="M1A"/>
     <eLiterals name="M2A" value="6" literal="M2A"/>
+    <eLiterals name="M" value="7" literal="M"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="SeasonType">
     <eLiterals name="fall" literal="Host"/>

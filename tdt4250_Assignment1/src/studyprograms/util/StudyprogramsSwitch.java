@@ -90,6 +90,12 @@ public class StudyprogramsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case StudyprogramsPackage.COURSE_ALLOCATION: {
+				CourseAllocation courseAllocation = (CourseAllocation)theEObject;
+				T result = caseCourseAllocation(courseAllocation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case StudyprogramsPackage.SEMESTER: {
 				Semester semester = (Semester)theEObject;
 				T result = caseSemester(semester);
@@ -99,12 +105,6 @@ public class StudyprogramsSwitch<T> extends Switch<T> {
 			case StudyprogramsPackage.COURSE_GROUP: {
 				CourseGroup courseGroup = (CourseGroup)theEObject;
 				T result = caseCourseGroup(courseGroup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case StudyprogramsPackage.COURSE_ALLOCATION: {
-				CourseAllocation courseAllocation = (CourseAllocation)theEObject;
-				T result = caseCourseAllocation(courseAllocation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
