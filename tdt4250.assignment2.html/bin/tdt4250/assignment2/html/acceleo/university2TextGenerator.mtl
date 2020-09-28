@@ -23,19 +23,48 @@
 [template public generate(programme : Programme)]
 		<h1>[programme.name/] - Studiets oppbygning</h1>
     	<div>Grad: [programme.degree/]</div>
-		[for (semester : Semester | programme.semesters)] 
+		[if (programmeHasPlainSemesters(programme))]
+			<div>
+			<ol>
+				[for (semester : Semester | programme.semesters)] 
+					[generate(semester)/]
+				[/for]
+			</ol>
+		</div>
+		[/if]
+		[if (programmeHasSpecialisations(programme))]
+	   		<div>
+				[for (specialisation : Specialisation | programme.specialisations)] 
+					[generate(specialisation)/]
+				[/for]
+			</div>
+		[/if]
+[/template]
+
+[template public generate(specialisation : Specialisation)]
+		<h2>[specialisation.name/]</h2>
+		[for (semester : Semester | specialisation.semesters)] 
 			[generate(semester)/]
 		[/for]
-		<h2>[specialisation(programme)/]</h2>
+
+		[if (specialisationHasChildSpecialisations(specialisation))]
+	   		<div>
+				[for (specialisation : Specialisation | specialisation.childSpecialisations)] 
+					[generate(specialisation)/]
+				[/for]
+			</div>
+		[/if]
 [/template]
 
 [template public generate(semester : Semester)]
-		<h3>[season(semester)/] - [semester.semesterNumber/]. semester</h3>
-		<ul>
-			[for (coursegroup : CourseGroup | semester.courseGroups)]
-				[generate(coursegroup)/]
-			[/for]
-		</ul>
+		<li>
+			<h3>[season(semester)/] - [semester.semesterNumber/]. semester</h3>
+			<ul>
+				[for (coursegroup : CourseGroup | semester.courseGroups)]
+					[generate(coursegroup)/]
+				[/for]
+			</ul>
+		</li>
 [/template]
 
 [template public generate(coursegroup : CourseGroup)]
@@ -76,6 +105,14 @@
 	 if semester.semesterNumber.mod(2) = 1 then 'Høst' else 'Vår' endif
  /]
 
-[query public specialisation(programme : Programme) : String = 
-	if programme.specialisations -> notEmpty() then programme.specialisations.name else '' endif
+[query public programmeHasPlainSemesters(programme : Programme) : Boolean = 
+	if programme.semesters -> notEmpty() then true else false endif
+/]
+
+[query public programmeHasSpecialisations(programme : Programme) : Boolean = 
+	if programme.specialisations -> notEmpty() then true else false endif
+/]
+
+[query public specialisationHasChildSpecialisations(specialisation : Specialisation) : Boolean = 
+	if specialisation.childSpecialisations -> notEmpty() then true else false endif
 /]
