@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studyprograms:University
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:studyprograms="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore"
+    xsi:schemaLocation="platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore ../../../../tdt4250_Assignment1/model/studyprograms.ecore">
+  <programmes
+      name="Datateknologi"
+      degree="Integrert Master">
+    <semesters
+        semesterNumber="1">
+      <courseGroups
+          minRequiredCredits="30.0">
+        <courseAllocations
+            course="TMA4100"/>
+        <courseAllocations
+            status="VA"
+            course="TDT4110"/>
+      </courseGroups>
+    </semesters>
+    <specialisations
+        name="Programvaresystemer">
+      <childSpecialisations
+          name="Programvareutvikling">
+        <semesters
+            semesterNumber="7">
+          <courseGroups
+              minRequiredCredits="22.5">
+            <courseAllocations
+                course="TDT4250"/>
+            <courseAllocations
+                course="TDT4290"/>
+          </courseGroups>
+          <courseGroups
+              name="Komplementaere emner"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="VB"
+                course="AAR4250"/>
+            <courseAllocations
+                status="VB"
+                course="TIØ4146"/>
+          </courseGroups>
+        </semesters>
+        <semesters
+            semesterNumber="8">
+          <courseGroups
+              name="Eksperter i Team"
+              minRequiredCredits="7.5">
+            <courseAllocations
+                status="V"
+                course="BEIT4014"/>
+          </courseGroups>
+          <courseGroups
+              minRequiredCredits="7.5"/>
+          <courseGroups
+              name="Ingenioremne annet studieprogram"
+              minRequiredCredits="7.5"/>
+          <courseGroups
+              name="Valgbare emner"
+              minRequiredCredits="7.5"/>
+        </semesters>
+      </childSpecialisations>
+      <childSpecialisations
+          name="Interaksjonsdesign og spillteknologi"/>
+      <childSpecialisations
+          name="Digital virksomhetsutvikling"/>
+      <semesters
+          semesterNumber="5">
+        <courseGroups
+            minRequiredCredits="22.5">
+          <courseAllocations
+              course="TDT4136"/>
+          <courseAllocations
+              course="TDT4175"/>
+        </courseGroups>
+        <courseGroups
+            name="Valgbare emner"
+            minRequiredCredits="7.5">
+          <courseAllocations
+              status="VA"
+              course="IT2810"/>
+        </courseGroups>
+      </semesters>
+    </specialisations>
+  </programmes>
+  <programmes
+      name="Informatikk">
+    <specialisations
+        name="Software">
+      <semesters
+          semesterNumber="1">
+        <courseGroups
+            minRequiredCredits="7.5">
+          <courseAllocations
+              status="M2A"
+              course="TDT4250"/>
+          <courseAllocations
+              course="TDT4175"/>
+        </courseGroups>
+        <courseGroups
+            minRequiredCredits="7.5"/>
+      </semesters>
+    </specialisations>
+  </programmes>
+  <courses subject="Avansert programvaredesign"
+      code="TDT4250"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Matematikk 1"
+      code="TMA4100"
+      credits="7.5"/>
+  <courses subject="Informasjonsteknologi, grunnkurs"
+      code="TDT4110"
+      credits="7.5"/>
+  <courses subject="Introduksjon til kunstig intelligens"
+      code="TDT4136"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses subject="Webutvikling"
+      code="IT2810"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+  <courses subject="Kundestyrt prosjekt"
+      code="TDT4290"
+      level="Hoyere grads nivaa"
+      credits="15.0"/>
+  <courses subject="Arkitektur som teknologisk praksis"
+      code="AAR4250"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses subject="Finans for teknisk-naturvitenskapelige studenter"
+      code="TIØ4146"
+      level="Hoyere grads nivaa"
+      credits="7.5"/>
+  <courses subject="Eksperter i Team - Grønne bygg"
+      code="BEIT4014"
+      level="Hoyere grads nivaa"
+      credits="7.5"
+      season="Vaar"/>
+  <courses subject="Informasjonssystemer"
+      code="TDT4175"
+      level="Tredjeaarsemner, nivaa 3"
+      credits="7.5"/>
+</studyprograms:University>

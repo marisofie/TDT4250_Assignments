@@ -61,9 +61,9 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 			case StudyprogramsPackage.COURSE: return createCourse();
 			case StudyprogramsPackage.PROGRAMME: return createProgramme();
 			case StudyprogramsPackage.SPECIALISATION: return createSpecialisation();
+			case StudyprogramsPackage.COURSE_ALLOCATION: return createCourseAllocation();
 			case StudyprogramsPackage.SEMESTER: return createSemester();
 			case StudyprogramsPackage.COURSE_GROUP: return createCourseGroup();
-			case StudyprogramsPackage.COURSE_ALLOCATION: return createCourseAllocation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -308,7 +308,7 @@ public class StudyprogramsFactoryImpl extends EFactoryImpl implements Studyprogr
 		}
 		return (String)super.createFromString(eDataType, initialValue);
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

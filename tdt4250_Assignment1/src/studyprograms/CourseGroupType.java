@@ -68,7 +68,15 @@ public enum CourseGroupType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SPECIALISATION_SUBJECTS_THESIS(5, "specialisationSubjectsThesis", "Fordypningsemner og masteroppgave");
+	SPECIALISATION_SUBJECTS_THESIS(5, "specialisationSubjectsThesis", "Fordypningsemner og masteroppgave"), /**
+	 * The '<em><b>Omradeemne</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OMRADEEMNE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OMRADEEMNE(6, "omradeemne", "Omr\u00e5deemne");
 
 	/**
 	 * The '<em><b>Mandatory Subjects</b></em>' literal value.
@@ -137,6 +145,17 @@ public enum CourseGroupType implements Enumerator {
 	public static final int SPECIALISATION_SUBJECTS_THESIS_VALUE = 5;
 
 	/**
+	 * The '<em><b>Omradeemne</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OMRADEEMNE
+	 * @model name="omradeemne" literal="Omr\345deemne"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OMRADEEMNE_VALUE = 6;
+
+	/**
 	 * An array of all the '<em><b>Course Group Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,6 +169,7 @@ public enum CourseGroupType implements Enumerator {
 			ENGINEERING_SUBJECTS_OTHER_PROGRAMME,
 			EXPERTS_IN_TEAM,
 			SPECIALISATION_SUBJECTS_THESIS,
+			OMRADEEMNE,
 		};
 
 	/**
@@ -212,6 +232,7 @@ public enum CourseGroupType implements Enumerator {
 			case ENGINEERING_SUBJECTS_OTHER_PROGRAMME_VALUE: return ENGINEERING_SUBJECTS_OTHER_PROGRAMME;
 			case EXPERTS_IN_TEAM_VALUE: return EXPERTS_IN_TEAM;
 			case SPECIALISATION_SUBJECTS_THESIS_VALUE: return SPECIALISATION_SUBJECTS_THESIS;
+			case OMRADEEMNE_VALUE: return OMRADEEMNE;
 		}
 		return null;
 	}

@@ -41,6 +41,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="semesters" upperBound="-1"
         eType="#//Semester" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CourseAllocation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//CourseStatusType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroup" lowerBound="1"
+        eType="#//CourseGroup" eOpposite="#//CourseGroup/courseAllocations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="course" lowerBound="1"
+        eType="#//Course"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Semester">
     <eAnnotations source="http://www.eclipse.org/acceleo/query/1.0">
       <details key="validateSemesterCredits" value=" let mc = self.courseGroups ->collect(cg | cg.minRequiredCredits) -> sum()  in  (if mc >= 30.0 then true else false endif)"/>
@@ -62,13 +69,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minRequiredCredits" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="semester" eType="#//Semester"
         eOpposite="#//Semester/courseGroups"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CourseAllocation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//CourseStatusType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="courseGroup" lowerBound="1"
-        eType="#//CourseGroup" eOpposite="#//CourseGroup/courseAllocations"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="course" lowerBound="1"
-        eType="#//Course"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCode" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EDataType" name="CourseCredit" instanceClassName="float">
@@ -100,6 +100,7 @@
     <eLiterals name="engineeringSubjectsOtherProgramme" value="3" literal="Ingenioremne annet studieprogram"/>
     <eLiterals name="expertsInTeam" value="4" literal="Eksperter i Team"/>
     <eLiterals name="specialisationSubjectsThesis" value="5" literal="Fordypningsemner og masteroppgave"/>
+    <eLiterals name="omradeemne" value="6" literal="Områdeemne"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CourseStatusType">
     <eLiterals name="O" literal="O"/>
@@ -109,6 +110,7 @@
     <eLiterals name="MAX1A" value="4" literal="MAX1A"/>
     <eLiterals name="M1A" value="5" literal="M1A"/>
     <eLiterals name="M2A" value="6" literal="M2A"/>
+    <eLiterals name="M" value="7" literal="M"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="SeasonType">
     <eLiterals name="fall" literal="Host"/>

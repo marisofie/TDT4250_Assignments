@@ -1,0 +1,118 @@
+[comment encoding = UTF-8 /]
+[module university2TextGenerator('platform:/plugin/tdt4250_Assignment1/model/studyprograms.ecore', 'http://www.eclipse.org/emf/2002/Ecore')]
+
+
+[template public University2TextGenerator(university : University)]
+[comment @main/]
+	[file (university.eClass().instanceClassName.concat('.html'), false, 'UTF-8')]
+<html>
+<head>
+	<title>Studiets oppbygning</title>
+	<meta charset="utf-8"/>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+	[for (programme : Programme | university.programmes)]
+		[generate(programme)/]
+	[/for]
+</body>
+</html>
+	[/file]
+[/template]
+
+[template public generate(programme : Programme)]
+		<h1>[programme.name/] - Studiets oppbygning</h1>
+    	<div>Grad: [programme.degree/]</div>
+		[if (programmeHasPlainSemesters(programme))]
+			<div>
+			<ol>
+				[for (semester : Semester | programme.semesters)] 
+					[generate(semester)/]
+				[/for]
+			</ol>
+		</div>
+		[/if]
+		[if (programmeHasSpecialisations(programme))]
+	   		<div>
+				[for (specialisation : Specialisation | programme.specialisations)] 
+					<h2>Spesialisering:</h2> [generate(specialisation)/]
+				[/for]
+			</div>
+		[/if]
+[/template]
+
+[template public generate(specialisation : Specialisation)]
+		<h2>[specialisation.name/]</h2>
+		[for (semester : Semester | specialisation.semesters)] 
+			[generate(semester)/]
+		[/for]
+
+		[if (specialisationHasChildSpecialisations(specialisation))]
+	   		<div>
+				[for (specialisation : Specialisation | specialisation.childSpecialisations)] 
+					<h2>Underspesialisering:</h2>[generate(specialisation)/]
+				[/for]
+			</div>
+		[/if]
+[/template]
+
+[template public generate(semester : Semester)]
+		<li>
+			<h3>[season(semester)/] - [semester.semesterNumber/]. semester</h3>
+			<ul>
+				[for (coursegroup : CourseGroup | semester.courseGroups)]
+					[generate(coursegroup)/]
+				[/for]
+			</ul>
+		</li>
+[/template]
+
+[template public generate(coursegroup : CourseGroup)]
+		 <li>
+		  <span>[coursegroup.name/]</span>
+		   <table border="2">
+		    <thead>
+		  	 <tr>
+		      <th>Kode</th>
+		      <th>Navn</th>
+		      <th>SP</th>
+		      <th>Status</th>
+		     </tr>
+		    </thead>
+			<tbody>
+			 [for (courseallocation : CourseAllocation | coursegroup.courseAllocations)]
+		 	[generate(courseallocation)/]
+		 [/for]			
+		</tbody>
+		</table>
+		 </li>
+[/template]
+
+[template public generate(courseallocation : CourseAllocation)]
+	<tr>
+		[generate(courseallocation.course)/]
+		<td>[courseallocation.status/]</td>
+	</tr>
+[/template]
+
+[template public generate(courses : Course)]
+	<td>[courses.code/]</td>
+	<td>[courses.subject/]</td>
+	<td>[courses.credits/]</td>
+[/template]
+
+[query public season(semester : Semester) : String = 
+	 if semester.semesterNumber.mod(2) = 1 then 'Høst' else 'Vår' endif
+ /]
+
+[query public programmeHasPlainSemesters(programme : Programme) : Boolean = 
+	if programme.semesters -> notEmpty() then true else false endif
+/]
+
+[query public programmeHasSpecialisations(programme : Programme) : Boolean = 
+	if programme.specialisations -> notEmpty() then true else false endif
+/]
+
+[query public specialisationHasChildSpecialisations(specialisation : Specialisation) : Boolean = 
+	if specialisation.childSpecialisations -> notEmpty() then true else false endif
+/]

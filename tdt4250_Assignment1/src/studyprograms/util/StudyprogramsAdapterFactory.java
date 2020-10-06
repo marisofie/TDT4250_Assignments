@@ -84,16 +84,16 @@ public class StudyprogramsAdapterFactory extends AdapterFactoryImpl {
 				return createSpecialisationAdapter();
 			}
 			@Override
+			public Adapter caseCourseAllocation(CourseAllocation object) {
+				return createCourseAllocationAdapter();
+			}
+			@Override
 			public Adapter caseSemester(Semester object) {
 				return createSemesterAdapter();
 			}
 			@Override
 			public Adapter caseCourseGroup(CourseGroup object) {
 				return createCourseGroupAdapter();
-			}
-			@Override
-			public Adapter caseCourseAllocation(CourseAllocation object) {
-				return createCourseAllocationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
