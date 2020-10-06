@@ -24,6 +24,11 @@ This model is produced from model to text with the use of Acceleo. The model is 
 
 - Open the file tdt4250.assignment2.html/src/tdt4250/assignment2/html/acceleo/studyprograms.University.html in your Eclipse IDE or locally in a web browser. This is the result of the transformed model to text.  
 
+#### Requirements and Dependencies for running the code
+To be able to run the mtl file and transform the model to code, the following dependencies and required plug-ins need to be installed. The packages are imported from tdt4250_Assignment1/src/studyprograms. 
+![Alt text](tdt4250.assignment2.html/Requirements.png?raw=true "Run Configurations Acceleo Application")
+
+
 # Assignment 1
 ## Repo structure & content
 - tdt4250_Assignment1 : 
