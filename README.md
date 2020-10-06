@@ -17,12 +17,12 @@ Group: Sigrid Marita Kvamme & Mari Sofie Lerfaldet
 ### Run Model Transformation 
 This model is produced from model to text with the use of Acceleo. The model is transformed from the file tdt4250.assignment2.html/src/tdt4250/assignment2/html/acceleo/SampleUniversity.university. 
 
-Steps to run the html page with the modelled instances: 
+#### Steps to run the html page with the modelled instances: 
 - Clone repo from master branch 
 - Run the file tdt4250.assignment2.html/src/tdt4250/assignment2/html/acceleo/university2TextGenerator.mtl as an Acceleo Application with the following run configurations: 
 ![Alt text](tdt4250.assignment2.html/RunConfigAcceleo.png?raw=true "Run Configurations Acceleo Application")
 
-- Open the file tdt4250.assignment2.html/src/tdt4250/assignment2/html/acceleo/studyprograms.University.html in your Eclipse IDE. This is the result of the transformed model to text.  
+- Open the file tdt4250.assignment2.html/src/tdt4250/assignment2/html/acceleo/studyprograms.University.html in your Eclipse IDE or locally in a web browser. This is the result of the transformed model to text.  
 
 # Assignment 1
 ## Repo structure & content
