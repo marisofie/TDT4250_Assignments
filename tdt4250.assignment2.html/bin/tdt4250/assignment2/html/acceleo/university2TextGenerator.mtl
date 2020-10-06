@@ -35,7 +35,7 @@
 		[if (programmeHasSpecialisations(programme))]
 	   		<div>
 				[for (specialisation : Specialisation | programme.specialisations)] 
-					[generate(specialisation)/]
+					<h2>Spesialisering:</h2> [generate(specialisation)/]
 				[/for]
 			</div>
 		[/if]
@@ -50,7 +50,7 @@
 		[if (specialisationHasChildSpecialisations(specialisation))]
 	   		<div>
 				[for (specialisation : Specialisation | specialisation.childSpecialisations)] 
-					[generate(specialisation)/]
+					<h2>Underspesialisering:</h2>[generate(specialisation)/]
 				[/for]
 			</div>
 		[/if]
