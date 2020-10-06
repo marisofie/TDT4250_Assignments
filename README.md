@@ -8,10 +8,10 @@ Group: Sigrid Marita Kvamme & Mari Sofie Lerfaldet
   - ```tdt4250_Assignment1.tests```
     -```/src/studyprograms.tests```
       - ```/CourseTest.java```
-        - Test for Label
+        - Test for ```Label```
       - ```/StudyprogramsValidatorTest.java```
         - Tests for constraints: ```ValidateSemesterCredits``` and ```CourseSeasonMatchesSemester```
-- Added some entities to enumerators for missing values (ex: M to CourseStatusType). 
+- Added some entities to enumerators for missing values (ex: ```M``` to ```CourseStatusType```). 
 - Added more detailed information about where to find the different constraints etc. under Assignment 1. 
 
 ### Run Model Transformation 
