@@ -82,7 +82,15 @@ public enum CourseStatusType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	M2A(6, "M2A", "M2A");
+	M2A(6, "M2A", "M2A"), /**
+	 * The '<em><b>M</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #M_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	M(7, "M", "M");
 
 	/**
 	 * The '<em><b>O</b></em>' literal value.
@@ -162,6 +170,17 @@ public enum CourseStatusType implements Enumerator {
 	public static final int M2A_VALUE = 6;
 
 	/**
+	 * The '<em><b>M</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #M
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int M_VALUE = 7;
+
+	/**
 	 * An array of all the '<em><b>Course Status Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -176,6 +195,7 @@ public enum CourseStatusType implements Enumerator {
 			MAX1A,
 			M1A,
 			M2A,
+			M,
 		};
 
 	/**
@@ -239,6 +259,7 @@ public enum CourseStatusType implements Enumerator {
 			case MAX1A_VALUE: return MAX1A;
 			case M1A_VALUE: return M1A;
 			case M2A_VALUE: return M2A;
+			case M_VALUE: return M;
 		}
 		return null;
 	}

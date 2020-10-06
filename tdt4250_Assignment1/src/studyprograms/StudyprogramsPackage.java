@@ -314,7 +314,7 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseGroup()
 	 * @generated
 	 */
-	int COURSE_GROUP = 5;
+	int COURSE_GROUP = 6;
 
 	/**
 	 * The meta object id for the '{@link studyprograms.impl.SemesterImpl <em>Semester</em>}' class.
@@ -324,7 +324,62 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @see studyprograms.impl.StudyprogramsPackageImpl#getSemester()
 	 * @generated
 	 */
-	int SEMESTER = 4;
+	int SEMESTER = 5;
+
+	/**
+	 * The meta object id for the '{@link studyprograms.impl.CourseAllocationImpl <em>Course Allocation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see studyprograms.impl.CourseAllocationImpl
+	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseAllocation()
+	 * @generated
+	 */
+	int COURSE_ALLOCATION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION__STATUS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Course Group</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION__COURSE_GROUP = 1;
+
+	/**
+	 * The feature id for the '<em><b>Course</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION__COURSE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Course Allocation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Course Allocation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_ALLOCATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Semester Number</b></em>' attribute.
@@ -415,61 +470,6 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @ordered
 	 */
 	int COURSE_GROUP_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link studyprograms.impl.CourseAllocationImpl <em>Course Allocation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see studyprograms.impl.CourseAllocationImpl
-	 * @see studyprograms.impl.StudyprogramsPackageImpl#getCourseAllocation()
-	 * @generated
-	 */
-	int COURSE_ALLOCATION = 6;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE_ALLOCATION__STATUS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Course Group</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE_ALLOCATION__COURSE_GROUP = 1;
-
-	/**
-	 * The feature id for the '<em><b>Course</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE_ALLOCATION__COURSE = 2;
-
-	/**
-	 * The number of structural features of the '<em>Course Allocation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE_ALLOCATION_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Course Allocation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COURSE_ALLOCATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link studyprograms.LevelType <em>Level Type</em>}' enum.

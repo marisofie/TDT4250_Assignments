@@ -94,12 +94,12 @@ public class StudyprogramsValidator extends EObjectValidator {
 				return validateProgramme((Programme)value, diagnostics, context);
 			case StudyprogramsPackage.SPECIALISATION:
 				return validateSpecialisation((Specialisation)value, diagnostics, context);
+			case StudyprogramsPackage.COURSE_ALLOCATION:
+				return validateCourseAllocation((CourseAllocation)value, diagnostics, context);
 			case StudyprogramsPackage.SEMESTER:
 				return validateSemester((Semester)value, diagnostics, context);
 			case StudyprogramsPackage.COURSE_GROUP:
 				return validateCourseGroup((CourseGroup)value, diagnostics, context);
-			case StudyprogramsPackage.COURSE_ALLOCATION:
-				return validateCourseAllocation((CourseAllocation)value, diagnostics, context);
 			case StudyprogramsPackage.DEGREE_TYPE:
 				return validateDegreeType((DegreeType)value, diagnostics, context);
 			case StudyprogramsPackage.LEVEL_TYPE:
