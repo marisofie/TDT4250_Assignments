@@ -400,13 +400,22 @@ public interface StudyprogramsPackage extends EPackage {
 	int SEMESTER__COURSE_GROUPS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEMESTER__INFORMATION = 2;
+
+	/**
 	 * The number of structural features of the '<em>Semester</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEMESTER_FEATURE_COUNT = 2;
+	int SEMESTER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Semester</em>' class.
@@ -454,13 +463,22 @@ public interface StudyprogramsPackage extends EPackage {
 	int COURSE_GROUP__SEMESTER = 3;
 
 	/**
+	 * The feature id for the '<em><b>Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COURSE_GROUP__INFORMATION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Course Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COURSE_GROUP_FEATURE_COUNT = 4;
+	int COURSE_GROUP_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Course Group</em>' class.
@@ -813,6 +831,17 @@ public interface StudyprogramsPackage extends EPackage {
 	EReference getCourseGroup_Semester();
 
 	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.CourseGroup#getInformation <em>Information</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Information</em>'.
+	 * @see studyprograms.CourseGroup#getInformation()
+	 * @see #getCourseGroup()
+	 * @generated
+	 */
+	EAttribute getCourseGroup_Information();
+
+	/**
 	 * Returns the meta object for class '{@link studyprograms.Semester <em>Semester</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -843,6 +872,17 @@ public interface StudyprogramsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSemester_CourseGroups();
+
+	/**
+	 * Returns the meta object for the attribute '{@link studyprograms.Semester#getInformation <em>Information</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Information</em>'.
+	 * @see studyprograms.Semester#getInformation()
+	 * @see #getSemester()
+	 * @generated
+	 */
+	EAttribute getSemester_Information();
 
 	/**
 	 * Returns the meta object for class '{@link studyprograms.CourseAllocation <em>Course Allocation</em>}'.
@@ -1196,6 +1236,14 @@ public interface StudyprogramsPackage extends EPackage {
 		EReference COURSE_GROUP__SEMESTER = eINSTANCE.getCourseGroup_Semester();
 
 		/**
+		 * The meta object literal for the '<em><b>Information</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COURSE_GROUP__INFORMATION = eINSTANCE.getCourseGroup_Information();
+
+		/**
 		 * The meta object literal for the '{@link studyprograms.impl.SemesterImpl <em>Semester</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1220,6 +1268,14 @@ public interface StudyprogramsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SEMESTER__COURSE_GROUPS = eINSTANCE.getSemester_CourseGroups();
+
+		/**
+		 * The meta object literal for the '<em><b>Information</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEMESTER__INFORMATION = eINSTANCE.getSemester_Information();
 
 		/**
 		 * The meta object literal for the '{@link studyprograms.impl.CourseAllocationImpl <em>Course Allocation</em>}' class.

@@ -431,6 +431,15 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCourseGroup_Information() {
+		return (EAttribute)courseGroupEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSemester() {
 		return semesterEClass;
 	}
@@ -451,6 +460,15 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 	 */
 	public EReference getSemester_CourseGroups() {
 		return (EReference)semesterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSemester_Information() {
+		return (EAttribute)semesterEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -620,12 +638,14 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		semesterEClass = createEClass(SEMESTER);
 		createEAttribute(semesterEClass, SEMESTER__SEMESTER_NUMBER);
 		createEReference(semesterEClass, SEMESTER__COURSE_GROUPS);
+		createEAttribute(semesterEClass, SEMESTER__INFORMATION);
 
 		courseGroupEClass = createEClass(COURSE_GROUP);
 		createEAttribute(courseGroupEClass, COURSE_GROUP__NAME);
 		createEReference(courseGroupEClass, COURSE_GROUP__COURSE_ALLOCATIONS);
 		createEAttribute(courseGroupEClass, COURSE_GROUP__MIN_REQUIRED_CREDITS);
 		createEReference(courseGroupEClass, COURSE_GROUP__SEMESTER);
+		createEAttribute(courseGroupEClass, COURSE_GROUP__INFORMATION);
 
 		// Create enums
 		degreeTypeEEnum = createEEnum(DEGREE_TYPE);
@@ -701,12 +721,14 @@ public class StudyprogramsPackageImpl extends EPackageImpl implements Studyprogr
 		initEClass(semesterEClass, Semester.class, "Semester", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSemester_SemesterNumber(), this.getSemesterNumber(), "semesterNumber", null, 0, 1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSemester_CourseGroups(), this.getCourseGroup(), this.getCourseGroup_Semester(), "courseGroups", null, 0, -1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSemester_Information(), ecorePackage.getEString(), "information", null, 0, 1, Semester.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(courseGroupEClass, CourseGroup.class, "CourseGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCourseGroup_Name(), this.getCourseGroupType(), "name", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCourseGroup_CourseAllocations(), this.getCourseAllocation(), this.getCourseAllocation_CourseGroup(), "courseAllocations", null, 0, -1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCourseGroup_MinRequiredCredits(), ecorePackage.getEFloat(), "minRequiredCredits", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCourseGroup_Semester(), this.getSemester(), this.getSemester_CourseGroups(), "semester", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCourseGroup_Information(), ecorePackage.getEString(), "information", null, 0, 1, CourseGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(degreeTypeEEnum, DegreeType.class, "DegreeType");
