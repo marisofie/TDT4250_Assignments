@@ -5,6 +5,7 @@
 [template public University2TextGenerator(university : University)]
 [comment @main/]
 	[file (university.eClass().instanceClassName.concat('.html'), false, 'UTF-8')]
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Studiets oppbygning</title>
@@ -13,7 +14,7 @@
 </head>
 <body>
 	[for (programme : Programme | university.programmes)]
-		[generate(programme)/]
+		<div>[generate(programme)/]</div>
 	[/for]
 </body>
 </html>
@@ -33,33 +34,32 @@
 		</div>
 		[/if]
 		[if (programmeHasSpecialisations(programme))]
-	   		<div>
-				[for (specialisation : Specialisation | programme.specialisations)] 
-					<h2>Spesialisering:</h2> [generate(specialisation)/]
-				[/for]
-			</div>
+			[for (specialisation : Specialisation | programme.specialisations)] 
+				<div><b>Spesialisering:</b> [generate(specialisation)/]</div>
+			[/for]
 		[/if]
 [/template]
 
 [template public generate(specialisation : Specialisation)]
 		<h2>[specialisation.name/]</h2>
-		[for (semester : Semester | specialisation.semesters)] 
-			[generate(semester)/]
-		[/for]
+		<ol>
+			[for (semester : Semester | specialisation.semesters)] 
+				[generate(semester)/]
+			[/for]
+		</ol>
+
 
 		[if (specialisationHasChildSpecialisations(specialisation))]
-	   		<div>
-				[for (specialisation : Specialisation | specialisation.childSpecialisations)] 
-					<h2>Underspesialisering:</h2>[generate(specialisation)/]
-				[/for]
-			</div>
+			[for (specialisation : Specialisation | specialisation.childSpecialisations)] 
+				<div><b>Underspesialisering:</b>[generate(specialisation)/]</div>
+			[/for]
 		[/if]
 [/template]
 
 [template public generate(semester : Semester)]
 		<li>
 			<h3>[season(semester)/] - [semester.semesterNumber/]. semester</h3>
-			<p> [semester.information/]</p>
+			<p>[semester.information/]</p>
 			<ul>
 				[for (coursegroup : CourseGroup | semester.courseGroups)]
 					[generate(coursegroup)/]

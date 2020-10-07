@@ -1,11 +1,21 @@
 body {
   font-family: monospace;
+  display: flex;
 }
+
+body > div {
+  flex-basis: 50%;
+  border: 2px solid pink;
+  padding: 10px;
+  margin: 10px;
+  
+}
+
 h1 {
   color: darkblue;
 }
 
-h2 {
+h2, b {
   color: orangered;
 }
 
@@ -17,12 +27,12 @@ ol {
   list-style: none;
 }
 
-div {
+body > div div {
   padding: 20px;
   border: 2px solid green;
   margin-bottom: 10px;
 }
 
-div > div {
+body > div div > div {
   border: 2px solid greenyellow;
 }
