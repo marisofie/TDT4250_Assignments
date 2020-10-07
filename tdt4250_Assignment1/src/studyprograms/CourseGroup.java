@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link studyprograms.CourseGroup#getCourseAllocations <em>Course Allocations</em>}</li>
  *   <li>{@link studyprograms.CourseGroup#getMinRequiredCredits <em>Min Required Credits</em>}</li>
  *   <li>{@link studyprograms.CourseGroup#getSemester <em>Semester</em>}</li>
+ *   <li>{@link studyprograms.CourseGroup#getInformation <em>Information</em>}</li>
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getCourseGroup()
@@ -110,5 +111,27 @@ public interface CourseGroup extends EObject {
 	 * @generated
 	 */
 	void setSemester(Semester value);
+
+	/**
+	 * Returns the value of the '<em><b>Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Information</em>' attribute.
+	 * @see #setInformation(String)
+	 * @see studyprograms.StudyprogramsPackage#getCourseGroup_Information()
+	 * @model
+	 * @generated
+	 */
+	String getInformation();
+
+	/**
+	 * Sets the value of the '{@link studyprograms.CourseGroup#getInformation <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Information</em>' attribute.
+	 * @see #getInformation()
+	 * @generated
+	 */
+	void setInformation(String value);
 
 } // CourseGroup

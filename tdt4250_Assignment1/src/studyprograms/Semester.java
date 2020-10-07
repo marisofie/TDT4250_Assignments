@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link studyprograms.Semester#getSemesterNumber <em>Semester Number</em>}</li>
  *   <li>{@link studyprograms.Semester#getCourseGroups <em>Course Groups</em>}</li>
+ *   <li>{@link studyprograms.Semester#getInformation <em>Information</em>}</li>
  * </ul>
  *
  * @see studyprograms.StudyprogramsPackage#getSemester()
@@ -60,5 +61,27 @@ public interface Semester extends EObject {
 	 * @generated
 	 */
 	EList<CourseGroup> getCourseGroups();
+
+	/**
+	 * Returns the value of the '<em><b>Information</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Information</em>' attribute.
+	 * @see #setInformation(String)
+	 * @see studyprograms.StudyprogramsPackage#getSemester_Information()
+	 * @model
+	 * @generated
+	 */
+	String getInformation();
+
+	/**
+	 * Sets the value of the '{@link studyprograms.Semester#getInformation <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Information</em>' attribute.
+	 * @see #getInformation()
+	 * @generated
+	 */
+	void setInformation(String value);
 
 } // Semester

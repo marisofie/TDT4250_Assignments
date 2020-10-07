@@ -75,12 +75,14 @@
     <genClasses ecoreClass="studyprograms.ecore#//Semester">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Semester/semesterNumber"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//Semester/courseGroups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//Semester/information"/>
     </genClasses>
     <genClasses ecoreClass="studyprograms.ecore#//CourseGroup">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//CourseGroup/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference studyprograms.ecore#//CourseGroup/courseAllocations"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//CourseGroup/minRequiredCredits"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference studyprograms.ecore#//CourseGroup/semester"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute studyprograms.ecore#//CourseGroup/information"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
