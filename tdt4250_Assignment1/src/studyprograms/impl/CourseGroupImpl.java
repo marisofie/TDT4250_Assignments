@@ -36,6 +36,7 @@ import studyprograms.StudyprogramsPackage;
  *   <li>{@link studyprograms.impl.CourseGroupImpl#getCourseAllocations <em>Course Allocations</em>}</li>
  *   <li>{@link studyprograms.impl.CourseGroupImpl#getMinRequiredCredits <em>Min Required Credits</em>}</li>
  *   <li>{@link studyprograms.impl.CourseGroupImpl#getSemester <em>Semester</em>}</li>
+ *   <li>{@link studyprograms.impl.CourseGroupImpl#getInformation <em>Information</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,6 +91,26 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * @ordered
 	 */
 	protected float minRequiredCredits = MIN_REQUIRED_CREDITS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInformation() <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInformation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INFORMATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInformation() <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInformation()
+	 * @generated
+	 * @ordered
+	 */
+	protected String information = INFORMATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,6 +231,27 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getInformation() {
+		return information;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInformation(String newInformation) {
+		String oldInformation = information;
+		information = newInformation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.COURSE_GROUP__INFORMATION, oldInformation, information));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -270,6 +312,8 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 				return getMinRequiredCredits();
 			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
 				return getSemester();
+			case StudyprogramsPackage.COURSE_GROUP__INFORMATION:
+				return getInformation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -296,6 +340,9 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
 				setSemester((Semester)newValue);
 				return;
+			case StudyprogramsPackage.COURSE_GROUP__INFORMATION:
+				setInformation((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -320,6 +367,9 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
 				setSemester((Semester)null);
 				return;
+			case StudyprogramsPackage.COURSE_GROUP__INFORMATION:
+				setInformation(INFORMATION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -340,6 +390,8 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 				return minRequiredCredits != MIN_REQUIRED_CREDITS_EDEFAULT;
 			case StudyprogramsPackage.COURSE_GROUP__SEMESTER:
 				return getSemester() != null;
+			case StudyprogramsPackage.COURSE_GROUP__INFORMATION:
+				return INFORMATION_EDEFAULT == null ? information != null : !INFORMATION_EDEFAULT.equals(information);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -358,6 +410,8 @@ public class CourseGroupImpl extends MinimalEObjectImpl.Container implements Cou
 		result.append(name);
 		result.append(", minRequiredCredits: ");
 		result.append(minRequiredCredits);
+		result.append(", information: ");
+		result.append(information);
 		result.append(')');
 		return result.toString();
 	}

@@ -30,6 +30,7 @@ import studyprograms.StudyprogramsPackage;
  * <ul>
  *   <li>{@link studyprograms.impl.SemesterImpl#getSemesterNumber <em>Semester Number</em>}</li>
  *   <li>{@link studyprograms.impl.SemesterImpl#getCourseGroups <em>Course Groups</em>}</li>
+ *   <li>{@link studyprograms.impl.SemesterImpl#getInformation <em>Information</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,6 +65,26 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * @ordered
 	 */
 	protected EList<CourseGroup> courseGroups;
+
+	/**
+	 * The default value of the '{@link #getInformation() <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInformation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INFORMATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInformation() <em>Information</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInformation()
+	 * @generated
+	 * @ordered
+	 */
+	protected String information = INFORMATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,6 +143,27 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getInformation() {
+		return information;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInformation(String newInformation) {
+		String oldInformation = information;
+		information = newInformation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StudyprogramsPackage.SEMESTER__INFORMATION, oldInformation, information));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -158,6 +200,8 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 				return getSemesterNumber();
 			case StudyprogramsPackage.SEMESTER__COURSE_GROUPS:
 				return getCourseGroups();
+			case StudyprogramsPackage.SEMESTER__INFORMATION:
+				return getInformation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -178,6 +222,9 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 				getCourseGroups().clear();
 				getCourseGroups().addAll((Collection<? extends CourseGroup>)newValue);
 				return;
+			case StudyprogramsPackage.SEMESTER__INFORMATION:
+				setInformation((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -196,6 +243,9 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 			case StudyprogramsPackage.SEMESTER__COURSE_GROUPS:
 				getCourseGroups().clear();
 				return;
+			case StudyprogramsPackage.SEMESTER__INFORMATION:
+				setInformation(INFORMATION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -212,6 +262,8 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 				return semesterNumber != SEMESTER_NUMBER_EDEFAULT;
 			case StudyprogramsPackage.SEMESTER__COURSE_GROUPS:
 				return courseGroups != null && !courseGroups.isEmpty();
+			case StudyprogramsPackage.SEMESTER__INFORMATION:
+				return INFORMATION_EDEFAULT == null ? information != null : !INFORMATION_EDEFAULT.equals(information);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -228,6 +280,8 @@ public class SemesterImpl extends MinimalEObjectImpl.Container implements Semest
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (semesterNumber: ");
 		result.append(semesterNumber);
+		result.append(", information: ");
+		result.append(information);
 		result.append(')');
 		return result.toString();
 	}

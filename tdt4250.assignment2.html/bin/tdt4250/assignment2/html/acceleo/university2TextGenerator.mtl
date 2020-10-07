@@ -59,6 +59,7 @@
 [template public generate(semester : Semester)]
 		<li>
 			<h3>[season(semester)/] - [semester.semesterNumber/]. semester</h3>
+			<p> [semester.information/]</p>
 			<ul>
 				[for (coursegroup : CourseGroup | semester.courseGroups)]
 					[generate(coursegroup)/]
@@ -69,7 +70,7 @@
 
 [template public generate(coursegroup : CourseGroup)]
 		 <li>
-		  <span>[coursegroup.name/]</span>
+		  <span>[coursegroup.name/] <p>[coursegroup.information/]</p></span>
 		   <table border="2">
 		    <thead>
 		  	 <tr>
@@ -85,6 +86,7 @@
 		 [/for]			
 		</tbody>
 		</table>
+		<br/>
 		 </li>
 [/template]
 

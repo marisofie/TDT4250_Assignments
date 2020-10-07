@@ -448,7 +448,8 @@
       </courseGroups>
     </semesters>
     <semesters
-        semesterNumber="3">
+        semesterNumber="3"
+        information="I dette semesteret kan du velge ett fag fra enten kursgruppen Områdeemne eller Valgbare emner">
       <courseGroups
           minRequiredCredits="22.5">
         <courseAllocations
@@ -473,7 +474,8 @@
       </courseGroups>
       <courseGroups
           name="Områdeemne"
-          minRequiredCredits="7.5">
+          minRequiredCredits="7.5"
+          information="I løpet av bachelorstudiet må det velges et områdeemne (7,5 studiepoeng). Områdeemnet tas normalt i 3. eller 4. semester.">
         <courseAllocations
             status="M"
             course="BI2081"/>
@@ -486,7 +488,8 @@
       </courseGroups>
     </semesters>
     <semesters
-        semesterNumber="4">
+        semesterNumber="4"
+        information="I dette semesteret kan du velge enten to fag fra kursgruppen Valgbare emner eller ett fag fra Valgbare emner og ett fag fra Områdeemne">
       <courseGroups
           minRequiredCredits="15.0">
         <courseAllocations
@@ -509,7 +512,8 @@
       </courseGroups>
       <courseGroups
           name="Områdeemne"
-          minRequiredCredits="7.5">
+          minRequiredCredits="7.5"
+          information="I løpet av bachelorstudiet må det velges et områdeemne (7,5 studiepoeng). Områdeemnet tas normalt i 3. eller 4. semester.">
         <courseAllocations
             status="M"
             course="BI2081"/>
