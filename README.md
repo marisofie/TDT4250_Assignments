@@ -12,7 +12,7 @@ Group: Sigrid Marita Kvamme & Mari Sofie Lerfaldet
       - ```/StudyprogramsValidatorTest.java```
         - Tests for constraints: ```ValidateSemesterCredits``` and ```CourseSeasonMatchesSemester```
 - Added some entities to enumerators for missing values (ex: ```M``` to ```CourseStatusType```). 
-- Added attribute ```information``` to both Semester and CourseGroup in the model for better information in the text version of the model. 
+- Added attribute ```information``` to both ```Semester``` and ```CourseGroup``` in the model for better information in the text version of the model. 
 - Added more detailed information about where to find the different constraints etc. under Assignment 1. 
 
 ### Run Model Transformation 
